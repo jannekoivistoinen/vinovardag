@@ -1,0 +1,17 @@
+/* TEAM */
+Company: Lucky Ranch Oy
+Site: https://luckyranch.fi
+Location: Pyhä, Finland
+Content: Thomas Lindqvist
+Photographers: Thomas Lindqvist, Mélanie Ba, Krista Ylinen, Miika Hämäläinen, Toni Eskelinen, Fiia Ketonen
+Developer: Janne Koivistoinen, Damngood
+Designer: Janne Koivistoinen, Damngood
+
+/* SITE */
+Last update: 2025
+Stack: Next.js, Tailwind CSS, Framer Motion
+Software: Cursor IDE, Sketch
+
+Built with attention to detail in Äkäslompolo, Finland.
+
+A damn good website by Damngood.

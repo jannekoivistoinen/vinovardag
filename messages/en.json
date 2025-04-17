@@ -1,0 +1,254 @@
+{
+  "page": {
+    "events": {
+      "metadata": {
+        "title": "Events",
+        "description": "Discover our exciting events and activities",
+        "keywords": ["events", "activities", "experiences", "Lapland"]
+      }
+    }
+  },
+  "component": {
+    "terminalCTA": {
+      "title": "## Book your Finnish Lapland holiday today and create lasting experiences.",
+      "label": "Contact us"
+    },
+    "footer": {
+      "titles": {
+        "winterActivities": "Winter activities",
+        "summerActivities": "Summer activities",
+        "accommodation": "Pyhä accommodation",
+        "services": "Services",
+        "theRanch": "The Ranch",
+        "info": "Information",
+        "contact": "Contact"
+      },
+      "footer": {
+        "policy": "## Policy links"
+      }
+    },
+    "faq": {
+      "title": "## Frequently asked questions",
+      "description": "Got questions? We've got answers! Check out our FAQs for everything you need to know about your stay, activities, and more. If you don't find what you're looking for, just ask—we're happy to help!",
+      "categories": {
+        "accommodation": "Accommodation",
+        "activities": "Activities"
+      },
+      "items": {
+        "accommodation": [
+          {
+            "question": "What time is check-in and check-out?",
+            "answer": "Check-in time is from 15:00 (3 PM), and check-out is until 11:00 (11 AM). Early check-in or late check-out may be available upon request, subject to availability."
+          },
+          {
+            "question": "Is breakfast included in the stay?",
+            "answer": "Breakfast is included with most accommodation bookings. Our breakfast is served at the Ranch Café from 8:00 to 10:00 daily, featuring local Finnish specialties and continental options."
+          },
+          {
+            "question": "How far is Lucky Ranch from Rovaniemi Airport?",
+            "answer": "Lucky Ranch is approximately 90 minutes drive from Rovaniemi Airport. We can arrange airport transfers for our guests at an additional cost.\n\n[Learn more about our location](/en/info/location)."
+          }
+        ],
+        "activities": [
+          {
+            "question": "Do I need previous experience for winter activities?",
+            "answer": "Most of our activities are suitable for beginners, and our experienced guides provide full instructions and safety briefings. Some advanced activities may require prior experience."
+          },
+          {
+            "question": "What clothing should I bring for winter activities?",
+            "answer": "We provide thermal overalls and boots for most winter activities. We recommend bringing warm base layers, wool socks, gloves, and a warm hat. A detailed packing list will be sent with your booking confirmation."
+          },
+          {
+            "question": "Can activities be cancelled due to weather?",
+            "answer": "Yes, some activities may be cancelled or rescheduled due to severe weather conditions for safety reasons. In such cases, we will offer alternative activities or a full refund."
+          }
+        ]
+      }
+    },
+    "contactForm": {
+      "placeholders": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone with country code e.g. +358",
+        "message": "Message"
+      },
+      "validation": {
+        "nameRequired": "Your name is required",
+        "emailRequired": "Your email is required",
+        "emailInvalid": "Please enter a valid email",
+        "phoneRequired": "Your phone number is required",
+        "phoneInvalid": "Please enter a valid phone number",
+        "messageRequired": "A message is required"
+      },
+      "submitButton": "Send message",
+      "errorMessage": "Something went wrong. Please try later."
+    }
+  },
+  "page": {
+    "homepage": {
+      "metadata": {
+        "title": "Lucky Ranch | Experience unique accommodation & activities in Finnish Lapland",
+        "description": "Discover authentic stays and unforgettable adventures at Lucky Ranch, a family owned experience ranch based in Pyhätunturi, close to Rovaniemi.",
+        "keywords": [
+          "lucky ranch",
+          "finnish lapland",
+          "pyhätunturi",
+          "accommodation",
+          "activities",
+          "snow igloos",
+          "horses",
+          "sauna",
+          "ice swimming",
+          "winter activities",
+          "summer activities",
+          "experience ranch",
+          "rovaniemi"
+        ]
+      },
+      "hero": {
+        "title": "# Experience unique accommodation & activities in Finnish Lapland",
+        "description": "Discover authentic stays and unforgettable adventures at Lucky Ranch, a family owned experience ranch based in Pyhätunturi, close to Rovaniemi."
+      },
+      "experiences": {
+        "title": "## Unforgettable experiences await you at the Lucky Ranch",
+        "description": "Adventure meets tranquility at Lucky Ranch. Whether you're chasing the northern lights, exploring snowy trails, or relaxing in a lakeside sauna, your unforgettable Lapland experience starts here.",
+        "features": [
+          {
+            "title": "### [Snow igloos](https://app.moder.fi/luckyranch)",
+            "description": "Sleep under the Arctic sky in our breathtaking snow igloos, [as featured on Netflix (S1, E4)](https://www.netflix.com/fi-en/title/81060530). A once-in-a-lifetime experience awaits, where cozy comfort meets icy wonder.",
+            "icon": "igloo",
+            "altText": "Snow igloos"
+          },
+          {
+            "title": "### [Winter horseback riding](/en/activities/horses-winter)",
+            "description": "Ride through snow-covered forests on horseback and experience Lapland's winter magic up close—an adventure straight out of a fairytale.",
+            "icon": "horseSaddle",
+            "altText": "Winter horseback riding"
+          },
+          {
+            "title": "### [Sauna & Ice swimming](/en/activities/sauna-ice-swimming)",
+            "description": "Feel the ultimate refreshment—warm up in a traditional Finnish sauna, then take a daring plunge into icy waters. A true Nordic wellness experience.",
+            "icon": "heat",
+            "altText": "Sauna & Ice swimming"
+          },
+          {
+            "title": "### [The Lucky Ranch](/en/ranch/location)",
+            "description": "Easily accessible — just a 90-minute scenic drive from Rovaniemi Airport and railway station.",
+            "icon": "locationDot",
+            "altText": "The Lucky Ranch"
+          },
+          {
+            "title": "### [Winter Ski Café](/en/services/winter-cafe)",
+            "description": "Indulge in a delightful winter ski café, ideal for families.",
+            "icon": "coffeePot",
+            "altText": "Winter Ski Café"
+          },
+          {
+            "title": "### [Groups & Events](/en/events)",
+            "description": "Celebrate, connect, and create unforgettable memories with your group—whether it's a family getaway, corporate retreat, or a special event in the Arctic wilderness.",
+            "icon": "peopleGroup",
+            "altText": "Groups & Events"
+          }
+        ]
+      },
+      "winterActivities": {
+        "title": "## Popular winter activities in Pyhä",
+        "description": "At Lucky Ranch, every season brings new adventures. In winter, explore snowy trails on horseback, snowmobiles or snowshoes, chase the northern lights and unwind in our traditional sauna.",
+        "link": "[Browse all winter activities](/activities/winter)",
+        "activities": [
+          {
+            "title": "### Snowmobile tours",
+            "description": "Experience the thrill of gliding through pristine snow",
+            "imageKey": "snowmobileTours",
+            "altText": "Two people holding snow surfing boards in snowy landscape",
+            "link": "/en/activities/snowmobile-tours"
+          },
+          {
+            "title": "### Northern light tours",
+            "description": "Experience the thrill of gliding through pristine snow",
+            "imageKey": "northernLights",
+            "altText": "Two people holding snow surfing boards in snowy landscape",
+            "link": "/en/activities/northern-light-tours"
+          },
+          {
+            "title": "### Horses",
+            "description": "Experience the thrill of gliding through pristine snow",
+            "imageKey": "winterHorses",
+            "altText": "Two people holding snow surfing boards in snowy landscape",
+            "link": "/en/activities/horses-winter"
+          },
+          {
+            "title": "###  Sauna & ice swimming",
+            "description": "Experience the thrill of gliding through pristine snow",
+            "imageKey": "saunaIceSwimming2",
+            "altText": "Two people holding snow surfing boards in snowy landscape",
+            "link": "/en/activities/sauna-ice-swimming"
+          },
+          {
+            "title": "### Other winter activities",
+            "description": "Experience the thrill of gliding through pristine snow",
+            "imageKey": "otherWinterTours3",
+            "altText": "Two people holding snow surfing boards in snowy landscape",
+            "link": "/en/activities/other-winter-activities"
+          },
+          {
+            "title": "###  Partner activities",
+            "description": "Experience the thrill of gliding through pristine snow",
+            "imageKey": "huskySafari",
+            "altText": "Two people holding snow surfing boards in snowy landscape",
+            "link": "/en/activities/partner-winter-activities"
+          }
+        ]
+      },
+      "accommodation": {
+        "title": "## Accommodation in Pyhä",
+        "description": "Experience the magic of Lapland with a stay at Lucky Ranch. Choose between cozy cabins or snow igloos, each offering a cozy retreat after a day of adventure. Nestled by Pyhäjärvi in the peaceful landscapes of Pyhätunturi, our accommodations invite you to unwind and embrace the serenity of nature.",
+        "link": "[Browse all accommodation](https://app.moder.fi/luckyranch)",
+        "options": [
+          {
+            "title": "### Snow igloos",
+            "capacity": "Up to 6 guests • 1 bedroom",
+            "link": "https://app.moder.fi/luckyranch",
+            "imageKey": "snowIglooNorthernLights",
+            "altText": "Snow igloos"
+          },
+          {
+            "title": "### Lucky Ranch Cabins",
+            "capacity": "Up to 6 guests • 1 bedroom",
+            "link": "https://app.moder.fi/luckyranch",
+            "imageKey": "cabins",
+            "altText": "Lucky Ranch Cabins"
+          },
+          {
+            "title": "### Lucky Ranch apartment",
+            "capacity": "Up to 5 guests • 3 bedrooms",
+            "link": "https://app.moder.fi/luckyranch",
+            "imageKey": "apartments",
+            "altText": "Lucky Ranch apartment"
+          },
+          {
+            "title": "### Finnish aitta",
+            "capacity": "Up to 3 guests • 1 bedroom",
+            "link": "https://app.moder.fi/luckyranch",
+            "imageKey": "aitta",
+            "altText": "Finnish aitta"
+          }
+        ]
+      },
+      "aboutUs": {
+        "title": "## Meet your hosts",
+        "description": "Lucky Ranch started with a dream — Anu's love for horses led her on a journey to find the perfect stable. In 2013, that dream grew into something more: a place where guests from around the world could experience the beauty of Lapland through authentic adventures and warm hospitality.",
+        "anu": {
+          "name": "### Anu",
+          "description": "An animal lover since childhood and started horseback riding at the age of nine. Her strengths lie in working with horses, and at Lucky Ranch, she manages sales, marketing, and overall coordination."
+        },
+        "antti": {
+          "name": "### Antti",
+          "description": "The expert behind Lucky Ranch's outdoor and adventure activities. His passion for board sports began in his teens with skateboarding and later expanded to snowboarding and surfing."
+        },
+        "link": "[Learn more about Anu, Antti and the Ranch](en/ranch/about)",
+        "imageAlt": "Anu and Antti at the ranch"
+      }
+    }
+  }
+}
