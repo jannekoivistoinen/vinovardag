@@ -158,7 +158,7 @@ export default function DesktopNavigation({
               <Link
                 key={item.link}
                 href={localeData.href}
-                className={`bg-brand-primary px-6 py-3 text-base font-medium text-white transition hover:opacity-90 ${
+                className={`bg-brand-primary px-6 py-3 text-base font-medium text-white transition hover:opacity-90 whitespace-nowrap ${
                   isScrolled ? "scale-100" : ""
                 }`}
               >

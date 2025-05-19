@@ -6,19 +6,19 @@ import { setRequestLocale } from "next-intl/server";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
-import { Source_Serif_4 } from "next/font/google";
 import { SITE_CONFIG } from "@/lib/constants";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const sourceSerif = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-source-serif",
+const haskoy = localFont({
+  src: "./../fonts/Haskoy-variable.woff2",
+  variable: "--font-haskoy",
 });
 
-const basteleurGrotesk = localFont({
-  src: "./../fonts/Basteleur-Moonlight.woff2",
-  variable: "--font-basteleur",
+const cabinetGrotesk = localFont({
+  src: "./../fonts/CabinetGrotesk-Medium.woff2",
+  variable: "--font-cabinet-grotesk",
+  weight: "500",
 });
 
 export const metadata: Metadata = {
@@ -115,7 +115,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${sourceSerif.variable} ${basteleurGrotesk.variable}`}
+      className={`${haskoy.variable} ${cabinetGrotesk.variable}`}
     >
       <head>
         <script
@@ -128,7 +128,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <Navigation />
-            <main className="flex-grow">{children}</main>
+            <main className="flex-grow overflow-x-hidden">{children}</main>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

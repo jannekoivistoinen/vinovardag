@@ -1,69 +1,44 @@
 {
-  "page": {
-    "events": {
-      "metadata": {
-        "title": "Events",
-        "description": "Discover our exciting events and activities",
-        "keywords": ["events", "activities", "experiences", "Lapland"]
-      }
-    }
-  },
   "component": {
     "terminalCTA": {
-      "title": "## Book your Finnish Lapland holiday today and create lasting experiences.",
-      "label": "Contact us"
+      "title": "## Discover the art of wine with Vinovardag",
+      "description": "Ready to explore the world of wine like never before? With Vinovardag, each sip becomes a story and every experience is crafted to delight. Book your journey into Lapland's unique wine culture today!",
+      "label": "Get in touch"
     },
     "footer": {
-      "titles": {
-        "winterActivities": "Winter activities",
-        "summerActivities": "Summer activities",
-        "accommodation": "Pyhä accommodation",
-        "services": "Services",
-        "theRanch": "The Ranch",
-        "info": "Information",
-        "contact": "Contact"
-      },
-      "footer": {
-        "policy": "## Policy links"
-      }
+      "copyright": "© 2025 Vinovardag & Outdoor North 67°",
+      "instagram": "Follow Vinovardag on Instagram",
+      "terms": "Terms & Conditions"
     },
     "faq": {
       "title": "## Frequently asked questions",
-      "description": "Got questions? We've got answers! Check out our FAQs for everything you need to know about your stay, activities, and more. If you don't find what you're looking for, just ask—we're happy to help!",
-      "categories": {
-        "accommodation": "Accommodation",
-        "activities": "Activities"
-      },
-      "items": {
-        "accommodation": [
-          {
-            "question": "What time is check-in and check-out?",
-            "answer": "Check-in time is from 15:00 (3 PM), and check-out is until 11:00 (11 AM). Early check-in or late check-out may be available upon request, subject to availability."
-          },
-          {
-            "question": "Is breakfast included in the stay?",
-            "answer": "Breakfast is included with most accommodation bookings. Our breakfast is served at the Ranch Café from 8:00 to 10:00 daily, featuring local Finnish specialties and continental options."
-          },
-          {
-            "question": "How far is Lucky Ranch from Rovaniemi Airport?",
-            "answer": "Lucky Ranch is approximately 90 minutes drive from Rovaniemi Airport. We can arrange airport transfers for our guests at an additional cost.\n\n[Learn more about our location](/en/info/location)."
-          }
-        ],
-        "activities": [
-          {
-            "question": "Do I need previous experience for winter activities?",
-            "answer": "Most of our activities are suitable for beginners, and our experienced guides provide full instructions and safety briefings. Some advanced activities may require prior experience."
-          },
-          {
-            "question": "What clothing should I bring for winter activities?",
-            "answer": "We provide thermal overalls and boots for most winter activities. We recommend bringing warm base layers, wool socks, gloves, and a warm hat. A detailed packing list will be sent with your booking confirmation."
-          },
-          {
-            "question": "Can activities be cancelled due to weather?",
-            "answer": "Yes, some activities may be cancelled or rescheduled due to severe weather conditions for safety reasons. In such cases, we will offer alternative activities or a full refund."
-          }
-        ]
-      }
+      "description": "Discover answers to your questions about Vinovardag's unique wine experiences and services.\n\nQuestions? Get in touch at hanna@vinovardag.se",
+      "items": [
+        {
+          "question": "What services do you offer?",
+          "answer": "We provide a range of services including sommelier consultations, wine tastings, and culinary experiences. Our offerings are tailored to meet the needs of local businesses and international tourists. Each experience is designed to highlight the best of Lapland's wine culture."
+        },
+        {
+          "question": "How can I book?",
+          "answer": "You can book our services directly through our website using the booking form, or by contacting us via email or phone. For customized experiences, we recommend reaching out directly so we can tailor the experience to your preferences."
+        },
+        {
+          "question": "Are your experiences customizable?",
+          "answer": "Yes, most of our experiences can be customized to meet your specific preferences and needs. Whether you're looking for a private wine tasting, a corporate event, or a specialized culinary experience, we can work with you to create the perfect offering."
+        },
+        {
+          "question": "What is your location?",
+          "answer": "We are located in Pyhätunturi, Finnish Lapland, approximately 90 minutes from Rovaniemi Airport. Our unique setting offers the perfect backdrop for wine experiences surrounded by Lapland's natural beauty."
+        },
+        {
+          "question": "Do you offer tastings?",
+          "answer": "Yes, we offer a variety of wine tastings featuring carefully selected wines from around the world, with special attention to unique and boutique wineries. Our tastings can be paired with local delicacies for a complete culinary experience."
+        },
+        {
+          "question": "I don't drink alcohol, can I still participate?",
+          "answer": "Absolutely! We offer non-alcoholic alternatives for all our tastings and experiences. Our goal is to create inclusive experiences where everyone can enjoy the culinary journey, regardless of their beverage preferences."
+        }
+      ]
     },
     "contactForm": {
       "placeholders": {
@@ -87,167 +62,44 @@
   "page": {
     "homepage": {
       "metadata": {
-        "title": "Lucky Ranch | Experience unique accommodation & activities in Finnish Lapland",
-        "description": "Discover authentic stays and unforgettable adventures at Lucky Ranch, a family owned experience ranch based in Pyhätunturi, close to Rovaniemi.",
-        "keywords": [
-          "lucky ranch",
-          "finnish lapland",
-          "pyhätunturi",
-          "accommodation",
-          "activities",
-          "snow igloos",
-          "horses",
-          "sauna",
-          "ice swimming",
-          "winter activities",
-          "summer activities",
-          "experience ranch",
-          "rovaniemi"
-        ]
+        "title": "Vinovardag | Discover the art of wine with Vinovardag",
+        "description": "Vinovardag's personalized services are designed to elevate your culinary journey in Lapland.",
+        "keywords": []
       },
       "hero": {
-        "title": "# Experience unique accommodation & activities in Finnish Lapland",
-        "description": "Discover authentic stays and unforgettable adventures at Lucky Ranch, a family owned experience ranch based in Pyhätunturi, close to Rovaniemi."
+        "title": "# Whether you're a local business or an international traveler, Vinovardag's personalized services are designed to elevate your culinary journey in Lapland."
       },
-      "experiences": {
-        "title": "## Unforgettable experiences await you at the Lucky Ranch",
-        "description": "Adventure meets tranquility at Lucky Ranch. Whether you're chasing the northern lights, exploring snowy trails, or relaxing in a lakeside sauna, your unforgettable Lapland experience starts here.",
-        "features": [
+      "services": {
+        "title": "## Wine tastings and culinary adventures",
+        "service": [
           {
-            "title": "### [Snow igloos](https://app.moder.fi/luckyranch)",
-            "description": "Sleep under the Arctic sky in our breathtaking snow igloos, [as featured on Netflix (S1, E4)](https://www.netflix.com/fi-en/title/81060530). A once-in-a-lifetime experience awaits, where cozy comfort meets icy wonder.",
-            "icon": "igloo",
-            "altText": "Snow igloos"
+            "title": "### Exquisite wine tastings",
+            "imageKey": "vinovardagWinetastings",
+            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
           },
           {
-            "title": "### [Winter horseback riding](/en/activities/horses-winter)",
-            "description": "Ride through snow-covered forests on horseback and experience Lapland's winter magic up close—an adventure straight out of a fairytale.",
-            "icon": "horseSaddle",
-            "altText": "Winter horseback riding"
+            "title": "### Outdoor culinary experiences",
+            "imageKey": "vinovardagOutdoor",
+            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
           },
           {
-            "title": "### [Sauna & Ice swimming](/en/activities/sauna-ice-swimming)",
-            "description": "Feel the ultimate refreshment—warm up in a traditional Finnish sauna, then take a daring plunge into icy waters. A true Nordic wellness experience.",
-            "icon": "heat",
-            "altText": "Sauna & Ice swimming"
+            "title": "### Customized culinary journeys",
+            "imageKey": "vinovardagCulinaryJourneys",
+            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
           },
           {
-            "title": "### [The Lucky Ranch](/en/ranch/location)",
-            "description": "Easily accessible — just a 90-minute scenic drive from Rovaniemi Airport and railway station.",
-            "icon": "locationDot",
-            "altText": "The Lucky Ranch"
-          },
-          {
-            "title": "### [Winter Ski Café](/en/services/winter-cafe)",
-            "description": "Indulge in a delightful winter ski café, ideal for families.",
-            "icon": "coffeePot",
-            "altText": "Winter Ski Café"
-          },
-          {
-            "title": "### [Groups & Events](/en/events)",
-            "description": "Celebrate, connect, and create unforgettable memories with your group—whether it's a family getaway, corporate retreat, or a special event in the Arctic wilderness.",
-            "icon": "peopleGroup",
-            "altText": "Groups & Events"
+            "title": "### Customized culinary journeys",
+            "imageKey": "vinovardagHero",
+            "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
           }
         ]
       },
-      "winterActivities": {
-        "title": "## Popular winter activities in Pyhä",
-        "description": "At Lucky Ranch, every season brings new adventures. In winter, explore snowy trails on horseback, snowmobiles or snowshoes, chase the northern lights and unwind in our traditional sauna.",
-        "link": "[Browse all winter activities](/activities/winter)",
-        "activities": [
-          {
-            "title": "### Snowmobile tours",
-            "description": "Experience the thrill of gliding through pristine snow",
-            "imageKey": "snowmobileTours",
-            "altText": "Two people holding snow surfing boards in snowy landscape",
-            "link": "/en/activities/snowmobile-tours"
-          },
-          {
-            "title": "### Northern light tours",
-            "description": "Experience the thrill of gliding through pristine snow",
-            "imageKey": "northernLights",
-            "altText": "Two people holding snow surfing boards in snowy landscape",
-            "link": "/en/activities/northern-light-tours"
-          },
-          {
-            "title": "### Horses",
-            "description": "Experience the thrill of gliding through pristine snow",
-            "imageKey": "winterHorses",
-            "altText": "Two people holding snow surfing boards in snowy landscape",
-            "link": "/en/activities/horses-winter"
-          },
-          {
-            "title": "###  Sauna & ice swimming",
-            "description": "Experience the thrill of gliding through pristine snow",
-            "imageKey": "saunaIceSwimming2",
-            "altText": "Two people holding snow surfing boards in snowy landscape",
-            "link": "/en/activities/sauna-ice-swimming"
-          },
-          {
-            "title": "### Other winter activities",
-            "description": "Experience the thrill of gliding through pristine snow",
-            "imageKey": "otherWinterTours3",
-            "altText": "Two people holding snow surfing boards in snowy landscape",
-            "link": "/en/activities/other-winter-activities"
-          },
-          {
-            "title": "###  Partner activities",
-            "description": "Experience the thrill of gliding through pristine snow",
-            "imageKey": "huskySafari",
-            "altText": "Two people holding snow surfing boards in snowy landscape",
-            "link": "/en/activities/partner-winter-activities"
-          }
-        ]
-      },
-      "accommodation": {
-        "title": "## Accommodation in Pyhä",
-        "description": "Experience the magic of Lapland with a stay at Lucky Ranch. Choose between cozy cabins or snow igloos, each offering a cozy retreat after a day of adventure. Nestled by Pyhäjärvi in the peaceful landscapes of Pyhätunturi, our accommodations invite you to unwind and embrace the serenity of nature.",
-        "link": "[Browse all accommodation](https://app.moder.fi/luckyranch)",
-        "options": [
-          {
-            "title": "### Snow igloos",
-            "capacity": "Up to 6 guests • 1 bedroom",
-            "link": "https://app.moder.fi/luckyranch",
-            "imageKey": "snowIglooNorthernLights",
-            "altText": "Snow igloos"
-          },
-          {
-            "title": "### Lucky Ranch Cabins",
-            "capacity": "Up to 6 guests • 1 bedroom",
-            "link": "https://app.moder.fi/luckyranch",
-            "imageKey": "cabins",
-            "altText": "Lucky Ranch Cabins"
-          },
-          {
-            "title": "### Lucky Ranch apartment",
-            "capacity": "Up to 5 guests • 3 bedrooms",
-            "link": "https://app.moder.fi/luckyranch",
-            "imageKey": "apartments",
-            "altText": "Lucky Ranch apartment"
-          },
-          {
-            "title": "### Finnish aitta",
-            "capacity": "Up to 3 guests • 1 bedroom",
-            "link": "https://app.moder.fi/luckyranch",
-            "imageKey": "aitta",
-            "altText": "Finnish aitta"
-          }
-        ]
-      },
-      "aboutUs": {
-        "title": "## Meet your hosts",
-        "description": "Lucky Ranch started with a dream — Anu's love for horses led her on a journey to find the perfect stable. In 2013, that dream grew into something more: a place where guests from around the world could experience the beauty of Lapland through authentic adventures and warm hospitality.",
-        "anu": {
-          "name": "### Anu",
-          "description": "An animal lover since childhood and started horseback riding at the age of nine. Her strengths lie in working with horses, and at Lucky Ranch, she manages sales, marketing, and overall coordination."
-        },
-        "antti": {
-          "name": "### Antti",
-          "description": "The expert behind Lucky Ranch's outdoor and adventure activities. His passion for board sports began in his teens with skateboarding and later expanded to snowboarding and surfing."
-        },
-        "link": "[Learn more about Anu, Antti and the Ranch](en/ranch/about)",
-        "imageAlt": "Anu and Antti at the ranch"
+      "aboutHanna": {
+        "quote": "Hanna's expertise in wine is unmatched. She effortlessly combines deep knowledge with a warm, approachable style, creating unforgettable tasting experiences.",
+        "quoteAttribution": "Jane Doe – Title, Company AB",
+        "heading": "## Sommelier Hanna crafts unforgettable wine experiences, blending the flavors of the Lappish wilderness with her passion for wine.",
+        "paragraph": "Based in the heart of Swedish Lapland, in the city or Kiruna, Hanna creates experiences that not only highlight the best of international and local wines but also reflect the stunning natural beauty and rich culture of the region.\n\nWhether it's uncovering rare vintages or showcasing sustainable winemaking practices, Hanna's expertise sets the stage for truly unforgettable wine experiences.",
+        "continueReading": "Continue reading"
       }
     }
   }

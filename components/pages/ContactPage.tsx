@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function EventsPage() {
-  const t = useTranslations("page.events");
+export default function ContactPage() {
+  const t = useTranslations("page.contact");
 
   return (
     <>
@@ -35,13 +35,13 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section id="events" className="container content">
+      <section id="contact" className="container content">
         <div className="md:mx-auto md:text-center max-w-4xl">
           <MarkdownText className="text-brand-dark mb-6">
-            {t("events.title")}
+            {t("contact.title")}
           </MarkdownText>
           <MarkdownText className="mb-12 p-lg">
-            {t("events.description")}
+            {t("contact.description")}
           </MarkdownText>
         </div>
       </section>

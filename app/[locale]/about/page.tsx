@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { COMPANY_METADATA } from "@/lib/constants";
 import { getTranslations } from "next-intl/server";
-import EventsPage from "@/components/pages/EventsPage";
+import AboutPage from "@/components/pages/AboutPage";
 
 // Update Props type to use PageProps
 type Props = {
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({
     locale,
-    namespace: "page.events.metadata",
+    namespace: "page.about.metadata",
   });
 
   return {
@@ -41,5 +41,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Update Page component to handle Promise params
 export default async function Page({ params }: Props) {
   await params; // Ensure params are resolved
-  return <EventsPage />;
+  return <AboutPage />;
 }

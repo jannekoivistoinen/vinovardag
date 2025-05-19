@@ -15,16 +15,16 @@ export type NavigationItem = {
         link: string;
         icon?: IconKey;
         en: LocaleData;
-        fi: LocaleData;
+        sv: LocaleData;
       }[]
     | undefined;
   en: LocaleData;
-  fi: LocaleData;
+  sv: LocaleData;
   sublinks?: {
     link: string;
     icon?: IconKey;
     en: LocaleData;
-    fi: LocaleData;
+    sv: LocaleData;
   }[];
 };
 

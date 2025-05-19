@@ -1,7 +1,7 @@
 "use client";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useRef } from "react";
 import { KeenSliderInstance } from "keen-slider";
 
 interface SliderProps {
@@ -15,6 +15,7 @@ interface SliderProps {
     | number;
   spacing?: number;
   mobileSpacing?: number;
+  showPagination?: boolean;
 }
 
 const WheelControls = (slider: KeenSliderInstance) => {
@@ -73,8 +74,12 @@ export function Slider({
   slidesPerView = { mobile: 1, tablet: 1, desktop: 1 },
   spacing = 16,
   mobileSpacing = 12,
+  showPagination = false,
 }: SliderProps) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [slidesCount, setSlidesCount] = useState(0);
+  const sliderInstanceRef = useRef<KeenSliderInstance | null>(null);
 
   const defaultSlides =
     typeof slidesPerView === "number" ? slidesPerView : slidesPerView.desktop;
@@ -112,28 +117,48 @@ export function Slider({
       defaultAnimation: {
         duration: 500,
       },
-      created: () => {
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel);
+      },
+      created(slider) {
         setIsLoaded(true);
+        setSlidesCount(slider.track.details.slides.length);
+        sliderInstanceRef.current = slider;
       },
     },
     [WheelControls]
   );
 
   return (
-    <div
-      ref={sliderRef}
-      className={`keen-slider !overflow-visible transition-opacity ${
-        isLoaded ? "opacity-100 duration-1000" : "opacity-0"
-      }`}
-    >
-      {Array.isArray(children) ? (
-        children.map((child, index) => (
-          <div key={index} className="keen-slider__slide">
-            {child}
-          </div>
-        ))
-      ) : (
-        <div className="keen-slider__slide">{children}</div>
+    <div className="relative">
+      <div
+        ref={sliderRef}
+        className={`keen-slider !overflow-visible transition-opacity ${
+          isLoaded ? "opacity-100 duration-1000" : "opacity-0"
+        }`}
+      >
+        {Array.isArray(children) ? (
+          children.map((child, index) => (
+            <div key={index} className="keen-slider__slide">
+              {child}
+            </div>
+          ))
+        ) : (
+          <div className="keen-slider__slide">{children}</div>
+        )}
+      </div>
+
+      {showPagination && slidesCount > 1 && (
+        <div className="flex justify-center mt-4 gap-2">
+          {Array.from({ length: slidesCount }).map((_, idx) => (
+            <span
+              key={idx}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                currentSlide === idx ? "bg-[#0a5778]" : "bg-[#ccc]"
+              }`}
+            />
+          ))}
+        </div>
       )}
     </div>
   );

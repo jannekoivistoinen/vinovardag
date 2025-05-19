@@ -10,13 +10,14 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        body: "var(--font-source-serif)",
-        heading: "var(--font-basteleur)",
+        body: "var(--font-haskoy)",
+        heading: "var(--font-cabinet-grotesk)",
       },
       colors: {
-        "brand-dark": "#886441",
-        "brand-primary": "#946C47",
+        "brand-dark": "#A77E16",
+        "brand-primary": "#D3A01C",
         "brand-light": "#EBE0D6",
+        "brand-brown": "#503825",
       },
     },
   },

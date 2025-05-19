@@ -1,0 +1,106 @@
+{
+  "component": {
+    "terminalCTA": {
+      "title": "## Upptäck vinkonstens mästerverk med Vinovardag",
+      "description": "Är du redo att utforska vinets värld på ett helt nytt sätt? Med Vinovardag blir varje klunk en berättelse och varje upplevelse skapad för att förtjusa. Boka din resa in i Lapplands unika vinkultur redan idag!",
+      "label": "Kontakta oss"
+    },
+    "footer": {
+      "copyright": "© 2025 Vinovardag & Outdoor North 67°",
+      "instagram": "Följ Vinovardag på Instagram",
+      "terms": "Villkor"
+    },
+    "faq": {
+      "title": "## Vanliga frågor",
+      "description": "Hitta svar på dina frågor om Vinovardags unika vinupplevelser och tjänster.\n\nFrågor? Kontakta oss på hanna@vinovardag.se",
+      "items": [
+        {
+          "question": "Vilka tjänster erbjuder ni?",
+          "answer": "Vi erbjuder ett brett utbud av tjänster inklusive sommelierkonsultationer, vinprovningar och kulinariska upplevelser. Vårt utbud är skräddarsytt för att möta behoven hos lokala företag och internationella turister. Varje upplevelse är designad för att lyfta fram det bästa av Lapplands vinkultur."
+        },
+        {
+          "question": "Hur bokar jag?",
+          "answer": "Du kan boka våra tjänster direkt via vår webbplats med hjälp av bokningsformuläret, eller genom att kontakta oss via e-post eller telefon. För skräddarsydda upplevelser rekommenderar vi att du kontaktar oss direkt så att vi kan anpassa upplevelsen efter dina önskemål."
+        },
+        {
+          "question": "Är era upplevelser anpassningsbara?",
+          "answer": "Ja, de flesta av våra upplevelser kan anpassas för att möta dina specifika önskemål och behov. Oavsett om du letar efter en privat vinprovning, ett företagsevenemang eller en specialiserad kulinarisk upplevelse kan vi samarbeta med dig för att skapa det perfekta erbjudandet."
+        },
+        {
+          "question": "Var ligger ni?",
+          "answer": "Vi är belägna i Pyhätunturi, finska Lappland, cirka 90 minuter från Rovaniemi flygplats. Vår unika miljö erbjuder den perfekta bakgrunden för vinupplevelser omgiven av Lapplands naturskönhet."
+        },
+        {
+          "question": "Erbjuder ni vinprovningar?",
+          "answer": "Ja, vi erbjuder en mängd olika vinprovningar med noggrant utvalda viner från hela världen, med särskilt fokus på unika och boutiquevingårdar. Våra provningar kan kombineras med lokala delikatesser för en komplett kulinarisk upplevelse."
+        },
+        {
+          "question": "Jag dricker inte alkohol, kan jag fortfarande delta?",
+          "answer": "Absolut! Vi erbjuder alkoholfria alternativ för alla våra provningar och upplevelser. Vårt mål är att skapa inkluderande upplevelser där alla kan njuta av den kulinariska resan, oavsett dryckespreferenser."
+        }
+      ]
+    },
+    "contactForm": {
+      "placeholders": {
+        "name": "Namn",
+        "email": "E-postadress",
+        "phone": "Telefonnummer med landskod t.ex. +358",
+        "message": "Meddelande"
+      },
+      "validation": {
+        "nameRequired": "Ditt namn är obligatoriskt",
+        "emailRequired": "Din e-postadress är obligatorisk",
+        "emailInvalid": "Ange en giltig e-postadress",
+        "phoneRequired": "Ditt telefonnummer är obligatoriskt",
+        "phoneInvalid": "Ange ett giltigt telefonnummer",
+        "messageRequired": "Ett meddelande krävs"
+      },
+      "submitButton": "Skicka meddelande",
+      "errorMessage": "Något gick fel. Försök igen senare."
+    }
+  },
+  "page": {
+    "homepage": {
+      "metadata": {
+        "title": "Vinovardag | Upptäck vinkonstens mästerverk med Vinovardag",
+        "description": "Vinovardags personliga tjänster är skapade för att lyfta din kulinariska resa i Lappland.",
+        "keywords": []
+      },
+      "hero": {
+        "title": "# Oavsett om du är ett lokalt företag eller en internationell resenär, är Vinovardags personliga tjänster designade för att lyfta din kulinariska resa i Lappland."
+      },
+      "services": {
+        "title": "## Vinprovningar och kulinariska äventyr",
+        "service": [
+          {
+            "title": "### Exklusiva vinprovningar",
+            "imageKey": "vinovardagWinetastings",
+            "altText": "En snowboardåkare som åker pudersnö i Ylläs-Pallas nationalpark"
+          },
+          {
+            "title": "### Kulinariska upplevelser i naturen",
+            "imageKey": "vinovardagOutdoor",
+            "altText": "En snowboardåkare som åker pudersnö i Ylläs-Pallas nationalpark"
+          },
+          {
+            "title": "### Skräddarsydda kulinariska resor",
+            "imageKey": "vinovardagCulinaryJourneys",
+            "altText": "En snowboardåkare som åker pudersnö i Ylläs-Pallas nationalpark"
+          },
+          {
+            "title": "### Skräddarsydda kulinariska resor",
+            "imageKey": "vinovardagHero",
+            "altText": "En snowboardåkare som åker pudersnö i Ylläs-Pallas nationalpark"
+          }
+        ]
+      },
+      "aboutHanna": {
+        "quote": "Hannas expertis inom vin är oöverträffad. Hon kombinerar utan ansträngning djup kunskap med en varm och tillgänglig stil, vilket skapar oförglömliga provningsupplevelser.",
+        "quoteAttribution": "Jane Doe – Titel, Företag AB",
+        "heading": "## Sommelieren Hanna skapar oförglömliga vinupplevelser och förenar smakerna från den lappländska vildmarken med sin passion för vin.",
+        "paragraph": "Baserad i hjärtat av svenska Lappland, i staden Kiruna, skapar Hanna upplevelser som inte bara lyfter fram det bästa av internationella och lokala viner utan också speglar regionens fantastiska naturskönhet och rika kultur.\n\nOavsett om det handlar om att upptäcka sällsynta årgångar eller visa upp hållbara metoder inom vinframställning, lägger Hannas expertis grunden för verkligt oförglömliga vinupplevelser.",
+        "continueReading": "Läs mer"
+      }
+    }
+  }
+}

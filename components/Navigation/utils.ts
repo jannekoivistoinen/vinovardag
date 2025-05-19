@@ -5,7 +5,7 @@ import { LocaleData, NavigationItem, isLocaleData } from "./types";
 // Locale names mapping
 export const localeNames: Record<string, string> = {
   en: "English",
-  fi: "Suomi",
+  sv: "Svenska",
 };
 
 // Shared language switching function

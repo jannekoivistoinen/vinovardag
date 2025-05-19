@@ -64,10 +64,10 @@ export default function Navigation() {
     <div
       className={`sticky z-[9999] top-0 w-full duration-300 ${
         mobileMenuOpen
-          ? "bg-white bg-opacity-100"
+          ? "bg-[#f5f5ed] bg-opacity-100"
           : isScrolled
-          ? "bg-white bg-opacity-85 backdrop-blur-xl "
-          : "bg-transparent"
+          ? "bg-[#f5f5ed] bg-opacity-85 backdrop-blur-xl "
+          : "bg-[#f5f5ed]"
       }`}
     >
       <nav

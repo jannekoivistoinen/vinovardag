@@ -21,7 +21,7 @@ export async function middleware(request: NextRequest) {
     }
 
     // If it starts with a valid locale, use the intl middleware
-    if (/^\/(?:en|fi)(?:$|\/)/.test(pathname)) {
+    if (/^\/(?:en|sv)(?:$|\/)/.test(pathname)) {
       return intlMiddleware(request);
     }
 
