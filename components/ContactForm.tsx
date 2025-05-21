@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
@@ -9,10 +9,9 @@ import { useTranslations } from "next-intl";
 
 // Add input class constants
 const INPUT_STYLES = {
-  base: "w-full bg-white text-zinc-950 px-4 py-3 placeholder:text-zinc-400 focus:ring-4 dark:bg-zinc-900 dark:text-white dark:placeholder:text-zinc-200",
-  error: "border-red-600 ring-red-100 focus:border-red-600 dark:ring-0",
-  normal:
-    "ring-zinc-100 focus:border-zinc-600 dark:border-zinc-600 dark:ring-0 dark:focus:border-white",
+  base: "w-full bg-white text-zinc-950 px-4 py-3 placeholder:text-zinc-400 focus:ring-4",
+  error: "border-red-600 ring-red-100 focus:border-red-600 ",
+  normal: "ring-zinc-100 focus:border-zinc-600",
   select:
     "appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%227%22%20height%3D%2212%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M3.5%2012a.498.498%200%200%201-.353-.146l-3-3a.5.5%200%201%201%20.707-.708L3.5%2010.794l2.647-2.647a.5.5%200%201%201%20.707.707l-3%203A.499.499%200%200%201%203.5%2012Zm0-12c.128%200%20.256.049.354.146l3%203a.5.5%200%201%201-.707.708L3.5%201.206.854%203.853a.5.5%200%201%201-.708-.707l3-3A.499.499%200%200%201%203.5%200Z%22%20fill%3D%22%23000%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E')] bg-[length:8px] bg-[right_1.25rem_center] bg-no-repeat",
 };
@@ -24,14 +23,16 @@ const getInputClassName = (error?: boolean, isSelect?: boolean) => {
 };
 
 type FormData = {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
   message: string;
   botcheck: string;
 };
 
-export default function Contact() {
+// Component to handle the part using useSearchParams
+const ContactFormContent = () => {
   const t = useTranslations("component.contactForm");
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -60,9 +61,9 @@ export default function Contact() {
     onSuccess: () => {
       reset();
       setShowError(false);
-      const isFinnish = pathname.startsWith("/fi");
-      const thankYouPath = isFinnish
-        ? "/fi/info/yhteystiedot/kiitos"
+      const isSwedish = pathname.startsWith("/sv");
+      const thankYouPath = isSwedish
+        ? "/sv/info/kontakt/tack"
         : "/en/info/contact/thank-you";
       router.push(thankYouPath);
     },
@@ -99,22 +100,41 @@ export default function Contact() {
           {...register("botcheck")}
         ></input>
 
-        <div className="mb-5">
-          <input
-            type="text"
-            placeholder={t("placeholders.name")}
-            autoComplete="false"
-            className={getInputClassName(!!errors.name)}
-            {...register("name", {
-              required: t("validation.nameRequired"),
-              maxLength: 80,
-            })}
-          />
-          {errors.name && (
-            <div className="mt-1 text-red-600">
-              <small>{errors.name.message?.toString()}</small>
-            </div>
-          )}
+        <div className="mb-5 flex gap-4">
+          <div className="w-1/2">
+            <input
+              type="text"
+              placeholder={t("placeholders.firstName")}
+              autoComplete="given-name"
+              className={getInputClassName(!!errors.firstName)}
+              {...register("firstName", {
+                required: t("validation.firstNameRequired"),
+                maxLength: 80,
+              })}
+            />
+            {errors.firstName && (
+              <div className="mt-1 text-red-600">
+                <small>{errors.firstName.message?.toString()}</small>
+              </div>
+            )}
+          </div>
+          <div className="w-1/2">
+            <input
+              type="text"
+              placeholder={t("placeholders.lastName")}
+              autoComplete="family-name"
+              className={getInputClassName(!!errors.lastName)}
+              {...register("lastName", {
+                required: t("validation.lastNameRequired"),
+                maxLength: 80,
+              })}
+            />
+            {errors.lastName && (
+              <div className="mt-1 text-red-600">
+                <small>{errors.lastName.message?.toString()}</small>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="mb-5">
@@ -211,5 +231,13 @@ export default function Contact() {
         </div>
       )}
     </>
+  );
+};
+
+export default function Contact() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ContactFormContent />
+    </Suspense>
   );
 }

@@ -42,21 +42,23 @@
     },
     "contactForm": {
       "placeholders": {
-        "name": "Namn",
-        "email": "E-postadress",
-        "phone": "Telefonnummer med landskod t.ex. +358",
-        "message": "Meddelande"
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "phone": "Phone with country code e.g. +358",
+        "message": "Message"
       },
       "validation": {
-        "nameRequired": "Ditt namn är obligatoriskt",
-        "emailRequired": "Din e-postadress är obligatorisk",
-        "emailInvalid": "Ange en giltig e-postadress",
-        "phoneRequired": "Ditt telefonnummer är obligatoriskt",
-        "phoneInvalid": "Ange ett giltigt telefonnummer",
-        "messageRequired": "Ett meddelande krävs"
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "emailRequired": "Your email is required",
+        "emailInvalid": "Please enter a valid email",
+        "phoneRequired": "Your phone number is required",
+        "phoneInvalid": "Please enter a valid phone number",
+        "messageRequired": "A message is required"
       },
-      "submitButton": "Skicka meddelande",
-      "errorMessage": "Något gick fel. Försök igen senare."
+      "submitButton": "Send message",
+      "errorMessage": "Something went wrong. Please try later."
     }
   },
   "page": {
@@ -100,6 +102,53 @@
         "heading": "## Sommelieren Hanna skapar oförglömliga vinupplevelser och förenar smakerna från den lappländska vildmarken med sin passion för vin.",
         "paragraph": "Baserad i hjärtat av svenska Lappland, i staden Kiruna, skapar Hanna upplevelser som inte bara lyfter fram det bästa av internationella och lokala viner utan också speglar regionens fantastiska naturskönhet och rika kultur.\n\nOavsett om det handlar om att upptäcka sällsynta årgångar eller visa upp hållbara metoder inom vinframställning, lägger Hannas expertis grunden för verkligt oförglömliga vinupplevelser.",
         "continueReading": "Läs mer"
+      }
+    },
+    "about": {
+      "metadata": {
+        "title": "Om Vinovardag | Vin- och kulinariska upplevelser i Lappland",
+        "description": "Lär dig mer om Vinovardag och sommelier Hannas passion för att skapa unika vin- och kulinariska upplevelser i hjärtat av Lappland.",
+        "keywords": [
+          "vinupplevelser",
+          "sommelier",
+          "Lappland",
+          "kulinariska resor",
+          "vinprovningar"
+        ]
+      },
+      "hero": {
+        "title": "# Enastående vinupplevelser i Arktis",
+        "description": "På Vinovardag tror vi att extraordinära vinupplevelser ska vara tillgängliga överallt - även i Lapplands avlägsna skönhet. Vår mission är att skapa minnesvärda stunder där vinkultur möter den orörda arktiska miljön.",
+        "buttonText": "Ladda ner våra produktkort"
+      },
+      "about": {
+        "title": "## Vår historia",
+        "description": "Grundat med en passion för vin och en djup koppling till den arktiska regionen har Vinovardag vuxit från en dröm till ett erkänt resmål för vinälskare och kulinariska entusiaster. Vi har skapat en plats där traditionell vinkultur harmoniskt blandas med Lapplands unika smaker och upplevelser.\n\nVår resa började med en enkel idé: att föra den fina vinvärlden till nordens hjärta, genom att skapa upplevelser som respekterar både vinkulturens sofistikering och de arktiska traditionernas autenticitet."
+      },
+      "hannaProfile": {
+        "title": "## Möt Hanna",
+        "subtitle": "Grundare & Sommelier",
+        "bio": "Som certifierad sommelier och infödd i Lappland ger Hanna ett unikt perspektiv på vinets värld. Hennes resa började med en nyfikenhet kring hur globala vintraditioner kunde upplevas genom ett nordiskt kulturellt perspektiv.\n\nHannas expertis sträcker sig från klassiska europeiska viner till framväxande regioner, alltid med öga för hållbara och autentiska produktioner. Hon har utbildat sig i prestigefyllda vinregioner över hela Europa och tar med sig denna kunskap tillbaka för att skapa upplevelser som är både lärorika och djupt njutbara.\n\nMed över ett decennium av erfarenhet inom gästfrihet och vinutbildning har Hanna utvecklat en undervisningsstil som gör vin tillgängligt för alla - från nyfikna nybörjare till erfarna kännare.",
+        "quote": "Vin handlar inte bara om vad som finns i glaset – det handlar om att skapa kopplingar mellan människor, platser och ögonblick i tiden.",
+        "philosopyTitle": "## Vår filosofi",
+        "philosophyCards": {
+          "accessible": {
+            "title": "Tillgänglig",
+            "description": "Bryta ner barriärer och pretentioner som ofta förknippas med vin och göra kunskap tillgänglig för alla oavsett erfarenhetsnivå."
+          },
+          "authentic": {
+            "title": "Autentisk",
+            "description": "Hedra både vintraditioner och Lapplands unika kultur, och skapa upplevelser som känns genuina och kopplade till platsen."
+          },
+          "sustainable": {
+            "title": "Hållbar",
+            "description": "Prioritera miljömedvetna producenter och metoder som respekterar naturen och stödjer framtiden för vinframställning."
+          },
+          "experiential": {
+            "title": "Upplevelsebaserad",
+            "description": "Skapa multisensoriska upplevelser som anknyter till vår arktiska omgivning och gör varje vinögonblick minnesvärt och unikt."
+          }
+        }
       }
     }
   }

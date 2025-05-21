@@ -87,7 +87,7 @@ section {
   &:first-of-type {
     padding-top: 48px;
     @include bp.breakpoint(lg) {
-      padding-top: 144px;
+      padding-top: 72px;
     }
   }
   a {

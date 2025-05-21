@@ -24,8 +24,15 @@ export function handleLanguageChange(
 // Helper function to check if a link is active
 export function isActive(itemHref: string, pathname: string) {
   if (itemHref === "#") return false;
-  if (itemHref === "/") return pathname === "/";
-  return pathname.startsWith(itemHref);
+
+  // For locale-specific paths like "/en" and "/sv" (homepage),
+  // only activate on exact match
+  if (itemHref.match(/^\/[a-z]{2}$/)) {
+    return pathname === itemHref;
+  }
+
+  // For all other pages, check for exact match or subpaths
+  return pathname === itemHref || pathname.startsWith(`${itemHref}/`);
 }
 
 // Helper function to get locale data safely

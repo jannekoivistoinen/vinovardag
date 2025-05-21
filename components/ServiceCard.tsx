@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import MarkdownText from "./MarkdownText";
 
-interface ActivityCardProps {
+interface ServiceCardProps {
   title: string;
   imageUrl: StaticImageData;
   altText: string;
@@ -12,12 +12,13 @@ interface ActivityCardProps {
   className?: string;
 }
 
-export function ActivityCard({
+export function ServiceCard({
   title,
   imageUrl,
   altText,
+  description,
   className = "",
-}: ActivityCardProps) {
+}: ServiceCardProps) {
   return (
     <div className={`block overflow-hidden ${className}`}>
       <div className="relative aspect-[2/3]">
@@ -34,6 +35,9 @@ export function ActivityCard({
 
       <div>
         <MarkdownText className="mt-4 mb-8">{title}</MarkdownText>
+        <MarkdownText className="text-slate-700 mb-4 content p-base mr-8 lg:mr-16">
+          {description}
+        </MarkdownText>
       </div>
     </div>
   );
