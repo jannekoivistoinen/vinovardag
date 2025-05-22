@@ -25,11 +25,7 @@ export default function ContactPage() {
             className="mx-auto mt-8 !text-white hover:no-underline"
             asChild
           >
-            <Link
-              href="/tuotekortit_hinnasto_luckyranch.pdf"
-              className="hover:no-underline"
-              target="_blank"
-            >
+            <Link href="#form" className="hover:no-underline" target="_blank">
               {t("hero.buttonText")}
             </Link>
           </Button>
@@ -38,8 +34,22 @@ export default function ContactPage() {
       </section>
 
       <section id="contact" className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
           <div>
+            <MarkdownText className="mb-3 md:mb-6">
+              {t("contact.title")}
+            </MarkdownText>
+            <MarkdownText className="mb-3 md:mb-6 p-base">
+              {t("contact.info")}
+            </MarkdownText>
+            <MarkdownText className="mb-3 md:mb-6 p-base">
+              {t("contact.email")}
+            </MarkdownText>
+          </div>
+          <div>
+            <MarkdownText className="mb-3 md:mb-6">
+              {t("contact.formTitle")}
+            </MarkdownText>
             <ContactForm />
           </div>
         </div>

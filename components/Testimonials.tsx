@@ -7,8 +7,8 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { Slider } from "./Slider";
 
 interface TestimonialItem {
-  title: string;
-  text: string;
+  name: string;
+  quote: string;
 }
 
 export default function Testimonials() {
@@ -31,9 +31,9 @@ export default function Testimonials() {
           Array.isArray(testimonialItems) &&
           testimonialItems.map((item) => (
             <TestimonialCard
-              key={item.title}
-              title={item.title}
-              description={item.text}
+              key={item.name}
+              name={item.name}
+              quote={item.quote}
               className="bg-[#EDEDDE]"
             />
           ))}

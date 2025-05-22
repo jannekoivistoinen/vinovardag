@@ -28,7 +28,7 @@
         },
         {
           "question": "Var ligger ni?",
-          "answer": "Vi är belägna i Pyhätunturi, finska Lappland, cirka 90 minuter från Rovaniemi flygplats. Vår unika miljö erbjuder den perfekta bakgrunden för vinupplevelser omgiven av Lapplands naturskönhet."
+          "answer": "Vi finns i Kiruna, Sveriges nordligaste stad, i hjärtat av svenska Lappland. Beläget 145 km norr om polcirkeln erbjuder Kiruna en magisk miljö med norrsken på vintern och midnattssol på sommaren. Vår plats utgör den perfekta bakgrunden för enastående vinupplevelser, omgiven av Lapplands orörda vildmark och hänförande natur."
         },
         {
           "question": "Erbjuder ni vinprovningar?",
@@ -42,23 +42,63 @@
     },
     "contactForm": {
       "placeholders": {
-        "firstName": "First name",
-        "lastName": "Last name",
-        "email": "Email",
-        "phone": "Phone with country code e.g. +358",
-        "message": "Message"
+        "firstName": "Förnamn",
+        "lastName": "Efternamn",
+        "email": "E-post",
+        "phone": "Telefon med landskod, t.ex. +46",
+        "message": "Meddelande"
       },
       "validation": {
-        "firstNameRequired": "First name is required",
-        "lastNameRequired": "Last name is required",
-        "emailRequired": "Your email is required",
-        "emailInvalid": "Please enter a valid email",
-        "phoneRequired": "Your phone number is required",
-        "phoneInvalid": "Please enter a valid phone number",
-        "messageRequired": "A message is required"
+        "firstNameRequired": "Förnamn är obligatoriskt",
+        "lastNameRequired": "Efternamn är obligatoriskt",
+        "emailRequired": "Din e-postadress är obligatorisk",
+        "emailInvalid": "Ange en giltig e-postadress",
+        "phoneRequired": "Ditt telefonnummer är obligatoriskt",
+        "phoneInvalid": "Ange ett giltigt telefonnummer",
+        "messageRequired": "Ett meddelande är obligatoriskt"
       },
-      "submitButton": "Send message",
-      "errorMessage": "Something went wrong. Please try later."
+      "submitButton": "Skicka meddelande",
+      "errorMessage": "Något gick fel. Försök igen senare."
+    },
+    "aboutHanna": {
+      "quote": "Hannas expertis inom vin är oöverträffad. Hon kombinerar utan ansträngning djup kunskap med en varm och tillgänglig stil, vilket skapar oförglömliga provningsupplevelser.",
+      "quoteAttribution": "**Jane Doe** – Titel, Företag AB",
+      "heading": "## Sommelieren Hanna skapar oförglömliga vinupplevelser och förenar smakerna från den lappländska vildmarken med sin passion för vin.",
+      "paragraph": "Baserad i hjärtat av svenska Lappland, i staden Kiruna, skapar Hanna upplevelser som inte bara lyfter fram det bästa av internationella och lokala viner utan också speglar regionens fantastiska naturskönhet och rika kultur.\n\nOavsett om det handlar om att upptäcka sällsynta årgångar eller visa upp hållbara metoder inom vinframställning, lägger Hannas expertis grunden för verkligt oförglömliga vinupplevelser.",
+      "continueReading": "Läs mer"
+    },
+    "values": {
+      "sectionTitle": "## Värderingar & Filosofi",
+      "items": [
+        {
+          "title": "### Hållbarhet i Fokus",
+          "text": "Med rötterna i svenska Lapplands hänförande landskap är hållbarhet vägledande för våra val. Vi samarbetar med vingårdar som delar vår respekt för miljön och strävar efter att leverera genuina vinupplevelser som hedrar naturens balans och renheten i vårt arktiska hem."
+        },
+        {
+          "title": "### Etiskt Inköpt, Exceptionellt Utformat",
+          "text": "Vi tror att ett stort vin berättar en historia om integritet. Därför väljer vi noggrant ut viner från producenter som är engagerade i etiska metoder, vilket säkerställer att varje flaska återspeglar kvalitet, ansvar och en djup respekt för hantverket och människorna bakom det."
+        },
+        {
+          "title": "### Främja Gemenskap & Samhörighet",
+          "text": "Vinovardag är dedikerade till att berika vår gemenskap genom att skapa delade upplevelser. Vi strävar efter att förena människor genom vinets glädje, fira den lokala kulturen och främja en välkomnande plats för upptäckt, lärande och genuin mänsklig samhörighet i hjärtat av svenska Lappland."
+        }
+      ]
+    },
+    "testimonials": {
+      "items": [
+        {
+          "name": "**Jane Doe** – Titel, Företag AB",
+          "quote": "Hannas vinkunskap är exceptionell. Hon valde ut det perfekta sortimentet för vårt bröllop och våra gäster var imponerade. Rekommenderar varmt hennes tjänster!"
+        },
+        {
+          "name": "**Jane Doe** – Titel, Företag AB",
+          "quote": "Hannas vinkunskap är exceptionell. Hon valde ut det perfekta sortimentet för vårt bröllop och våra gäster var imponerade. Rekommenderar varmt hennes tjänster!"
+        },
+        {
+          "name": "**Jane Doe** – Titel, Företag AB",
+          "quote": "Hannas vinkunskap är exceptionell. Hon valde ut det perfekta sortimentet för vårt bröllop och våra gäster var imponerade. Rekommenderar varmt hennes tjänster!"
+        }
+      ]
     }
   },
   "page": {
@@ -119,7 +159,7 @@
       "hero": {
         "title": "# Enastående vinupplevelser i Arktis",
         "description": "På Vinovardag tror vi att extraordinära vinupplevelser ska vara tillgängliga överallt - även i Lapplands avlägsna skönhet. Vår mission är att skapa minnesvärda stunder där vinkultur möter den orörda arktiska miljön.",
-        "buttonText": "Ladda ner våra produktkort"
+        "buttonText": "Kontakta oss"
       },
       "about": {
         "title": "## Vår historia",
@@ -149,6 +189,76 @@
             "description": "Skapa multisensoriska upplevelser som anknyter till vår arktiska omgivning och gör varje vinögonblick minnesvärt och unikt."
           }
         }
+      }
+    },
+    "contact": {
+      "metadata": {
+        "title": "Kontakta Vinovardag | Boka din vinupplevelse i svenska Lappland",
+        "description": "Kontakta Vinovardag för att boka din personliga vinprovning, företagsevenemang eller kulinariska upplevelse i svenska Lapplands orörda natur.",
+        "keywords": [
+          "boka vinprovning",
+          "sommeliertjänster",
+          "vinupplevelser svenska Lappland",
+          "företagsevenemang",
+          "kontakta sommelier",
+          "vinturism Lappland",
+          "Kiruna"
+        ]
+      },
+      "hero": {
+        "title": "# Kontakta oss",
+        "description": "Tack för ditt intresse för mina vinprovningstjänster. Oavsett om du planerar ett speciellt evenemang, söker vinkunskap eller letar efter personliga rekommendationer, finns jag här för att förhöja din vinupplevelse.",
+        "buttonText": "Skicka ett meddelande"
+      },
+      "contact": {
+        "title": "### Kontaktinformation",
+        "info": "**Vinovardag AB**\n\nGatuadress\n\nKiruna 981 XX\n\nSverige",
+        "formTitle": "### Skicka ett meddelande",
+        "email": "e. hanna@vinovardag.se\n\nt. +46 123 456 789"
+      }
+    },
+    "services": {
+      "metadata": {
+        "title": "Tjänster | Vinprovningar & Kulinariska Äventyr med Vinovardag",
+        "description": "Utforska Vinovardags professionella sommeliertjänster, inklusive vinprovningar, kulinariska utomhusupplevelser och skräddarsydda vinresor i svenska Lappland.",
+        "keywords": [
+          "vinprovningar",
+          "sommeliertjänster",
+          "utomhusmiddagar",
+          "kulinariska äventyr",
+          "upplevelser svenska Lappland",
+          "företagsvinprovningar",
+          "vinutbildning",
+          "arktisk mat"
+        ]
+      },
+      "hero": {
+        "title": "# Upptäck vinkonsten med en professionell sommelier",
+        "description": "Med över ett decenniums erfarenhet från världens främsta vinregioner erbjuder jag personliga tjänster som tar vingårdsupplevelsen direkt till dig. Oavsett om du anordnar en intim sammankomst eller ett stort företagsevenemang, säkerställer min expertis att ditt vinval perfekt kompletterar tillfället.",
+        "buttonText": "Kontakta oss"
+      },
+      "services": {
+        "title": "## Vinprovningar och kulinariska äventyr",
+        "service": [
+          {
+            "title": "### Exklusiva vinprovningar",
+            "description": "Upplev konsten att prova vin med en professionell sommelier. Våra vinprovningar är utformade för att vara både lärorika och njutbara, och passar perfekt för grupper i alla storlekar.\n\n- Anpassat vinval\n- Professionella provningsnoteringar\n- Utbildning om vinregioner\n- Tillgängligt för grupper om 2-20 personer",
+            "imageKey": "vinovardagWinetastings",
+            "altText": "En snowboardåkare som åker pudersnö i Ylläs-Pallas nationalpark"
+          },
+          {
+            "title": "### Kulinariska upplevelser i naturen",
+            "description": "Kombinera naturens skönhet med exceptionella viner. Dessa utomhusupplevelser parar natursköna platser med perfekt matchade viner och säsongsbetonad mat.\n\n- Vingårdspicknickar\n- Trädgårdsprovningar\n- Säsongsanpassade matkombinationer",
+            "imageKey": "vinovardagOutdoor",
+            "altText": "En snowboardåkare som åker pudersnö i Ylläs-Pallas nationalpark"
+          },
+          {
+            "title": "### Skräddarsydda Kulinariska Resor",
+            "description": "En komplett sensorisk upplevelse som parar fina viner med gourmetmat. Samarbeta med mig för att skapa en minnesvärd resa genom kompletterande smaker.\n\n- Flerarätters vinparningar\n- Kocksamarbete\n- Anpassad menyutveckling\n- Privata middagsupplevelser",
+            "imageKey": "vinovardagCulinaryJourneys",
+            "altText": "En snowboardåkare som åker pudersnö i Ylläs-Pallas nationalpark"
+          }
+        ]
       }
     }
   }

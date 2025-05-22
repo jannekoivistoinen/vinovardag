@@ -2,7 +2,8 @@
 
 import { FAQ } from "@/components/FAQ";
 import MarkdownText from "@/components/MarkdownText";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Values from "@/components/Values";
@@ -10,6 +11,7 @@ import { AboutHannaSection } from "@/components/AboutHannaSection";
 import { Slider } from "../Slider";
 import { images, ImageKey } from "@/app/assets/images";
 import { ServiceDetailsCard } from "@/components/ServiceDetailsCard";
+import { SITE_CONFIG } from "@/lib/constants";
 
 interface Service {
   title: string;
@@ -22,6 +24,7 @@ interface Service {
 
 export default function ServicesPage() {
   const t = useTranslations("page.services");
+  const locale = useLocale();
   const services = t.raw("services.service") as Service[];
 
   return (
@@ -40,7 +43,11 @@ export default function ServicesPage() {
             asChild
           >
             <Link
-              href="/tuotekortit_hinnasto_luckyranch.pdf"
+              href={`/${locale}/${
+                SITE_CONFIG.i18n.routes.contact[
+                  locale as keyof typeof SITE_CONFIG.i18n.routes.contact
+                ]
+              }`}
               className="hover:no-underline"
               target="_blank"
             >

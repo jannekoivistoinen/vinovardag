@@ -37,11 +37,11 @@ export const SITE_CONFIG = {
     routes: {
       services: {
         en: "services",
-        sv: "services-sv",
+        sv: "tjanster",
       },
       about: {
         en: "about",
-        sv: "about-sv",
+        sv: "om-oss",
       },
       contact: {
         en: "contact",
@@ -49,7 +49,7 @@ export const SITE_CONFIG = {
       },
       terms: {
         en: "terms",
-        sv: "terms-sv",
+        sv: "villkor",
       },
     },
     // Language switcher visibility settings

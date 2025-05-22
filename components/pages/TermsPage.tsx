@@ -24,11 +24,7 @@ export default function TermsPage() {
             className="mx-auto mt-8 !text-white hover:no-underline"
             asChild
           >
-            <Link
-              href="/tuotekortit_hinnasto_luckyranch.pdf"
-              className="hover:no-underline"
-              target="_blank"
-            >
+            <Link href="#" className="hover:no-underline" target="_blank">
               {t("hero.buttonText")}
             </Link>
           </Button>

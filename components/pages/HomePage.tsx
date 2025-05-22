@@ -6,11 +6,13 @@ import { Slider } from "@/components/Slider";
 import Image from "next/image";
 import { images, ImageKey } from "@/app/assets/images";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import MarkdownText from "../MarkdownText";
 import { FAQ } from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/ServiceCard";
 import { AboutHannaSection } from "@/components/AboutHannaSection";
+import { SITE_CONFIG } from "@/lib/constants";
 
 interface Service {
   title: string;
@@ -37,7 +39,18 @@ export default function HomePage() {
         <div className="max-w-[800px]">
           <MarkdownText>{t("hero.title")}</MarkdownText>
           <div className="mt-8 mb-8 md:mb-24 flex gap-4">
-            <Button size="lg">Get in touch</Button>
+            <Button size="lg" asChild>
+              <Link
+                className="!text-white"
+                href={`/${locale}/${
+                  SITE_CONFIG.i18n.routes.contact[
+                    locale as keyof typeof SITE_CONFIG.i18n.routes.contact
+                  ]
+                }`}
+              >
+                Get in touch
+              </Link>
+            </Button>
             <Button size="lg" variant="outline">
               Learn more
             </Button>

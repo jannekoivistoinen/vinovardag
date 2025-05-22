@@ -6,9 +6,10 @@ import vinovardagWinetastings from "./vinovardag-winetastings.jpg";
 import hannaKarkea from "./vinovardag-hanna-karkea.jpg";
 import peopleImage from "./vinovardag-people.jpg";
 import terminalImage from "./vinovardag-terminal.jpg";
+import testimonialAvatar from "./testimonialAvatar.jpg";
 
 // FontAwesome Icons
-import { faSkiingNordic } from "@awesome.me/kit-b2cb81c624/icons/duotone/solid";
+import { faArrowRightLong } from "@awesome.me/kit-b2cb81c624/icons/duotone/solid";
 import { faInstagram } from "@awesome.me/kit-b2cb81c624/icons/classic/brands";
 
 export const images = {
@@ -21,10 +22,11 @@ export const images = {
   hannaKarkea,
   peopleImage,
   terminalImage,
+  testimonialAvatar,
 } as const;
 
 export const navigationIcons = {
-  nordicSkiing: faSkiingNordic,
+  nordicSkiing: faArrowRightLong,
   instagram: faInstagram,
 } as const;
 

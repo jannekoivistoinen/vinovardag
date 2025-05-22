@@ -45,6 +45,12 @@
       }
     }
 
+    ul {
+      list-style-type: disc;
+      list-style-position: inside;
+      margin-left: 2rem;
+    }
+
     p + ul {
       li:last-child {
         margin-bottom: 2rem;
@@ -93,7 +99,7 @@ section {
   a {
     color: #835f3f !important;
     &:hover {
-      text-decoration: underline;
+      color: #000;
     }
   }
 }

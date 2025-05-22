@@ -21,12 +21,17 @@ export function AboutHannaSection() {
         </div>
         <div className="flex flex-col justify-between h-full md:pr-16">
           <div className="relative mb-16">
-            <blockquote className="italic text-gray-700 p-base">
+            <Image
+              src={images.testimonialAvatar}
+              alt="Testimonial Avatar"
+              className="w-12 h-12 rounded-full mt-2 md:mt-0 object-cover mb-4 md:mb-6"
+            />
+            <MarkdownText className="italic text-gray-700 p-base">
               {t("quote")}
-            </blockquote>
-            <p className="mt-2 text-sm text-gray-900">
+            </MarkdownText>
+            <MarkdownText className="mt-2 text-sm text-gray-900">
               {t("quoteAttribution")}
-            </p>
+            </MarkdownText>
           </div>
 
           <div>

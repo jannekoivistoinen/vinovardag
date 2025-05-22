@@ -1,20 +1,20 @@
 import Image, { StaticImageData } from "next/image";
 import MarkdownText from "./MarkdownText";
-
+import { images } from "@/app/assets/images";
 interface TestimonialCardProps {
-  title: string;
+  name: string;
   imageUrl?: StaticImageData;
   altText?: string;
   href?: string;
-  description?: string;
+  quote?: string;
   className?: string;
 }
 
 export function TestimonialCard({
-  title,
+  name,
   imageUrl,
   altText,
-  description,
+  quote,
   className = "",
 }: TestimonialCardProps) {
   return (
@@ -37,15 +37,20 @@ export function TestimonialCard({
 
       <div className="flex flex-col justify-between h-full">
         <div>
-          <MarkdownText className="text-2xl font-medium mb-48">
-            {title}
-          </MarkdownText>
+          {quote && (
+            <MarkdownText className="italic text-base mt-auto p-base text-brand-brown mb-40">
+              {quote}
+            </MarkdownText>
+          )}
         </div>
-        {description && (
-          <MarkdownText className="text-base mt-auto p-base">
-            {description}
-          </MarkdownText>
-        )}
+        <div className="flex items-center">
+          <Image
+            src={images.testimonialAvatar}
+            alt="Testimonial Avatar"
+            className="w-12 h-12 rounded-full object-cover"
+          />
+          <MarkdownText className="ml-4">{name}</MarkdownText>
+        </div>
       </div>
     </div>
   );

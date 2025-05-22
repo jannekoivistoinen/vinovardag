@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import MarkdownText from "./MarkdownText";
-
+import { Button } from "./ui/button";
 interface ServiceDetailsCardProps {
   title: string;
   imageUrl: StaticImageData;
@@ -34,11 +34,14 @@ export function ServiceDetailsCard({
       </div>
 
       <div>
-        <MarkdownText className="mt-4 mb-2">{title}</MarkdownText>
+        <MarkdownText className="mt-8 mb-4">{title}</MarkdownText>
         <MarkdownText className="text-slate-700 mb-4 content p-base mr-8 lg:mr-16">
           {description}
         </MarkdownText>
       </div>
+      <Button size="lg" className="mt-4">
+        Inquire
+      </Button>
     </div>
   );
 }
