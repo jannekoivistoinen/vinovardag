@@ -2,7 +2,7 @@
   "component": {
     "terminalCTA": {
       "title": "## Discover the art of wine with Vinovardag",
-      "description": "Ready to explore the world of wine like never before? With Vinovardag, each sip becomes a story and every experience is crafted to delight. Book your journey into Swedish Lapland's unique wine culture today!",
+      "description": "Ready to explore the world of wine like never before? With Vinovardag, each sip becomes a story and every experience is crafted to delight. Book your journey into the unique wine culture of the Nordics today!",
       "label": "Get in touch"
     },
     "footer": {
@@ -12,18 +12,18 @@
     },
     "faq": {
       "title": "## Frequently asked questions",
-      "description": "Discover answers to your questions about Vinovardag's unique wine experiences and services.\n\nQuestions? Get in touch at hanna@vinovardag.se",
+      "description": "Discover answers to your questions about Vinovardag's unique wine experiences and services.\n\nQuestions? Get in touch at vinovardag@gmail.com",
       "items": [
         {
           "question": "What services do you offer?",
-          "answer": "We provide a range of services including sommelier consultations, wine tastings, and culinary experiences. Our offerings are tailored to meet the needs of local businesses and international tourists. Each experience is designed to highlight the best of Swedish Lapland's wine culture."
+          "answer": "We provide a range of services including sommelier consultations, wine tastings, and culinary experiences. Our offerings are tailored to meet the needs of local businesses and international tourists. Each experience is designed to highlight the best of Nordic wine culture."
         },
         {
           "question": "How can I book?",
-          "answer": "You can book our services directly through our website using the booking form, or by contacting us via email or phone. For customized experiences, we recommend reaching out directly so we can tailor the experience to your preferences."
+          "answer": "You can book our services directly through our website using the booking link, or by contacting us via email. For customized experiences, we recommend reaching out directly so we can tailor the experience to your preferences."
         },
         {
-          "question": "Are your experiences customizable?",
+          "question": "MISSING Are your experiences customizable?",
           "answer": "Yes, most of our experiences can be customized to meet your specific preferences and needs. Whether you're looking for a private wine tasting, a corporate event, or a specialized culinary experience, we can work with you to create the perfect offering."
         },
         {
@@ -32,17 +32,17 @@
         },
         {
           "question": "Do you offer tastings?",
-          "answer": "Yes, we offer a variety of wine tastings featuring carefully selected wines from around the world, with special attention to unique and boutique wineries. Our tastings can be paired with local delicacies for a complete culinary experience."
+          "answer": "Yes, we offer a variety of wine tastings featuring carefully selected wines from around the world, with special attention to boutique wineries and Nordic wines. Our tastings can be paired with local delicacies for a complete culinary experience."
         },
         {
           "question": "I don't drink alcohol, can I still participate?",
-          "answer": "Absolutely! We offer non-alcoholic alternatives for all our tastings and experiences. Our goal is to create inclusive experiences where everyone can enjoy the culinary journey, regardless of their beverage preferences."
+          "answer": "Absolutely! We offer non-alcoholic alternatives for all our tastings and experiences. Our goal is to create inclusive experiences where everyone can enjoy the culinary journey, regardless of their beverage preferences. Please mention your interest in these pairings when you first inquire, so we can tailor the experience to your journey through Lapland."
         }
       ]
     },
     "aboutHanna": {
-      "quote": "Hanna's expertise in wine is unmatched. She effortlessly combines deep knowledge with a warm, approachable style, creating unforgettable tasting experiences.",
-      "quoteAttribution": "**Jane Doe** – Title, Company AB",
+      "quote": "MISSING Hanna's expertise in wine is unmatched. She effortlessly combines deep knowledge with a warm, approachable style, creating unforgettable tasting experiences.",
+      "quoteAttribution": "MISSING **Jane Doe** – Title, Company AB",
       "heading": "## Sommelier Hanna crafts unforgettable wine experiences, blending the flavors of the Lappish wilderness with her passion for wine.",
       "paragraph": "Based in the heart of Swedish Lapland, in the city of Kiruna, Hanna creates experiences that not only highlight the best of international and local wines but also reflect the stunning natural beauty and rich culture of the region.\n\nWhether it's uncovering rare vintages or showcasing sustainable winemaking practices, Hanna's expertise sets the stage for truly unforgettable wine experiences.",
       "continueReading": "Continue reading"
@@ -53,7 +53,7 @@
         "lastName": "Last name",
         "email": "Email",
         "phone": "Phone with country code e.g. +358",
-        "message": "Message"
+        "message": "Please let me know what kind of service or activity you are looking for, the approx date and number of people and I will get back to you as soon as possible"
       },
       "validation": {
         "firstNameRequired": "First name is required",
@@ -87,16 +87,16 @@
     "testimonials": {
       "items": [
         {
-          "name": "**Jane Doe** – Title, Company AB",
-          "quote": "Hanna's knowledge of wine is exceptional. She curated the perfect selection for our wedding and our guests were impressed. Highly recommend her services!"
+          "name": "MISSING **Jane Doe** – Title, Company AB",
+          "quote": "MISSING Hanna's knowledge of wine is exceptional. She curated the perfect selection for our wedding and our guests were impressed. Highly recommend her services!"
         },
         {
-          "name": "**Jane Doe** – Title, Company AB",
-          "quote": "Hanna's knowledge of wine is exceptional. She curated the perfect selection for our wedding and our guests were impressed. Highly recommend her services!"
+          "name": "MISSING **Jane Doe** – Title, Company AB",
+          "quote": "MISSING Hanna's knowledge of wine is exceptional. She curated the perfect selection for our wedding and our guests were impressed. Highly recommend her services!"
         },
         {
-          "name": "**Jane Doe** – Title, Company AB",
-          "quote": "Hanna's knowledge of wine is exceptional. She curated the perfect selection for our wedding and our guests were impressed. Highly recommend her services!"
+          "name": "MISSING **Jane Doe** – Title, Company AB",
+          "quote": "MISSING Hanna's knowledge of wine is exceptional. She curated the perfect selection for our wedding and our guests were impressed. Highly recommend her services!"
         }
       ]
     }
@@ -118,7 +118,7 @@
         ]
       },
       "hero": {
-        "title": "# Whether you're a local business or an international traveler, Vinovardag's personalized services are designed to elevate your culinary journey in Swedish Lapland."
+        "title": "# MISSING Whether you're a local business or an international traveler, Vinovardag's personalized services are designed to elevate your culinary journey in Swedish Lapland."
       },
       "services": {
         "title": "## Wine tastings and culinary adventures",
@@ -159,19 +159,19 @@
         ]
       },
       "hero": {
-        "title": "# Bringing exceptional wine experiences to the Swedish Arctic",
-        "description": "At Vinovardag, we believe that extraordinary wine experiences should be accessible everywhere - even in the remote beauty of Swedish Lapland. Our mission is to create memorable moments where wine culture meets the pristine arctic environment.",
+        "title": "# Heartwarming, soulful, local food & wine experiences in the Swedish Arctic.",
+        "description": "We believe that heartfelt wine and food experiences serve as a bridge to the land itself, offering a beautiful way to gain a deeper vision of local life. Our mission is to create gentle, immersive moments where a love for fine flavor harmonizes with the pristine Arctic environment, providing a warm, sensory gateway into the nature and heritage of the North.",
         "buttonText": "Get in touch"
       },
       "about": {
-        "title": "## Vinovardag's Story",
+        "title": "## MISSING Vinovardag's Story",
         "description": "Founded with a passion for wine and a deep connection to the Arctic region, Vinovardag has grown from a dream to a recognized destination for wine lovers and culinary enthusiasts. We've created a space where traditional wine culture harmoniously blends with the unique flavors and experiences of Swedish Lapland.\n\nOur journey started with a simple idea: to bring the world of fine wines to the heart of the north, creating experiences that respect both the sophistication of wine culture and the authenticity of Arctic traditions.\n\nThe serene landscapes of Swedish Lapland are not just a backdrop for our experiences; they are an integral part of them. We believe that the purity of the Arctic air and the tranquility of its vast wilderness enhance the appreciation of fine wines, creating a sensory journey unlike any other. Our events often incorporate elements of the local environment, from foraged ingredients to outdoor tastings under the Northern Lights or midnight sun.\n\nAt Vinovardag, every detail is thoughtfully curated, from the selection of wines to the ambiance of each gathering. We are dedicated to continuous learning and exploration within the world of wine, ensuring that we always bring fresh perspectives and exceptional quality to our guests. Our aim is not just to serve wine, but to share stories, create connections, and leave a lasting impression of warmth and discovery."
       },
       "hannaProfile": {
         "title": "## Meet Hanna",
         "subtitle": "Founder & Sommelier",
-        "bio": "As a certified sommelier and native of Swedish Lapland, Hanna brings a unique perspective to the world of wine. Her journey began with a curiosity about how global wine traditions could be experienced through the lens of Nordic culture.\n\nHanna's expertise spans from classic European wines to emerging regions, always with an eye for sustainable and authentic productions. She has trained in prestigious wine regions across Europe and brings this knowledge back to create experiences that are both educational and deeply enjoyable.\n\nWith over a decade of experience in hospitality and wine education, Hanna has developed a teaching style that makes wine accessible to everyone - from curious beginners to seasoned connoisseurs.",
-        "quote": "Wine is not just about what's in the glass – it's about creating connections between people, places, and moments in time."
+        "bio": "As a certified sommelier originally from Finnish Lapland and now rooted in Swedish Lapland, Hanna brings a truly pan-Arctic perspective to the world of wine. Her journey is deeply personal: born and raised in Finnish Lapland to a reindeer herder father and a restauranteur mother, she grew up at the intersection of wild nature and arctic hospitality. This unique upbringing sparked her curiosity about how global traditions could be reimagined through the lens of Nordic culture.\n\nHanna's expertise is built on a foundation of excellence; she trained at the Scandinavian Wine Academy in Stockholm, where she graduated Best in Class, before going on to achieve the prestigious WSET Level 3 certification. Her passion has taken her across the globe to visit countless wineries and regions, a journey she continues today to ensure her knowledge remains fresh and inspired.\n\nMost of her tastings are held in the warm, intimate setting of her private home in old Kiruna. Built in 1914, this historic house provides a soulful backdrop that echoes the heritage of the North. It is a true family home, shared with her husband, son and two lively terriers, adding a sense of genuine warmth and life to every visit.\n\nWith over three decades of experience in hospitality and wine, Hanna's true passion is hosting unpretentious, easy-going, and comfortable gatherings. She creates a relaxed space where guests from all over the world can connect, ensuring every meeting feels like a warm conversation among friends. Whether you are a curious beginner or a seasoned connoisseur, she welcomes you into her home for a journey that is both educational and deeply heartfelt.",
+        "quote": "MISSING Wine is not just about what's in the glass – it's about creating connections between people, places, and moments in time."
       }
     },
     "contact": {
@@ -190,14 +190,14 @@
       },
       "hero": {
         "title": "# Get in touch",
-        "description": "Thank you for your interest in my wine tasting services. Whether you're planning a special event, seeking wine education, or looking for personalized recommendations, I'm here to elevate your wine experience.",
+        "description": "Thank you so much for your interest. Whether you are planning a special celebration, looking for the warmth of a home-hosted activity, or in need of personalized recommendations, I am here to help elevate your journey.\n\nI look forward to welcoming you and sharing the heartfelt flavors of Lapland together.",
         "buttonText": "Send a message"
       },
       "contact": {
         "title": "### Contact information",
-        "info": "**Vinovardag AB**\n\nStreet address\n\nKiruna 00100\n\nSweden",
+        "info": "Hjalmar Lundbohmsvägen 74A\n\n98139 Kiruna\n\nSweden",
         "formTitle": "### Send a message",
-        "email": "e. hanna@vinovardag.se\n\np. +46 123 4567"
+        "email": "e. vinovardag@gmail.com"
       }
     },
     "services": {
@@ -217,29 +217,53 @@
       },
       "hero": {
         "title": "# Discover the art of wine with a professional sommelier",
-        "description": "With over a decade of experience in the world's finest wine regions, I offer personalized services that bring the vineyard experience to you. Whether you're hosting an intimate gathering or a large corporate event, my expertise will ensure your wine selection perfectly complements your occasion.",
+        "description": "MISSING With over a decade of experience in the world's finest wine regions, I offer personalized services that bring the vineyard experience to you. Whether you're hosting an intimate gathering or a large corporate event, my expertise will ensure your wine selection perfectly complements your occasion.",
         "buttonText": "Get in touch"
       },
       "services": {
         "title": "## Wine tastings and culinary adventures",
         "service": [
           {
-            "title": "### Exquisite wine tastings",
+            "title": "### MISSING Exquisite wine tastings",
             "description": "Experience the art of wine tasting with a professional sommelier. Our wine tastings are designed to be educational and enjoyable, and are perfect for groups of any size.\n\n- Customized wine selection\n- Professional tasting notes\n- Wine region education\n- Available for groups of 2-20",
             "imageKey": "vinovardagWinetastings",
             "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
           },
           {
             "title": "### Outdoor culinary experiences",
-            "description": "Combine the beauty of nature with exceptional wines. These outdoor experiences pair scenic locations with perfectly matched wines and seasonal cuisine.\n\n- Vineyard picnics\n- Garden tastings\n- Seasonal food pairings",
+            "description": "Combine the beauty of nature with exceptional wines. These outdoor experiences pair scenic locations with perfectly matched wines and seasonal cuisine.\n\n- Forest picnics\n- Fireside tastings\n- Seasonal food pairings",
             "imageKey": "vinovardagOutdoor",
             "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
           },
           {
-            "title": "### Customized Culinary Journeys",
-            "description": "A complete sensory experience that pairs fine wines with gourmet cuisine. Work with me to create a memorable journey through complementary flavors.\n\n- Multi-course wine pairings\n- Chef collaboration\n- Custom menu development\n- Private dining experiences",
+            "title": "### Customised culinary journeys",
+            "description": "A complete sensory experience that pairs fine wines with gourmet cuisine. Work with me to create a memorable journey through complementary flavours.\n\n- Multi-course wine pairings\n- Chef collaboration\n- Custom menu development\n- Private dining experiences, for example Swedish craft party, Swedish surströmming tasting, afternoon tea with Swedish sandwich cake…",
             "imageKey": "vinovardagCulinaryJourneys",
             "altText": "One snowboarding riding powder in Ylläs-Pallas National Park"
+          },
+          {
+            "title": "### Arctic Home Invitations: Lunch in the Sommelier's Arctic Kitchen",
+            "description": "Experience the true heart of Swedish Lapland through the eyes of a local family. We invite you into our private home in Kiruna's historic Old Town, a soulful residence built in 1914 that captures the spirit of a century gone by.\n\nThere is a special kind of magic in a meal cooked from the heart and shared at a family table. You are being welcomed into the very center of our daily life. Our cooking is honest and comforting, inspired by the recipes and wild ingredients that have sustained families in the North for generations. You might find a pot of slow-simmered reindeer stew, fresh fish from local waters, or hand-picked forest mushrooms on the menu. As a Sommelier, I take great joy in choosing the perfect drink to complement these home-cooked flavors, but the focus remains on the warmth of the meal and the easy flow of conversation.\n\n**Shared activity**\n**Time:** 11:00–13:00\n**Duration:** Approx 2 hrs\n**Price:** 1 195 SEK/person\n**Min 2 pax – max 6 pax**\n\n*Private sessions available. Please note a minimum booking fee for 6 people applies.*\n\n**Essential information:** This is a home-hosted activity in Kiruna Old Town. The atmosphere is a lively and authentic family environment featuring a unique mix of 1914 charm and modern design. Please note that this experience includes the company of our two friendly, sometimes loud, family dogs.",
+            "imageKey": "vinovardagCulinaryJourneys",
+            "altText": "Lunch in the Sommelier's Arctic Kitchen in Kiruna"
+          },
+          {
+            "title": "### Nordic Wine Tasting: A Sommelier's Selection",
+            "description": "Discover the surprising world of cool-climate viticulture and Nordic flavors. This intimate session strips away the pretense of formal tasting and replaces it with genuine conversation and expert insight. You will enjoy a curated journey through high-quality wines with a focus on how they harmonize with the subarctic environment. Each glass is accompanied by hand-picked light snacks inspired by the local larder. The vibe is warm and relaxed, a chance to learn something new about the local lifestyle and while exploring award winning nordic wines. Alcohol free alternatives available. Possible to arrange outdoors in the nature.\n\n**Private activity on request**\n**Duration:** Approx 1.5 hrs\n**Price:** 2 200 SEK/person\n**Min 2 pax – max 8 pax**\n\n**Essential information:** This is a home-hosted activity in Kiruna Old Town. The atmosphere is a lively and authentic family environment featuring a unique mix of 1914 charm and modern design. Please note that this experience includes the company of our two friendly, sometimes loud, family dogs.",
+            "imageKey": "vinovardagWinetastings",
+            "altText": "Nordic wine tasting at Vinovardag in Kiruna"
+          },
+          {
+            "title": "### Heartfelt Arctic Dining",
+            "description": "Escape the traditional restaurant setting for a seat at our private family table. More than just a meal, this is an invitation into the heart of Arctic living. Our cooking is honest and seasonal, featuring vegetarian creations sourced from the forest or our backyard alongside traditional staples like rich reindeer stew or fresh local catch. Every plate serves as a narrative of the North. As a Sommelier and your host, I'll handle the pairings to elevate the home-cooked flavors, leaving you free to enjoy the warmth of a real household and great conversation. Alcohol free alternatives available.\n\n**Private activity on request**\n**Duration:** Approx 2.5 hrs\n**Price:** 2 500 SEK/person\n**Min 2 pax – max 6 pax**\n\n**Essential information:** This is a home-hosted activity in Kiruna Old Town. The atmosphere is a lively and authentic family environment featuring a unique mix of 1914 charm and modern design. Please note that this experience includes the company of our two friendly, sometimes loud, family dogs.",
+            "imageKey": "vinovardagOutdoor",
+            "altText": "Heartfelt Arctic Dining at Vinovardag in Kiruna"
+          },
+          {
+            "title": "### Authentic Swedish Fika: Coffee and Conversation",
+            "description": "Step in from the Arctic chill for a tradition that defines Swedish culture. Fika is more than a coffee break; it is a moment to slow down and connect. Enjoy a spread of home-baked delicacies ranging from classic cinnamon buns to cakes featuring berries foraged from the surrounding forests. We serve high-quality coffee or tea in the heart of a living and breathing family home where you can learn about life 145 kilometres north of the Arctic Circle. We will share the history of a town on the move and the quirks of living in the far north.\n\n**Private activity on request**\n**Duration:** Approx 1.5 hrs\n**Price:** 1 500 SEK/person\n**Min 2 pax – max 8 pax**\n\n**Essential information:** This is a home-hosted activity in Kiruna Old Town. The atmosphere is a lively and authentic family environment featuring a unique mix of 1914 charm and modern design. Please note that this experience includes the company of our two friendly, sometimes loud, family dogs.",
+            "imageKey": "vinovardagHero",
+            "altText": "Authentic Swedish Fika at Vinovardag in Kiruna"
           }
         ]
       }

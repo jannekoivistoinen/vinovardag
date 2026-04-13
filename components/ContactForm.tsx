@@ -54,8 +54,8 @@ const ContactFormContent = () => {
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "Lucky Ranch",
-      subject: "New inquiry from Lucky Ranch",
+      from_name: "Vinovardag",
+      subject: "New inquiry from Vinovardag",
     },
     onSuccess: () => {
       reset();
