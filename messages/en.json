@@ -200,6 +200,22 @@
         "email": "e. vinovardag@gmail.com"
       }
     },
+    "terms": {
+      "metadata": {
+        "title": "Terms & Conditions | Vinovardag",
+        "description": "Terms and conditions for Vinovardag wine experiences and services in Swedish Lapland.",
+        "keywords": ["terms and conditions", "Vinovardag", "wine experiences", "Swedish Lapland"]
+      },
+      "hero": {
+        "title": "# MISSING Terms & Conditions",
+        "description": "MISSING Please read these terms and conditions carefully before booking or using our services.",
+        "buttonText": "MISSING Download PDF"
+      },
+      "terms": {
+        "title": "## MISSING Terms & Conditions",
+        "description": "MISSING Full terms and conditions text goes here."
+      }
+    },
     "services": {
       "metadata": {
         "title": "Services | Wine Tastings & Culinary Adventures by Vinovardag",

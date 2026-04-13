@@ -217,6 +217,22 @@
         "email": "e. vinovardag@gmail.com"
       }
     },
+    "terms": {
+      "metadata": {
+        "title": "Villkor | Vinovardag",
+        "description": "Villkor för Vinovardags vinupplevelser och tjänster i svenska Lappland.",
+        "keywords": ["villkor", "Vinovardag", "vinupplevelser", "svenska Lappland"]
+      },
+      "hero": {
+        "title": "# MISSING Villkor",
+        "description": "MISSING Vänligen läs dessa villkor noggrant innan du bokar eller använder våra tjänster.",
+        "buttonText": "MISSING Ladda ned PDF"
+      },
+      "terms": {
+        "title": "## MISSING Villkor",
+        "description": "MISSING Fullständig text för villkor placeras här."
+      }
+    },
     "services": {
       "metadata": {
         "title": "Tjänster | Vinprovningar & Kulinariska Äventyr med Vinovardag",
