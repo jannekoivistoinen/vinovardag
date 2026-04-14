@@ -4,7 +4,7 @@ export const linkStylesActive = "text-brand-dark";
 export const descriptionStyles = "text-sm text-gray-500";
 
 // Desktop styles
-export const desktopLinkStyles = `${linkStyles} py-6 px-[1vw] hover:opacity-50`;
+export const desktopLinkStyles = `${linkStyles} py-6 px-4 hover:opacity-50`;
 export const desktopPopoverTriggerStyles = "flex items-center gap-1";
 export const desktopPopoverContentStyles = "w-full p-0 pb-2 bg-white";
 export const desktopPopoverContentWideStyles = "w-full p-0 bg-white";

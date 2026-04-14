@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, ReactNode, useEffect } from "react";
+import { createContext, useContext, ReactNode, useEffect, useState } from "react";
 import { SITE_CONFIG } from "@/lib/constants";
 
 // Theme context type
@@ -55,20 +55,6 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     }
   }, []);
 
-  // Apply CSS variables for theme colors
-  useEffect(() => {
-    const root = document.documentElement;
-
-    // Set CSS variables for theme colors
-    Object.entries(SITE_CONFIG.theme.colors).forEach(([key, value]) => {
-      root.style.setProperty(`--color-${key}`, value);
-    });
-
-    // Set font variables
-    root.style.setProperty("--font-heading", SITE_CONFIG.theme.fonts.heading);
-    root.style.setProperty("--font-body", SITE_CONFIG.theme.fonts.body);
-  }, []);
-
   return (
     <ThemeContext.Provider
       value={{
@@ -90,6 +76,3 @@ export function useTheme() {
   }
   return context;
 }
-
-// Import useState at the top
-import { useState } from "react";

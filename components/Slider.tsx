@@ -133,7 +133,7 @@ export function Slider({
     <div className="relative">
       <div
         ref={sliderRef}
-        className={`keen-slider !overflow-visible transition-opacity ${
+        className={`keen-slider touch-pan-x !overflow-visible transition-opacity ${
           isLoaded ? "opacity-100 duration-1000" : "opacity-0"
         }`}
       >

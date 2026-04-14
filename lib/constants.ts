@@ -8,24 +8,21 @@ export const SITE_CONFIG = {
     domain: "vinovardag.se",
     url: "https://vinovardag.se",
     description:
-      "Provide top-notch website design and development services tailored to meet your business needs. Team of experts ensures your online presence is both visually appealing and highly functional.",
+      "Vinovardag offers sommelier-led wine tastings and culinary experiences in Kiruna, Swedish Lapland, tailored for locals and international travelers.",
     sitemapUrl: "https://vinovardag.se/sitemap.xml",
     logo: {
       // Path to logo images
       default: "/logo.svg",
       dark: "/logo-dark.svg",
-      alt: "Company Logo",
+      alt: "Vinovardag logo",
     },
     contact: {
-      email: "info@vinovardag.se",
+      email: "vinovardag@gmail.com",
       phone: "+46707123456",
-      address: "123 Main Street, City, Country",
+      address: "Hjalmar Lundbohmsvägen 74A, 98139 Kiruna, Sweden",
     },
     social: {
-      facebook: "https://facebook.com/example",
-      twitter: "https://twitter.com/example",
-      instagram: "https://instagram.com/example",
-      linkedin: "https://linkedin.com/company/example",
+      instagram: "https://instagram.com/vinovardag",
     },
   },
 
@@ -38,6 +35,10 @@ export const SITE_CONFIG = {
       services: {
         en: "services",
         sv: "tjanster",
+      },
+      activities: {
+        en: "activities",
+        sv: "aktiviteter",
       },
       about: {
         en: "about",
@@ -110,6 +111,17 @@ export const NAVIGATION_LINKS: NavigationItem[] = [
     sv: {
       name: "Tjänster",
       href: `/sv/${SITE_CONFIG.i18n.routes.services.sv}`,
+    },
+  },
+  {
+    link: "activities",
+    en: {
+      name: "Activities",
+      href: `/en/${SITE_CONFIG.i18n.routes.activities.en}`,
+    },
+    sv: {
+      name: "Aktiviteter",
+      href: `/sv/${SITE_CONFIG.i18n.routes.activities.sv}`,
     },
   },
   {

@@ -36,7 +36,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
             transition={{ duration: 0.2, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <MarkdownText className="pb-8 pl-6 md:pl-12 p-base text-brand-brown">
+            <MarkdownText className="pb-8 pl-6 md:pl-12 p-base">
               {answer}
             </MarkdownText>
           </motion.div>
@@ -47,7 +47,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
 };
 
 export function FAQ({}: FAQProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndices, setOpenIndices] = useState<Set<number>>(new Set([0]));
   const t = useTranslations("component.faq");
 
   const items = t.raw("items") as Array<{
@@ -56,7 +56,11 @@ export function FAQ({}: FAQProps) {
   }>;
 
   const handleClick = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndices((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) { next.delete(index); } else { next.add(index); }
+      return next;
+    });
   };
 
   return (
@@ -64,7 +68,7 @@ export function FAQ({}: FAQProps) {
       <div className="container">
         <Image
           src={images.peopleImage}
-          alt="Test Image"
+          alt="Guests gathered at a Vinovardag event"
           className="w-full h-full object-cover aspect-[3/2] lg:aspect-[3/1] mb-8 lg:mb-16"
           quality={80}
           sizes="(min-width: 1920px) 2000px, (min-width: 1280px) 1440px, (min-width: 780px) 50vw, 90vw"
@@ -86,7 +90,7 @@ export function FAQ({}: FAQProps) {
                 key={index}
                 question={item.question}
                 answer={item.answer}
-                isOpen={openIndex === index}
+                isOpen={openIndices.has(index)}
                 onClick={() => handleClick(index)}
               />
             ))}

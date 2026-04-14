@@ -6,12 +6,16 @@ import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
+import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { COMPANY_METADATA } from "@/lib/constants";
 import Logo from "@/components/Logo";
 import DesktopNavigation from "./DesktopNavigation";
-import MobileNavigation from "./MobileNavigation";
 import { SCROLL_THRESHOLD } from "./utils";
+
+const MobileNavigation = dynamic(() => import("./MobileNavigation"), {
+  ssr: false,
+});
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,7 +33,7 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -62,7 +66,7 @@ export default function Navigation() {
 
   return (
     <div
-      className={`sticky z-[9999] top-0 w-full duration-300 ${
+      className={`nav-bar sticky z-[9999] top-0 w-full duration-300 ${
         mobileMenuOpen
           ? "bg-[#f5f5ed] bg-opacity-100"
           : isScrolled
@@ -76,7 +80,7 @@ export default function Navigation() {
           isScrolled ? "py-3 xl:py-3" : "py-3 xl:py-3"
         }`}
       >
-        <div className="flex relative z-[10000]">
+        <div className="flex relative z-[10000] nav-logo">
           <Link
             href="/"
             className={`px-1 xl:px-2 transition hover:opacity-50 ${
@@ -88,7 +92,7 @@ export default function Navigation() {
             <Logo />
           </Link>
         </div>
-        <div className="mr-6 flex xl:hidden relative z-[10000]">
+        <div className="mr-6 flex xl:hidden relative z-[10000] nav-actions">
           <Button
             className="group scale-125"
             variant="outline"

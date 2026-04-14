@@ -11,7 +11,7 @@ export function TerminalCTA() {
   const locale = useLocale();
 
   return (
-    <div id="terminalCTA" className="container mb-4">
+    <div id="terminalCTA" className="container mb-6">
       <div className="flex flex-col lg:flex-row bg-[#503825] text-white">
         <div className="order-2 lg:order-1 lg:w-1/2 flex flex-col justify-center text-center py-16 px-8 md: p-24 lg:p-32">
           <MarkdownText className="mb-4">{t("title")}</MarkdownText>
@@ -34,8 +34,11 @@ export function TerminalCTA() {
         <div className="order-1 lg:order-2 lg:w-1/2">
           <Image
             src={images.terminalImage}
-            alt="Test Image"
+            alt="Wine and dining setup prepared for a Vinovardag tasting"
             className="w-full h-full object-cover aspect-[3/2] lg:aspect-square"
+            quality={80}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            loading="lazy"
           />
         </div>
       </div>

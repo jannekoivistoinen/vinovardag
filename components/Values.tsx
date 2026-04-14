@@ -1,8 +1,4 @@
-"use client";
-
-import { useParams } from "next/navigation";
-import { useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import MarkdownText from "./MarkdownText";
 import { ValueCard } from "@/components/ValueCard";
 import { Slider } from "./Slider";
@@ -12,19 +8,14 @@ interface ValueItem {
   text: string;
 }
 
-export default function Values() {
-  const { locale } = useParams();
-  const t = useTranslations("component.values");
-
-  useEffect(() => {
-    console.log("Current locale:", locale);
-  }, [locale]);
+export default async function Values() {
+  const t = await getTranslations("component.values");
 
   const valueItems = t.raw("items") as ValueItem[];
 
   return (
     <section className="container">
-      <MarkdownText className="p-lg mb-8 content">
+      <MarkdownText className="p-lg mb-12 content text-center">
         {t("sectionTitle")}
       </MarkdownText>
       <Slider

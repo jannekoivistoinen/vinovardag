@@ -54,8 +54,8 @@ const ContactFormContent = () => {
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "Lucky Ranch",
-      subject: "New inquiry from Lucky Ranch",
+      from_name: "Vinovardag",
+      subject: "New inquiry from Vinovardag",
     },
     onSuccess: () => {
       reset();
@@ -181,12 +181,17 @@ const ContactFormContent = () => {
 
         <div className="mb-3">
           <textarea
+            id="contact-message"
             placeholder={t("placeholders.message")}
+            aria-describedby="message-help"
             className={`h-36 ${getInputClassName(!!errors.message)}`}
             {...register("message", {
               required: t("validation.messageRequired"),
             })}
           />
+          <p id="message-help" className="mt-1.5 text-sm text-zinc-500">
+            {t("messageHelp")}
+          </p>
           {errors.message && (
             <div className="mt-1 text-red-600">
               <small>{errors.message.message?.toString()}</small>

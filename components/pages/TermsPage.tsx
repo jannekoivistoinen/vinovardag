@@ -12,7 +12,7 @@ export default function TermsPage() {
   return (
     <>
       <section className="container">
-        <div className="mx-auto text-center max-w-4xl mb-8 lg:mb-24">
+        <div className="mx-auto text-center max-w-4xl mb-8 lg:mb-24 page-hero">
           <MarkdownText className="text-brand-dark mb-3 md:mb-6">
             {t("hero.title")}
           </MarkdownText>
