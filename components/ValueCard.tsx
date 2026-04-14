@@ -13,7 +13,7 @@ export function ValueCard({
 }: ValueCardProps) {
   return (
     <div
-      className={`block overflow-hidden bg-brand-beige-lightest p-12 h-full ${className}`}
+      className={`block overflow-hidden bg-[#EDEDDE] p-12 h-full ${className}`}
     >
       <div className="flex flex-col justify-between h-full">
         <div>

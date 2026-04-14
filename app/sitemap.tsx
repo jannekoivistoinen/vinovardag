@@ -4,7 +4,7 @@ import { routing } from "@/i18n/routing";
 
 type PathConfig = {
   en: string;
-  fi: string;
+  sv: string;
 };
 
 type Pathnames = {
@@ -22,23 +22,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Create sitemap entries for each path and both languages
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  // Add entries for Finnish paths
+  // Add entries for Swedish paths
   paths.forEach((path) => {
+    const swedishUrl = `${baseUrl}/sv${pathnames[path].sv}`;
+    const englishUrl = `${baseUrl}/en${pathnames[path].en}`;
+
     sitemapEntries.push({
-      url: `${baseUrl}/fi${pathnames[path].fi}`,
+      url: swedishUrl,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: path === "/" ? 1 : 0.8,
+      alternates: {
+        languages: {
+          en: englishUrl,
+          sv: swedishUrl,
+        },
+      },
     });
   });
 
   // Add entries for English paths
   paths.forEach((path) => {
+    const englishUrl = `${baseUrl}/en${pathnames[path].en}`;
+    const swedishUrl = `${baseUrl}/sv${pathnames[path].sv}`;
+
     sitemapEntries.push({
-      url: `${baseUrl}/en${pathnames[path].en}`,
+      url: englishUrl,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: path === "/" ? 1 : 0.8,
+      alternates: {
+        languages: {
+          en: englishUrl,
+          sv: swedishUrl,
+        },
+      },
     });
   });
 
@@ -55,12 +73,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en`,
+          sv: `${baseUrl}/sv`,
+        },
+      },
     },
     {
-      url: `${baseUrl}/fi`,
+      url: `${baseUrl}/sv`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en`,
+          sv: `${baseUrl}/sv`,
+        },
+      },
     },
   ];
 

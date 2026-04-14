@@ -9,6 +9,7 @@ import localFont from "next/font/local";
 import { SITE_CONFIG } from "@/lib/constants";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import JsonLd from "@/components/JsonLd";
 
 const haskoy = localFont({
   src: "./../fonts/Haskoy-variable.woff2",
@@ -22,9 +23,9 @@ const cabinetGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.company.name} | Experience unique accommodation & activities in Finnish Lapland`,
+  title: `${SITE_CONFIG.company.name} | Premium Wine Experiences in Swedish Lapland`,
   description:
-    "Discover authentic stays and unforgettable adventures at Lucky Ranch, a family owned experience ranch based in Pyhätunturi, close to Rovaniemi.",
+    "Discover exceptional wine tastings and culinary adventures with Vinovardag in Kiruna, Swedish Lapland. Personalized experiences for locals and international travelers.",
   alternates: {
     canonical: SITE_CONFIG.company.url,
   },
@@ -33,16 +34,16 @@ export const metadata: Metadata = {
   applicationName: SITE_CONFIG.company.name,
   referrer: "origin-when-cross-origin",
   keywords: [
-    "family owned experience ranch",
-    "pyhätunturi",
-    "rovaniemi",
-    "finnish lapland",
-    "accommodation",
-    "activities",
-    "snow igloos",
-    "horses",
-    "sauna",
-    "ice swimming",
+    "wine tastings",
+    "sommelier Kiruna",
+    "Swedish Lapland",
+    "Arctic dining",
+    "Nordic wine experiences",
+    "culinary experiences",
+    "private wine tastings",
+    "Kiruna activities",
+    "wine tourism Sweden",
+    "Vinovardag",
   ],
   robots: {
     index: true,
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
     google: "EVo6WZtq4f16-mlM784qCHgJz6oFM1LTyfkw8Dm8zuE",
   },
   openGraph: {
-    title: `${SITE_CONFIG.company.name} | Experience unique accommodation & activities in Finnish Lapland`,
+    title: `${SITE_CONFIG.company.name} | Premium Wine Experiences in Swedish Lapland`,
     description:
-      "Discover authentic stays and unforgettable adventures at Lucky Ranch, a family owned experience ranch based in Pyhätunturi, close to Rovaniemi.",
+      "Discover exceptional wine tastings and culinary adventures with Vinovardag in Kiruna, Swedish Lapland. Personalized experiences for locals and international travelers.",
     url: SITE_CONFIG.company.url,
     siteName: SITE_CONFIG.company.name,
     images: [
@@ -112,6 +113,47 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_CONFIG.company.name,
+    url: SITE_CONFIG.company.url,
+    logo: `${SITE_CONFIG.company.url}${SITE_CONFIG.company.logo.default}`,
+    email: SITE_CONFIG.company.contact.email,
+    telephone: SITE_CONFIG.company.contact.phone,
+    sameAs: Object.values(SITE_CONFIG.company.social),
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "TouristAttraction"],
+    name: SITE_CONFIG.company.name,
+    url: SITE_CONFIG.company.url,
+    description: SITE_CONFIG.company.description,
+    image: `${SITE_CONFIG.company.url}/og-image.jpg`,
+    priceRange: "SEK 1195-2500",
+    openingHours: "By appointment",
+    servesCuisine: ["Nordic", "Arctic", "Swedish"],
+    areaServed: "Kiruna, Swedish Lapland",
+    currenciesAccepted: "SEK",
+    hasMap:
+      "https://www.google.com/maps/search/?api=1&query=Hjalmar+Lundbohmsv%C3%A4gen+74A,+98139+Kiruna,+Sweden",
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 67.8558,
+      longitude: 20.2253,
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Hjalmar Lundbohmsvagen 74A",
+      postalCode: "98139",
+      addressLocality: "Kiruna",
+      addressCountry: "SE",
+    },
+    email: SITE_CONFIG.company.contact.email,
+    telephone: SITE_CONFIG.company.contact.phone,
+  };
+
   return (
     <html
       lang={locale}
@@ -120,15 +162,17 @@ export default async function LocaleLayout({
       <head>
         <script
           defer
-          data-domain="luckyranch.fi"
+          data-domain="vinovardag.se"
           src="https://plausible.io/js/script.js"
         ></script>
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={localBusinessSchema} />
       </head>
       <body className="flex flex-col min-h-screen">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <Navigation />
-            <main className="flex-grow overflow-x-hidden">{children}</main>
+            <main className="flex-grow overflow-x-clip">{children}</main>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

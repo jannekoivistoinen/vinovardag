@@ -19,7 +19,7 @@ export function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <div
-      className={`block overflow-hidden bg-brand-beige-lightest p-12 h-full ${className}`}
+      className={`block overflow-hidden bg-[#EDEDDE] p-12 h-full ${className}`}
     >
       {imageUrl && altText && (
         <div className="relative aspect-[2/3]">
@@ -48,6 +48,8 @@ export function TestimonialCard({
             src={images.testimonialAvatar}
             alt="Testimonial Avatar"
             className="w-12 h-12 rounded-full object-cover"
+            width={48}
+            height={48}
           />
           <MarkdownText className="ml-4">{name}</MarkdownText>
         </div>

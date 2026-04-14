@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { COMPANY_METADATA } from "@/lib/constants";
+import { COMPANY_METADATA, SITE_CONFIG } from "@/lib/constants";
 import { getTranslations } from "next-intl/server";
 import ContactPage from "@/components/pages/ContactPage";
 
@@ -10,6 +10,14 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const baseUrl = COMPANY_METADATA.url.endsWith("/")
+    ? COMPANY_METADATA.url.slice(0, -1)
+    : COMPANY_METADATA.url;
+  const localizedPath =
+    locale === "sv"
+      ? SITE_CONFIG.i18n.routes.contact.sv
+      : SITE_CONFIG.i18n.routes.contact.en;
+  const canonicalUrl = `${baseUrl}/${locale}/${localizedPath}`;
   const t = await getTranslations({
     locale,
     namespace: "page.contact.metadata",
@@ -20,20 +28,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("description"),
     keywords: t.raw("keywords"),
     alternates: {
-      canonical: COMPANY_METADATA.url,
+      canonical: canonicalUrl,
+      languages: {
+        en: `${baseUrl}/en/${SITE_CONFIG.i18n.routes.contact.en}`,
+        sv: `${baseUrl}/sv/${SITE_CONFIG.i18n.routes.contact.sv}`,
+      },
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: COMPANY_METADATA.url,
+      url: canonicalUrl,
       siteName: COMPANY_METADATA.name,
+      type: "website",
+      locale: locale === "sv" ? "sv_SE" : "en_US",
       images: [
         {
-          url: `${COMPANY_METADATA.url}/og-image.jpg`,
+          url: `${baseUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: [`${baseUrl}/og-image.jpg`],
     },
   };
 }

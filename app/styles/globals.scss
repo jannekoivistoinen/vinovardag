@@ -73,6 +73,11 @@
 
 :root {
   --bg-pattern-opacity: 1;
+  --color-primary: #a77e16;
+  --color-secondary: #000000;
+  --color-accent: #d3a01c;
+  --font-heading: "Cabinet Grotesk", sans-serif;
+  --font-body: "Haskoy", sans-serif;
 }
 
 body {
@@ -145,6 +150,83 @@ h4 {
 
   @include bp.breakpoint(xl) {
     font-size: 1.313rem;
+  }
+}
+
+// Navigation fade-in on page load
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-logo {
+  animation: fadeInDown 0.5s ease-out both;
+}
+
+.nav-links {
+  animation: fadeInDown 0.5s ease-out both;
+  animation-delay: 0.1s;
+}
+
+.nav-actions {
+  animation: fadeInDown 0.5s ease-out both;
+  animation-delay: 0.2s;
+}
+
+// Page fade-in animations
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Hero section: per-element staggered cascade
+.page-hero > * {
+  animation: fadeInUp 0.55s ease-out both;
+}
+
+.page-hero > *:nth-child(2) { animation-delay: 0.1s; }
+.page-hero > *:nth-child(3) { animation-delay: 0.2s; }
+.page-hero > *:nth-child(4) { animation-delay: 0.3s; }
+
+// Content in the first section that sits alongside the hero (e.g. hero image, activity grid, testimonials)
+section:first-of-type > *:not(.page-hero) {
+  animation: fadeInUp 0.6s ease-out both;
+  animation-delay: 0.4s;
+}
+
+// All sections after the hero: fade in as a unit
+section:not(:first-of-type) {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+section:nth-of-type(2) { animation-delay: 0.15s; }
+section:nth-of-type(3) { animation-delay: 0.25s; }
+section:nth-of-type(4) { animation-delay: 0.35s; }
+section:nth-of-type(5) { animation-delay: 0.45s; }
+section:nth-of-type(6) { animation-delay: 0.55s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-logo,
+  .nav-links,
+  .nav-actions,
+  .page-hero > *,
+  section:first-of-type > *:not(.page-hero),
+  section:not(:first-of-type) {
+    animation: none;
   }
 }
 

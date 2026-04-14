@@ -18,6 +18,7 @@ const config: Config = {
         "brand-primary": "#D3A01C",
         "brand-light": "#EBE0D6",
         "brand-brown": "#503825",
+        "brand-beige-lightest": "#FAF7F2",
       },
     },
   },

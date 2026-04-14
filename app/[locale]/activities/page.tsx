@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import { COMPANY_METADATA, SITE_CONFIG } from "@/lib/constants";
 import { getTranslations } from "next-intl/server";
-import ServicesPage from "@/components/pages/ServicesPage";
+import ActivitiesServicesPage from "@/components/pages/ActivitiesServicesPage";
 import JsonLd from "@/components/JsonLd";
 
+// Update Props type to use PageProps
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -15,12 +16,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : COMPANY_METADATA.url;
   const localizedPath =
     locale === "sv"
-      ? SITE_CONFIG.i18n.routes.services.sv
-      : SITE_CONFIG.i18n.routes.services.en;
+      ? SITE_CONFIG.i18n.routes.activities.sv
+      : SITE_CONFIG.i18n.routes.activities.en;
   const canonicalUrl = `${baseUrl}/${locale}/${localizedPath}`;
   const t = await getTranslations({
     locale,
-    namespace: "page.servicesLanding.metadata",
+    namespace: "page.services.metadata",
   });
 
   return {
@@ -30,8 +31,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        en: `${baseUrl}/en/${SITE_CONFIG.i18n.routes.services.en}`,
-        sv: `${baseUrl}/sv/${SITE_CONFIG.i18n.routes.services.sv}`,
+        en: `${baseUrl}/en/${SITE_CONFIG.i18n.routes.activities.en}`,
+        sv: `${baseUrl}/sv/${SITE_CONFIG.i18n.routes.activities.sv}`,
       },
     },
     openGraph: {
@@ -58,23 +59,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Update Page component to handle Promise params
 export default async function Page({ params }: Props) {
   const { locale } = await params;
-  const servicesLandingTranslations = await getTranslations({
+  const servicesTranslations = await getTranslations({
     locale,
-    namespace: "page.servicesLanding",
+    namespace: "page.services.services",
   });
-  const outdoorSlides = servicesLandingTranslations.raw("outdoorSlides") as Array<{
+  const sharedServices = servicesTranslations.raw("service") as Array<{
     title: string;
-    description: string;
+    description?: string;
+    imageKey?: string;
+    bookingUrl?: string;
+    details?: {
+      price?: string;
+    };
   }>;
-  const journeySlides = servicesLandingTranslations.raw("journeySlides") as Array<{
-    title: string;
-    description: string;
-  }>;
-  const allServices = [...outdoorSlides, ...journeySlides];
+  const privateServicesSection = servicesTranslations.raw("privateServices") as {
+    service: Array<{
+      title: string;
+      description?: string;
+      imageKey?: string;
+      bookingUrl?: string;
+      details?: {
+        price?: string;
+      };
+    }>;
+  };
+  const allServices = [...sharedServices, ...privateServicesSection.service];
 
-  const servicesItemListSchema = {
+  const serviceItemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     itemListElement: allServices.map((service, index) => ({
@@ -83,20 +97,33 @@ export default async function Page({ params }: Props) {
       item: {
         "@type": "Service",
         name: service.title.replace(/^###\s*\*?\s*/, ""),
-        description: service.description.replace(/^\*\s*/, ""),
+        description: service.description,
+        image: service.imageKey
+          ? `${SITE_CONFIG.company.url}/assets/images/${service.imageKey}.jpg`
+          : undefined,
+        url: service.bookingUrl,
+        offers: service.details?.price
+          ? {
+              "@type": "Offer",
+              price: service.details.price.replace(/[^\d]/g, ""),
+              priceCurrency: "SEK",
+              availability: "https://schema.org/InStock",
+            }
+          : undefined,
         provider: {
           "@type": "Organization",
           name: SITE_CONFIG.company.name,
           url: SITE_CONFIG.company.url,
         },
+        areaServed: "Kiruna, Swedish Lapland",
       },
     })),
   };
 
   return (
     <>
-      <JsonLd data={servicesItemListSchema} />
-      <ServicesPage locale={locale} />
+      <JsonLd data={serviceItemListSchema} />
+      <ActivitiesServicesPage locale={locale} />
     </>
   );
 }

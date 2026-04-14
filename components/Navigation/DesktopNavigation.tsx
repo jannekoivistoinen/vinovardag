@@ -42,7 +42,7 @@ export default function DesktopNavigation({
 }: DesktopNavigationProps) {
   return (
     <>
-      <div className="hidden xl:flex justify-center">
+      <div className="hidden xl:flex justify-center nav-links">
         {NAVIGATION_LINKS.map((item: NavigationItem) => {
           const localeData = getLocaleData(item, locale);
           const active = isActive(localeData.href, pathname);
@@ -147,7 +147,7 @@ export default function DesktopNavigation({
           );
         })}
       </div>
-      <div className="hidden xl:flex xl:justify-end">
+      <div className="hidden xl:flex xl:justify-end nav-actions">
         <div className="flex items-center gap-4 px-6">
           {SITE_CONFIG.i18n.languageSwitcher.showOnDesktop && (
             <LanguageSwitcher />
