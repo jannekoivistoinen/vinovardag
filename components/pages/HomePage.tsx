@@ -8,7 +8,7 @@ import { FAQ } from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/ServiceCard";
 import { AboutHannaSection } from "@/components/AboutHannaSection";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, IMAGE_QUALITY } from "@/lib/constants";
 
 interface Service {
   title: string;
@@ -83,8 +83,8 @@ export default async function HomePage({ locale }: HomePageProps) {
           src={images.vinovardagHero}
           alt="Guests enjoying a Vinovardag wine experience in Swedish Lapland"
           className="w-full h-full object-cover aspect-square md:aspect-video mb-3 md:mb-6"
-          quality={80}
-          sizes="(min-width: 1920px) 2000px, (min-width: 1280px) 1440px, (min-width: 780px) 50vw, 90vw"
+          quality={IMAGE_QUALITY}
+          sizes="(min-width: 1540px) 1440px, calc(100vw - 3rem)"
           priority
         />
       </section>

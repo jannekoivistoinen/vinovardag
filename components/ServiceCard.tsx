@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import MarkdownText from "./MarkdownText";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { IMAGE_QUALITY } from "@/lib/constants";
 
 interface ServiceCardProps {
   title: string;
@@ -35,8 +36,8 @@ export function ServiceCard({
           alt={altText}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-[1.01]"
-          quality={80}
-          sizes="(min-width: 1280px) 1200px, (min-width: 780px) 50vw, 90vw"
+          quality={IMAGE_QUALITY}
+          sizes="(min-width: 1280px) 33vw, (min-width: 780px) 50vw, 85vw"
           loading="lazy"
         />
       </div>

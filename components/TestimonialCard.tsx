@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import MarkdownText from "./MarkdownText";
 import { images } from "@/app/assets/images";
+import { IMAGE_QUALITY } from "@/lib/constants";
 interface TestimonialCardProps {
   name: string;
   imageUrl?: StaticImageData;
@@ -28,8 +29,8 @@ export function TestimonialCard({
             alt={altText}
             fill
             className="object-cover"
-            quality={80}
-            sizes="(min-width: 1280px) 1200px, (min-width: 780px) 50vw, 90vw"
+            quality={IMAGE_QUALITY}
+            sizes="(min-width: 1280px) 33vw, (min-width: 780px) 50vw, 85vw"
             loading="lazy"
           />
         </div>

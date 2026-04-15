@@ -4,7 +4,7 @@ import Image from "next/image";
 import { images } from "@/app/assets/images";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, IMAGE_QUALITY } from "@/lib/constants";
 
 export function TerminalCTA() {
   const t = useTranslations("component.terminalCTA");
@@ -36,7 +36,7 @@ export function TerminalCTA() {
             src={images.terminalImage}
             alt="Wine and dining setup prepared for a Vinovardag tasting"
             className="w-full h-full object-cover aspect-[3/2] lg:aspect-square"
-            quality={80}
+            quality={IMAGE_QUALITY}
             sizes="(min-width: 1024px) 50vw, 100vw"
             loading="lazy"
           />

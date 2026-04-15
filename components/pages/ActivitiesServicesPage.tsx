@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 import { images, ImageKey } from "@/app/assets/images";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, IMAGE_QUALITY } from "@/lib/constants";
 import Image from "next/image";
 import Script from "next/script";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -125,8 +125,8 @@ function ActivityGrid({
               alt={service.altText}
               fill
               className="object-cover"
-              quality={80}
-              sizes="(min-width: 1280px) 640px, (min-width: 780px) 50vw, 90vw"
+              quality={IMAGE_QUALITY}
+              sizes="(min-width: 1280px) 640px, (min-width: 780px) 50vw, 100vw"
               loading="lazy"
             />
           </div>

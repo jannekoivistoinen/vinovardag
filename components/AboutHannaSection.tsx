@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import MarkdownText from "./MarkdownText";
 import { images } from "@/app/assets/images";
+import { IMAGE_QUALITY } from "@/lib/constants";
 
 export function AboutHannaSection() {
   const t = useTranslations("component.aboutHanna");
@@ -17,7 +18,7 @@ export function AboutHannaSection() {
             alt="Hanna Karkea"
             className="w-full h-auto object-cover aspect-[4/5]"
             style={{ maxWidth: hanna.width }}
-            quality={100}
+            quality={IMAGE_QUALITY}
             sizes={`(min-width: 1024px) min(${hanna.width}px, 50vw), 100vw`}
           />
         </div>

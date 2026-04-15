@@ -7,7 +7,7 @@ import Image from "next/image";
 import { images } from "@/app/assets/images";
 import Values from "@/components/Values";
 import { HomeHostedSection } from "@/components/HomeHostedSection";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, IMAGE_QUALITY } from "@/lib/constants";
 
 interface AboutPageProps {
   locale: string;
@@ -54,7 +54,7 @@ export default async function AboutPage({ locale }: AboutPageProps) {
               alt="Hanna Karkea"
               className="w-full h-auto object-cover aspect-[4/5]"
               style={{ maxWidth: hanna.width }}
-              quality={80}
+              quality={IMAGE_QUALITY}
               sizes={`(min-width: 1024px) min(${hanna.width}px, 50vw), 100vw`}
               priority
             />

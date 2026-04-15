@@ -77,6 +77,7 @@ export const SITE_CONFIG = {
 export const COMPANY_METADATA = SITE_CONFIG.company;
 export const locales = SITE_CONFIG.i18n.locales;
 export const defaultLocale = SITE_CONFIG.i18n.defaultLocale;
+export const IMAGE_QUALITY = 80;
 
 export type NavigationItem = {
   link: string;

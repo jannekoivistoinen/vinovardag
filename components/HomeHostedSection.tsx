@@ -6,6 +6,7 @@ import MarkdownText from "@/components/MarkdownText";
 import { Slider } from "@/components/Slider";
 import { images } from "@/app/assets/images";
 import { cn } from "@/lib/utils";
+import { IMAGE_QUALITY } from "@/lib/constants";
 
 type SliderImage = { alt: string };
 
@@ -51,8 +52,8 @@ export function HomeHostedSection({ className }: { className?: string }) {
               src={img.src}
               alt={img.alt}
               className="w-full object-cover aspect-square md:aspect-video"
-              quality={80}
-              sizes="(min-width: 1920px) 2000px, (min-width: 1280px) 1440px, (min-width: 780px) 50vw, 90vw"
+              quality={IMAGE_QUALITY}
+              sizes="(min-width: 1540px) 1440px, calc(100vw - 3rem)"
               loading="lazy"
             />
           ))}

@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import MarkdownText from "@/components/MarkdownText";
 import Image from "next/image";
 import { images } from "@/app/assets/images";
+import { IMAGE_QUALITY } from "@/lib/constants";
 
 interface FAQItemProps {
   question: string;
@@ -70,8 +71,8 @@ export function FAQ({}: FAQProps) {
           src={images.peopleImage}
           alt="Guests gathered at a Vinovardag event"
           className="w-full h-full object-cover aspect-[3/2] lg:aspect-[3/1] mb-8 lg:mb-16"
-          quality={80}
-          sizes="(min-width: 1920px) 2000px, (min-width: 1280px) 1440px, (min-width: 780px) 50vw, 90vw"
+          quality={IMAGE_QUALITY}
+          sizes="(min-width: 1540px) 1440px, calc(100vw - 3rem)"
         />
       </div>
       <div className="container grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2">

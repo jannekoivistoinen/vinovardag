@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import MarkdownText from "./MarkdownText";
 import { Button } from "./ui/button";
+import { IMAGE_QUALITY } from "@/lib/constants";
 interface ServiceDetailsCardProps {
   title: string;
   imageUrl: StaticImageData;
@@ -27,8 +28,8 @@ export function ServiceDetailsCard({
           alt={altText}
           fill
           className="object-cover"
-          quality={80}
-          sizes="(min-width: 1280px) 1200px, (min-width: 780px) 50vw, 90vw"
+          quality={IMAGE_QUALITY}
+          sizes="(min-width: 1024px) 50vw, 100vw"
           loading="lazy"
         />
       </div>
