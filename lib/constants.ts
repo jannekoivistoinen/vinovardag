@@ -36,10 +36,6 @@ export const SITE_CONFIG = {
         en: "services",
         sv: "tjanster",
       },
-      activities: {
-        en: "activities",
-        sv: "aktiviteter",
-      },
       about: {
         en: "about",
         sv: "om-oss",
@@ -112,17 +108,6 @@ export const NAVIGATION_LINKS: NavigationItem[] = [
     sv: {
       name: "Tjänster",
       href: `/sv/${SITE_CONFIG.i18n.routes.services.sv}`,
-    },
-  },
-  {
-    link: "activities",
-    en: {
-      name: "Activities",
-      href: `/en/${SITE_CONFIG.i18n.routes.activities.en}`,
-    },
-    sv: {
-      name: "Aktiviteter",
-      href: `/sv/${SITE_CONFIG.i18n.routes.activities.sv}`,
     },
   },
   {

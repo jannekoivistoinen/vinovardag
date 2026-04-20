@@ -11,6 +11,7 @@ interface ServiceCardProps {
   href: string;
   description: string;
   details: string;
+  bullets?: string[];
   callToAction?: string;
   className?: string;
   /** Merged onto the outer link (e.g. Rezdy modal classes) */
@@ -23,11 +24,12 @@ export function ServiceCard({
   altText,
   href,
   description,
+  bullets,
   linkClassName,
 }: ServiceCardProps) {
   return (
     <Link
-      href={href || "/en/activities"}
+      href={href || "/en/services"}
       className={cn("group block", linkClassName)}
     >
       <div className="relative aspect-[2/3] overflow-hidden">
@@ -49,7 +51,14 @@ export function ServiceCard({
           </MarkdownText>
         </div>
         {description && (
-          <p className="mt-1 text-black line-clamp-3 mr-6">{description}</p>
+          <p className="mt-1 text-black mr-6">{description}</p>
+        )}
+        {bullets && bullets.length > 0 && (
+          <ul className="mt-3 mr-6 list-disc pl-5 text-sm text-black space-y-1">
+            {bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
         )}
       </div>
     </Link>

@@ -6,7 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { images } from "@/app/assets/images";
 import Values from "@/components/Values";
-import { HomeHostedSection } from "@/components/HomeHostedSection";
 import { SITE_CONFIG, IMAGE_QUALITY } from "@/lib/constants";
 
 interface AboutPageProps {
@@ -74,8 +73,6 @@ export default async function AboutPage({ locale }: AboutPageProps) {
       </section>
 
       <Values />
-
-      <HomeHostedSection />
 
       <FAQ />
     </>

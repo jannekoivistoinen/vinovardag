@@ -115,116 +115,59 @@
         "title": "# Discover the art of wine with Vinovardag",
         "ingress": "Ready to explore the world of wine like never before? With Vinovardag, each sip becomes a story and every experience is crafted to delight. Book your journey into the unique wine culture of the Nordics today!",
         "ctaPrimary": "Get in touch",
-        "ctaSecondary": "View activities"
+        "ctaSecondary": "View services"
       },
-      "services": {
-        "title": "## Arctic Home Invitations in Old Kiruna",
-        "service": [
+      "cards": {
+        "sectionTitle": "## Wine tastings and culinary journeys",
+        "items": [
           {
-            "title": "### Lunch in the Sommelier's Arctic Kitchen",
-            "description": "* A shared meal cooked from the heart in our 1914 family home in Kiruna's historic Old Town. Honest, seasonal cooking paired by your sommelier host.",
-            "imageKey": "vinovardagCulinaryJourneys",
-            "altText": "Lunch in the Sommelier's Arctic Kitchen in Kiruna"
+            "title": "### Outdoor culinary experiences",
+            "description": "Combine the beauty of nature with exceptional wines. These outdoor experiences pair scenic locations with perfectly matched wines and seasonal cuisine.",
+            "bullets": [
+              "Forest picnics",
+              "Fireside tastings",
+              "Seasonal food pairings"
+            ],
+            "imageKey": "vinovardagOutdoor",
+            "altText": "Outdoor culinary experience in Swedish Lapland"
           },
           {
-            "title": "### Nordic Wine Tasting: A Sommelier's Selection",
-            "description": "* Private activity. An intimate journey through cool-climate wines and Nordic flavors, paired with hand-picked local snacks in our family home.",
+            "title": "### Customised culinary journeys",
+            "description": "A complete sensory experience that pairs fine wines with gourmet cuisine. Work with me to create a memorable journey through complementary flavours.",
+            "bullets": [
+              "Multi-course wine pairings",
+              "Chef collaboration",
+              "Custom menu development",
+              "Private dining experiences, for example Swedish craft party, surströmming tasting, afternoon tea with smörgåstårta"
+            ],
+            "imageKey": "vinovardagCulinaryJourneys",
+            "altText": "Customised culinary journey at Vinovardag"
+          },
+          {
+            "title": "### Exquisite wine tastings",
+            "description": "Discover the surprising world of cool-climate viticulture and Nordic flavors. An intimate session that replaces formal tasting with genuine conversation and expert insight.",
+            "bullets": [
+              "Cool-climate wine flights",
+              "Hand-picked local snacks",
+              "Alcohol-free alternatives available"
+            ],
             "imageKey": "vinovardagWinetastings",
             "altText": "Nordic wine tasting at Vinovardag in Kiruna"
           },
           {
-            "title": "### Heartfelt Arctic Dining",
-            "description": "* Private activity. A seat at our family table for a seasonal Arctic dinner — honest cooking, sommelier pairings, and warm conversation. On request we can shape the meal around Swedish traditions, for example a Swedish craft party, a surströmming tasting, or afternoon tea with smörgåstårta (Swedish sandwich cake).",
-            "imageKey": "vinovardagOutdoor",
-            "altText": "Heartfelt Arctic Dining at Vinovardag in Kiruna"
-          },
-          {
-            "title": "### Authentic Swedish Fika: Coffee and Conversation",
-            "description": "* Private activity. Home-baked delicacies and stories from life 145 km north of the Arctic Circle, shared over great coffee in a real family home.",
+            "title": "### Arctic Home Invitations in Old Kiruna",
+            "description": "Step into our 1914 family home in Kiruna's historic Old Town for an authentic Arctic welcome led by your sommelier host.",
+            "bullets": [
+              "Lunch in the Sommelier's Arctic Kitchen",
+              "Nordic wine tastings",
+              "Heartfelt Arctic dining",
+              "Authentic Swedish fika"
+            ],
             "imageKey": "vinovardagHero",
-            "altText": "Authentic Swedish Fika at Vinovardag in Kiruna"
+            "altText": "Arctic Home Invitations in Old Kiruna"
           }
         ]
       }
-    },
-    "servicesLanding": {
-      "metadata": {
-        "title": "Wine & Culinary Services | Vinovardag",
-        "description": "Outdoor culinary experiences and customised wine journeys in Swedish Lapland. Forest picnics, fireside tastings, private dining, and sommelier-led pairings with Vinovardag.",
-        "keywords": [
-          "wine and culinary services",
-          "outdoor dining Lapland",
-          "sommelier Kiruna",
-          "Swedish Lapland",
-          "wine pairings",
-          "private dining"
-        ]
-      },
-      "hero": {
-        "title": "# Wine & culinary experiences in Swedish Lapland",
-        "ingress": "From open-air meals in the forest to private dinners in Kiruna, discover how Vinovardag pairs Nordic landscapes with soulful wine and seasonal food."
-      },
-      "outdoor": {
-        "title": "## Outdoor culinary experiences",
-        "ingress": "Combine the beauty of nature with exceptional wines. These outdoor experiences pair scenic locations with perfectly matched wines and seasonal cuisine."
-      },
-      "outdoorSlides": [
-        {
-          "title": "### Forest picnics",
-          "description": "* Hand-picked wines and Arctic-inspired bites in a peaceful forest setting.",
-          "imageKey": "vinovardagOutdoor",
-          "altText": "Forest picnic in Swedish Lapland",
-          "details": ""
-        },
-        {
-          "title": "### Fireside tastings",
-          "description": "* Guided tasting flights by the fire with stories from the North.",
-          "imageKey": "vinovardagWinetastings",
-          "altText": "Fireside wine tasting",
-          "details": ""
-        },
-        {
-          "title": "### Seasonal food pairings",
-          "description": "* Menus and wines that change with the seasons and the landscape.",
-          "imageKey": "vinovardagCulinaryJourneys",
-          "altText": "Seasonal food and wine pairing",
-          "details": ""
-        }
-      ],
-      "journeys": {
-        "title": "## Customised culinary journeys",
-        "ingress": "A complete sensory experience that pairs fine wines with gourmet cuisine. Work with me to create a memorable journey through complementary flavours."
-      },
-      "journeySlides": [
-        {
-          "title": "### Multi-course wine pairings",
-          "description": "* Course-by-course pairings with standout wines and local flavours.",
-          "imageKey": "vinovardagCulinaryJourneys",
-          "altText": "Multi-course wine pairing",
-          "details": ""
-        },
-        {
-          "title": "### Chef collaboration",
-          "description": "* Coordinate dishes and wine with guest chefs for a seamless table.",
-          "imageKey": "vinovardagWinetastings",
-          "altText": "Chef collaboration at Vinovardag",
-          "details": ""
-        },
-        {
-          "title": "### Custom menu development",
-          "description": "* Tailored menus and wine lists shaped around your occasion.",
-          "imageKey": "vinovardagHero",
-          "altText": "Custom menu development",
-          "details": ""
-        },
-        {
-          "title": "### Private dining experiences",
-          "description": "* Intimate dining with sommelier guidance from aperitif to dessert. Menus can be tailored on request—for example a Swedish craft party, a surströmming tasting, or afternoon tea with smörgåstårta (Swedish sandwich cake).",
-          "imageKey": "peopleImage",
-          "altText": "Private dining experience",
-          "details": ""
-        }
-      ]
     },
     "about": {
       "metadata": {
@@ -341,17 +284,11 @@
               "type": "Shared activity",
               "time": "11–13.00",
               "duration": "Approx 2 hrs",
-              "price": "1195 SEK/person",
               "capacity": "Min 2 – max 6 pax",
               "note": "Private sessions available. Minimum booking fee for 6 people applies."
             }
           }
         ],
-        "homeHosted": {
-          "eyebrow": "Essential Information",
-          "title": "## Homehosted activities in Kiruna Old Town",
-          "description": "The atmosphere is a lively and authentic family environment featuring a unique mix of 1914 charm and modern design. Please note that this experience includes the company of our two friendly, sometimes loud, family dogs. To us, hospitality is about more than service, it's about sharing our home, our history, and our passion for the North.\n\nWe look forward to welcoming you to our family home!"
-        },
         "privateServices": {
           "title": "Private activities",
           "service": [
@@ -363,7 +300,6 @@
               "details": {
                 "type": "Private activity on request",
                 "duration": "approx 1.5 hrs",
-                "price": "2200 SEK/person",
                 "capacity": "Min 2 – max 8 pax"
               }
             },
@@ -375,7 +311,6 @@
               "details": {
                 "type": "Private activity on request",
                 "duration": "approx 2.5 hrs",
-                "price": "2500 SEK/person",
                 "capacity": "Min 2 – max 6 pax"
               }
             },
@@ -387,7 +322,6 @@
               "details": {
                 "type": "Private activity on request",
                 "duration": "approx 1.5 hrs",
-                "price": "1500 SEK/person",
                 "capacity": "Min 2 – max 8 pax"
               }
             }

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `${baseUrl}/${locale}/${localizedPath}`;
   const t = await getTranslations({
     locale,
-    namespace: "page.servicesLanding.metadata",
+    namespace: "page.services.metadata",
   });
 
   return {
@@ -60,21 +60,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;
-  const servicesLandingTranslations = await getTranslations({
+  const servicesTranslations = await getTranslations({
     locale,
-    namespace: "page.servicesLanding",
+    namespace: "page.services.services",
   });
-  const outdoorSlides = servicesLandingTranslations.raw("outdoorSlides") as Array<{
+  const sharedServices = servicesTranslations.raw("service") as Array<{
     title: string;
-    description: string;
+    description?: string;
+    imageKey?: string;
+    bookingUrl?: string;
   }>;
-  const journeySlides = servicesLandingTranslations.raw("journeySlides") as Array<{
-    title: string;
-    description: string;
-  }>;
-  const allServices = [...outdoorSlides, ...journeySlides];
+  const privateServicesSection = servicesTranslations.raw(
+    "privateServices"
+  ) as {
+    service: Array<{
+      title: string;
+      description?: string;
+      imageKey?: string;
+      bookingUrl?: string;
+    }>;
+  };
+  const allServices = [...sharedServices, ...privateServicesSection.service];
 
-  const servicesItemListSchema = {
+  const serviceItemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     itemListElement: allServices.map((service, index) => ({
@@ -83,19 +91,24 @@ export default async function Page({ params }: Props) {
       item: {
         "@type": "Service",
         name: service.title.replace(/^###\s*\*?\s*/, ""),
-        description: service.description.replace(/^\*\s*/, ""),
+        description: service.description,
+        image: service.imageKey
+          ? `${SITE_CONFIG.company.url}/assets/images/${service.imageKey}.jpg`
+          : undefined,
+        url: service.bookingUrl,
         provider: {
           "@type": "Organization",
           name: SITE_CONFIG.company.name,
           url: SITE_CONFIG.company.url,
         },
+        areaServed: "Kiruna, Swedish Lapland",
       },
     })),
   };
 
   return (
     <>
-      <JsonLd data={servicesItemListSchema} />
+      <JsonLd data={serviceItemListSchema} />
       <ServicesPage locale={locale} />
     </>
   );
