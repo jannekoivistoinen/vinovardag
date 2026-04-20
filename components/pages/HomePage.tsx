@@ -44,7 +44,7 @@ export default async function HomePage({ locale }: HomePageProps) {
           <p className="mt-6 text-lg leading-relaxed max-w-[55ch] text-center mx-auto">
             {t("hero.ingress")}
           </p>
-          <div className="mt-8 mb-8 md:mb-24 flex gap-4 justify-center">
+          <div className="hero-ctas mt-8 mb-8 md:mb-24 flex gap-4 justify-center">
             <Button size="lg" asChild>
               <Link
                 className="!text-white"
@@ -87,8 +87,6 @@ export default async function HomePage({ locale }: HomePageProps) {
               imageUrl={images[card.imageKey]}
               altText={card.altText}
               href={`/${locale}/${servicesPath}`}
-              description={card.description}
-              bullets={card.bullets}
               details=""
             />
           ))}

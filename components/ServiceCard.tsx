@@ -9,7 +9,7 @@ interface ServiceCardProps {
   imageUrl: StaticImageData;
   altText: string;
   href: string;
-  description: string;
+  description?: string;
   details: string;
   bullets?: string[];
   callToAction?: string;
