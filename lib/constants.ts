@@ -17,7 +17,7 @@ export const SITE_CONFIG = {
       alt: "Vinovardag logo",
     },
     contact: {
-      email: "vinovardag@gmail.com",
+      email: "hello@vinovardag.com",
       phone: "+46707123456",
       address: "Hjalmar Lundbohmsvägen 74A, 98139 Kiruna, Sweden",
     },

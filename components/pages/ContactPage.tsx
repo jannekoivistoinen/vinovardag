@@ -3,7 +3,6 @@ import MarkdownText from "@/components/MarkdownText";
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Testimonials from "@/components/Testimonials";
 import ContactForm from "../ContactForm";
 export default async function ContactPage() {
   const t = await getTranslations("page.contact");
@@ -28,7 +27,6 @@ export default async function ContactPage() {
             </Link>
           </Button>
         </div>
-        <Testimonials />
       </section>
 
       <section id="contact" className="container">

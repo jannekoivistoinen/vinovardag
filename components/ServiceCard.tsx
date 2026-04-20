@@ -30,7 +30,7 @@ export function ServiceCard({
   return (
     <Link
       href={href || "/en/services"}
-      className={cn("group block", linkClassName)}
+      className={cn("group block pb-8", linkClassName)}
     >
       <div className="relative aspect-[2/3] overflow-hidden">
         <Image
@@ -49,12 +49,13 @@ export function ServiceCard({
           <MarkdownText className="group-hover:text-black transition-all duration-300 no-underline">
             {title}
           </MarkdownText>
+          <span className="shrink-0 ml-2 text-2xl translate-x-0 group-hover:translate-x-1.5 transition-transform duration-300">
+            →
+          </span>
         </div>
-        {description && (
-          <p className="mt-1 text-black mr-6">{description}</p>
-        )}
+        {description && <p className="mt-1 text-black mr-6">{description}</p>}
         {bullets && bullets.length > 0 && (
-          <ul className="mt-3 mr-6 list-disc pl-5 text-sm text-black space-y-1">
+          <ul className="mt-3 mr-6 list-disc pl-5 text-black space-y-1">
             {bullets.map((bullet) => (
               <li key={bullet}>{bullet}</li>
             ))}

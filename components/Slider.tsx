@@ -139,12 +139,12 @@ export function Slider({
       >
         {Array.isArray(children) ? (
           children.map((child, index) => (
-            <div key={index} className="keen-slider__slide">
+            <div key={index} className="keen-slider__slide flex flex-col">
               {child}
             </div>
           ))
         ) : (
-          <div className="keen-slider__slide">{children}</div>
+          <div className="keen-slider__slide flex flex-col">{children}</div>
         )}
       </div>
 

@@ -62,12 +62,45 @@ export default async function AboutPage({ locale }: AboutPageProps) {
             <MarkdownText className="mb-3">
               {t("hannaProfile.title")}
             </MarkdownText>
-            <h3 className="text-lg font-medium text-brand-brown mb-6">
-              {t("hannaProfile.subtitle")}
-            </h3>
-            <MarkdownText className="p-lg mb-8 content">
+            <div className="flex flex-row items-center gap-8 flex-wrap my-8">
+              <Link
+                href="https://vinkallan.se/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0"
+              >
+                <Image
+                  src="/vinkallan-logo-transparent.png"
+                  alt="Vinkällan Dryckesutbildningar"
+                  width={160}
+                  height={100}
+                  className="h-20 w-auto"
+                />
+              </Link>
+              <Link
+                href="https://www.wsetglobal.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0"
+              >
+                <Image
+                  src="/wset-logo.png"
+                  alt="WSET Wine & Spirit Education Trust"
+                  width={293}
+                  height={139}
+                  className="h-16 w-auto"
+                />
+              </Link>
+            </div>
+            <MarkdownText className="p-lg mb-6 content">
               {t("hannaProfile.bio")}
             </MarkdownText>
+            <p className="text-2xl font-medium text-brand-brown mb-1">
+              {t("hannaProfile.closingName")}
+            </p>
+            <h3 className="text-lg font-medium text-brand-brown">
+              {t("hannaProfile.subtitle")}
+            </h3>
           </div>
         </div>
       </section>
