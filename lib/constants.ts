@@ -5,11 +5,11 @@ export const SITE_CONFIG = {
   // Company/Organization Information
   company: {
     name: "Vinovardag",
-    domain: "vinovardag.se",
-    url: "https://vinovardag.se",
+    domain: "vinovardag.com",
+    url: "https://www.vinovardag.com",
     description:
       "Vinovardag offers sommelier-led wine tastings and culinary experiences in Kiruna, Swedish Lapland, tailored for locals and international travelers.",
-    sitemapUrl: "https://vinovardag.se/sitemap.xml",
+    sitemapUrl: "https://www.vinovardag.com/sitemap.xml",
     logo: {
       // Path to logo images
       default: "/logo.svg",
