@@ -59,14 +59,15 @@
         "messageRequired": "Ett meddelande är obligatoriskt"
       },
       "submitButton": "Skicka meddelande",
+      "thankYouMessage": "Tack för att du hörde av dig! Jag svarar så snart jag kan. – Hanna",
       "errorMessage": "Något gick fel. Försök igen senare."
     },
     "aboutHanna": {
       "quote": "Hannas expertis inom vin är oöverträffad. Hon kombinerar utan ansträngning djup kunskap med en varm och tillgänglig stil, vilket skapar oförglömliga provningsupplevelser.",
       "quoteAttribution": "**Gäst från London** - Privat middagsupplevelse",
-      "heading": "## Möt Hanna",
-      "subtitle": "Grundare & sommelier",
-      "paragraph": "Som certifierad sommelier ursprungligen från finska Lappland och nu rotad i svenska Lappland, ger Hanna ett genuint pan-arktiskt perspektiv på vinets värld. Hennes resa är djupt personlig: född och uppvuxen i finska Lappland med en renherdande far och en restauratör till mor, växte hon upp i skärningspunkten mellan vild natur och arktisk gästfrihet. Denna unika uppväxt väckte hennes nyfikenhet på hur globala traditioner kunde omtolkas genom en nordisk kulturlins.",
+      "heading": "## Om mig, Din värd & sommelier",
+      "subtitle": "",
+      "paragraph": "Som certifierad sommelier ursprungligen från finska Lappland och nu rotad i svenska Lappland har jag ett arktiskt perspektiv på vinets värld. Som dotter till en renherdare och en restauratör har mitt liv alltid varit en blandning av det vilda och det välkomnande.",
       "continueReading": "Läs mer"
     },
     "values": {
@@ -196,10 +197,10 @@
         "buttonText": "Kontakta oss"
       },
       "hannaProfile": {
-        "title": "## Hej, jag är Hanna",
-        "closingName": "Hanna",
-        "subtitle": "Grundare & Sommelier",
-        "bio": "Som certifierad sommelier ursprungligen från finska Lappland och nu rotad i svenska Lappland, ger jag ett genuint pan-arktiskt perspektiv på vinets värld. Min resa är djupt personlig: född och uppvuxen i finska Lappland med en renherdande far och en restauratör till mor, växte jag upp i skärningspunkten mellan vild natur och arktisk gästfrihet. Denna unika uppväxt väckte min nyfikenhet på hur globala traditioner kunde omtolkas genom en nordisk kulturlins.\n\nMin expertis är byggd på en grund av excellens; jag utbildade mig vid Scandinavian Wine Academy i Stockholm, där jag tog examen som bäst i klassen, innan jag gick vidare och uppnådde det prestigefyllda WSET Level 3-certifikatet. Min passion har tagit mig runt om i världen för att besöka otaliga vingårdar och regioner, en resa jag fortsätter idag för att säkerställa att min kunskap förblir färsk och inspirerad.\n\nDe flesta av mina provningar hålls i den varma, intima miljön i mitt privata hem i gamla Kiruna. Byggt 1914 ger detta historiska hus en själsfull bakgrund som ekar nordens arv. Det är ett äkta familjehäm, delat med min man, son och två livliga terriers, vilket tillför en känsla av genuin värme och liv till varje besök.\n\nMed över tre decenniers erfarenhet inom gästfrihet och vin är min sanna passion att arrangera anspråkslösa, avslappnade och bekväma sammankomster. Jag skapar ett avslappnat utrymme där gäster från hela världen kan knyta kontakter och säkerställer att varje möte känns som ett varmt samtal bland vänner. Oavsett om du är en nyfiken nybörjare eller en erfaren kännare välkomnar jag dig in i mitt hem för en resa som är både lärorik och djupt hjärtlig.",
+        "title": "## Om mig, Din värd & sommelier",
+        "closingName": "Vänliga hälsningar, Hanna",
+        "subtitle": "",
+        "bio": "Som certifierad sommelier ursprungligen från finska Lappland och nu rotad i svenska Lappland har jag ett arktiskt perspektiv på vinets värld.\n\nSom dotter till en renherdare och en restauratör har mitt liv alltid varit en blandning av det vilda och det välkomnande. Jag växte upp i skärningspunkten mellan vild natur och arktisk gästfrihet, där jag tidigt lärde mig att ett bord bara är så bra som hjärtat bakom det. Idag, som certifierad sommelier rotad i svenska Lappland, för jag det dubbla arvet till varje glas jag serverar och varje gäst jag möter.\n\nJag påbörjade min formella vinutbildning i Stockholm, där jag hade turen att ta examen som bäst i klassen vid Scandinavian Wine Academy. Sedan dess har jag lagt till WSET Level 3 i min verktygslåda och tillbringat otaliga timmar på vingårdar världen över. Jag ser mig inte som färdigutbildad; jag utforskar och lär mig fortfarande varje dag för att säkerställa att jag för med mig den bästa och mest aktuella kunskapen till bordet.\n\nMin sanna passion är att vara värd för anspråkslösa, avslappnade och bekväma sammankomster. Jag gör mitt bästa för att skapa en avslappnad miljö där gäster från hela världen kan mötas, så att varje tillfälle känns som ett varmt samtal bland vänner.\n\nFrån nyfikna nybörjare till livslånga kännare – alla är välkomna. Följ med till mitt hemmabord eller vid elden i en traditionell samisk kåta för en upplevelse som förenar ny kunskap med en hjärtlig koppling till vårt land.",
         "philosopyTitle": "## Vår filosofi",
         "philosophyCards": {
           "accessible": {

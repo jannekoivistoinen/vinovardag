@@ -15,7 +15,7 @@ export default async function Values() {
 
   return (
     <section className="container">
-      <MarkdownText className="p-lg mb-12 content text-center">
+      <MarkdownText className="p-lg mb-6 md:mb-12 content md:text-center">
         {t("sectionTitle")}
       </MarkdownText>
       <Slider

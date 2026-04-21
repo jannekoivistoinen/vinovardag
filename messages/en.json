@@ -43,9 +43,9 @@
     "aboutHanna": {
       "quote": "Hanna's expertise in wine is unmatched. She effortlessly combines deep knowledge with a warm, approachable style, creating unforgettable tasting experiences.",
       "quoteAttribution": "**Guest from London** - Private dining experience",
-      "heading": "## Meet Hanna",
-      "subtitle": "Founder & Sommelier",
-      "paragraph": "As a certified sommelier originally from Finnish Lapland and now rooted in Swedish Lapland, Hanna brings a truly pan-Arctic perspective to the world of wine. Her journey is deeply personal: born and raised in Finnish Lapland to a reindeer herder father and a restauranteur mother, she grew up at the intersection of wild nature and arctic hospitality. This unique upbringing sparked her curiosity about how global traditions could be reimagined through the lens of Nordic culture.",
+      "heading": "## About me, Your host & Sommelier",
+      "subtitle": "",
+      "paragraph": "As a certified sommelier originally from Finnish Lapland and now rooted in Swedish Lapland, I have an Arctic perspective to the world of wine. Born to a reindeer herder and a restaurateur, my life has always been a blend of the wild and the welcoming.",
       "continueReading": "Continue reading"
     },
     "contactForm": {
@@ -67,6 +67,7 @@
         "messageRequired": "A message is required"
       },
       "submitButton": "Send message",
+      "thankYouMessage": "Thanks for getting in touch! I will reply as soon as I can. -Hanna",
       "errorMessage": "Something went wrong. Please try later."
     },
     "values": {
@@ -196,10 +197,10 @@
         "buttonText": "Get in touch"
       },
       "hannaProfile": {
-        "title": "## Hi, I'm Hanna",
-        "closingName": "Hanna",
-        "subtitle": "Founder & Sommelier",
-        "bio": "As a certified sommelier originally from Finnish Lapland and now rooted in Swedish Lapland, I bring a truly pan-Arctic perspective to the world of wine. My journey is deeply personal: born and raised in Finnish Lapland to a reindeer herder father and a restauranteur mother, I grew up at the intersection of wild nature and arctic hospitality. This unique upbringing sparked my curiosity about how global traditions could be reimagined through the lens of Nordic culture.\n\nMy expertise is built on a foundation of excellence; I trained at the Scandinavian Wine Academy in Stockholm, where I graduated Best in Class, before going on to achieve the prestigious WSET Level 3 certification. My passion has taken me across the globe to visit countless wineries and regions, a journey I continue today to ensure my knowledge remains fresh and inspired.\n\nMost of my tastings are held in the warm, intimate setting of my private home in old Kiruna. Built in 1914, this historic house provides a soulful backdrop that echoes the heritage of the North. It is a true family home, shared with my husband, son and two lively terriers, adding a sense of genuine warmth and life to every visit.\n\nWith over three decades of experience in hospitality and wine, my true passion is hosting unpretentious, easy-going, and comfortable gatherings. I create a relaxed space where guests from all over the world can connect, ensuring every meeting feels like a warm conversation among friends.\n\nWhether you are a curious beginner or a seasoned connoisseur, I welcome you into my home for a journey that is both educational and deeply heartfelt."
+        "title": "## About me, Your host & Sommelier",
+        "closingName": "Kindly, Hanna",
+        "subtitle": "",
+        "bio": "As a certified sommelier originally from Finnish Lapland and now rooted in Swedish Lapland, I have an Arctic perspective to the world of wine.\n\nBorn to a reindeer herder and a restaurateur, my life has always been a blend of the wild and the welcoming. I was raised at the intersection of wild nature and Arctic hospitality, where I learned early on that a table is only as good as the heart behind it. Today, as a certified Sommelier rooted in Swedish Lapland, I bring that dual heritage to every glass I pour and to every guest I meet.\n\nI started my formal wine education in Stockholm, where I was lucky enough to graduate top of my class at the Scandinavian Wine Academy. Since then, I've added a WSET Level 3 to my toolkit and spent countless hours in wineries across the globe. I don't think of myself as having 'finished' my studies; I'm still exploring and learning every day to make sure I'm bringing the best, most current knowledge to the table.\n\nMy true passion is hosting unpretentious, easy-going, and comfortable gatherings. I do my best to create a relaxed space where guests from all over the world can connect, ensuring every meeting feels like a warm conversation among friends.\n\nFrom curious beginners to lifelong connoisseurs, everyone is welcome. Join me at my home table or by the fire in a traditional Lappish teepee for an experience that blends new knowledge with a heartfelt connection to our land."
       }
     },
     "contact": {

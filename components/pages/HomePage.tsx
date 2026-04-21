@@ -60,14 +60,16 @@ export default async function HomePage({ locale }: HomePageProps) {
             </Button>
           </div>
         </div>
-        <Image
-          src={images.vinovardagHero}
-          alt="Guests enjoying a Vinovardag wine experience in Swedish Lapland"
-          className="w-full h-full object-cover aspect-square md:aspect-video mb-3 md:mb-6"
-          quality={IMAGE_QUALITY}
-          sizes="(min-width: 1540px) 1440px, calc(100vw - 3rem)"
-          priority
-        />
+        <div className="mb-3 md:mb-6 w-full">
+          <Image
+            src={images.vinovardagHero}
+            alt="Guests enjoying a Vinovardag wine experience in Swedish Lapland"
+            className="w-full h-full object-cover aspect-square md:aspect-video"
+            quality={IMAGE_QUALITY}
+            sizes="(min-width: 1540px) 1440px, calc(100vw - 3rem)"
+            priority
+          />
+        </div>
       </section>
 
       <section className="container">

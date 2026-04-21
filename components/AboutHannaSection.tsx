@@ -24,12 +24,14 @@ export function AboutHannaSection() {
         </div>
         <div className="flex flex-col justify-between h-full md:pr-16">
           <div>
-            <MarkdownText className="content mb-2 md:mb-3">
+            <MarkdownText className="content mb-6">
               {t("heading")}
             </MarkdownText>
-            <h3 className="text-lg font-medium text-brand-brown mb-6">
-              {t("subtitle")}
-            </h3>
+            {t("subtitle") ? (
+              <h3 className="text-lg font-medium text-brand-brown mb-6">
+                {t("subtitle")}
+              </h3>
+            ) : null}
             <MarkdownText className="content p-lg mb-6 md:mb-12">
               {t("paragraph")}
             </MarkdownText>

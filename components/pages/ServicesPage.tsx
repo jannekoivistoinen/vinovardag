@@ -22,6 +22,52 @@ interface ServicesPageProps {
   locale: string;
 }
 
+function ServiceOfferingBlock({
+  card,
+  locale,
+  servicesPath,
+  learnMoreAndBook,
+  requestViaEmail,
+}: {
+  card: CardItem;
+  locale: string;
+  servicesPath: string;
+  learnMoreAndBook: string;
+  requestViaEmail: string;
+}) {
+  return (
+    <div className="flex-1 flex flex-col">
+      <ServiceCard
+        title={card.title}
+        imageUrl={images[card.imageKey]}
+        altText={card.altText}
+        href={`/${locale}/${servicesPath}`}
+        description={card.description}
+        bullets={card.bullets}
+        details=""
+      />
+      {card.bookingUrl ? (
+        <a
+          href={card.bookingUrl}
+          className="rezdy rezdy-modal inline-flex items-center justify-center h-12 px-8 mt-auto bg-brand-primary !text-white hover:bg-brand-dark font-medium transition-colors cursor-pointer no-underline self-start"
+        >
+          {learnMoreAndBook}
+        </a>
+      ) : (
+        <Button
+          size="lg"
+          className="mt-auto !text-white hover:no-underline self-start"
+          asChild
+        >
+          <a href={`mailto:${SITE_CONFIG.company.contact.email}`}>
+            {requestViaEmail}
+          </a>
+        </Button>
+      )}
+    </div>
+  );
+}
+
 export default async function ServicesPage({ locale }: ServicesPageProps) {
   const t = await getTranslations("page.services");
   const tHome = await getTranslations("page.homepage");
@@ -67,42 +113,35 @@ export default async function ServicesPage({ locale }: ServicesPageProps) {
           </Button>
         </div>
 
-        <Slider
-          slidesPerView={{ mobile: 1.05, tablet: 2, desktop: 2.5 }}
-          showPagination={false}
-        >
+        <div className="flex flex-col gap-10 md:hidden">
           {cards.map((card) => (
-            <div key={card.title} className="flex-1 flex flex-col">
-              <ServiceCard
-                title={card.title}
-                imageUrl={images[card.imageKey]}
-                altText={card.altText}
-                href={`/${locale}/${servicesPath}`}
-                description={card.description}
-                bullets={card.bullets}
-                details=""
-              />
-              {card.bookingUrl ? (
-                <a
-                  href={card.bookingUrl}
-                  className="rezdy rezdy-modal inline-flex items-center justify-center h-12 px-8 mt-auto bg-brand-primary !text-white hover:bg-brand-dark font-medium transition-colors cursor-pointer no-underline self-start"
-                >
-                  {learnMoreAndBook}
-                </a>
-              ) : (
-                <Button
-                  size="lg"
-                  className="mt-auto !text-white hover:no-underline self-start"
-                  asChild
-                >
-                  <a href={`mailto:${SITE_CONFIG.company.contact.email}`}>
-                    {requestViaEmail}
-                  </a>
-                </Button>
-              )}
-            </div>
+            <ServiceOfferingBlock
+              key={card.title}
+              card={card}
+              locale={locale}
+              servicesPath={servicesPath}
+              learnMoreAndBook={learnMoreAndBook}
+              requestViaEmail={requestViaEmail}
+            />
           ))}
-        </Slider>
+        </div>
+        <div className="hidden md:block">
+          <Slider
+            slidesPerView={{ mobile: 1.05, tablet: 2, desktop: 2.5 }}
+            showPagination={false}
+          >
+            {cards.map((card) => (
+              <ServiceOfferingBlock
+                key={card.title}
+                card={card}
+                locale={locale}
+                servicesPath={servicesPath}
+                learnMoreAndBook={learnMoreAndBook}
+                requestViaEmail={requestViaEmail}
+              />
+            ))}
+          </Slider>
+        </div>
       </section>
 
       <FAQ />

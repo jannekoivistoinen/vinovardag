@@ -1,8 +1,6 @@
 import { FAQ } from "@/components/FAQ";
 import MarkdownText from "@/components/MarkdownText";
 import { getTranslations } from "next-intl/server";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import ContactForm from "../ContactForm";
 export default async function ContactPage() {
   const t = await getTranslations("page.contact");
@@ -17,20 +15,9 @@ export default async function ContactPage() {
           <MarkdownText className="p-lg content max-w-3xl mx-auto">
             {t("hero.description")}
           </MarkdownText>
-          <Button
-            size="lg"
-            className="mx-auto mt-8 !text-white hover:no-underline"
-            asChild
-          >
-            <Link href="#form" className="hover:no-underline" target="_blank">
-              {t("hero.buttonText")}
-            </Link>
-          </Button>
         </div>
-      </section>
 
-      <section id="contact" className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
+        <div className="contact-layout grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 pt-12">
           <div>
             <MarkdownText className="mb-3 md:mb-6">
               {t("contact.title")}

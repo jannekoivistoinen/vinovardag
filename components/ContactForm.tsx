@@ -2,10 +2,13 @@
 
 import { useState, useEffect, Suspense } from "react";
 import { useForm } from "react-hook-form";
-import useWeb3Forms from "@web3forms/react";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useSearchParams, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import type {
+  ContactApiResult,
+  ContactFormData,
+} from "@/lib/contact/schema";
 
 // Add input class constants
 const INPUT_STYLES = {
@@ -22,55 +25,40 @@ const getInputClassName = (error?: boolean, isSelect?: boolean) => {
   } ${isSelect ? INPUT_STYLES.select : ""}`;
 };
 
-type FormData = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
-  botcheck: string;
-};
-
-// Component to handle the part using useSearchParams
 const ContactFormContent = () => {
   const t = useTranslations("component.contactForm");
-  const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors, isSubmitting },
-  } = useForm<FormData>({
+  } = useForm<ContactFormData>({
     mode: "onTouched",
   });
 
   const [message, setMessage] = useState<string>("");
   const [showError, setShowError] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const apiKey = process.env.PUBLIC_ACCESS_KEY || "";
-
-  const { submit: onSubmit } = useWeb3Forms({
-    access_key: apiKey,
-    settings: {
-      from_name: "Vinovardag",
-      subject: "New inquiry from Vinovardag",
-    },
-    onSuccess: () => {
-      reset();
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = (await res.json()) as ContactApiResult;
+      if (!res.ok || !json.ok) {
+        throw new Error("error" in json ? json.error : "Failed");
+      }
       setShowError(false);
-      const isSwedish = pathname.startsWith("/sv");
-      const thankYouPath = isSwedish
-        ? "/sv/info/kontakt/tack"
-        : "/en/info/contact/thank-you";
-      router.push(thankYouPath);
-    },
-    onError: (msg) => {
+      setSubmitted(true);
+    } catch (err) {
       setShowError(true);
-      setMessage(msg);
-    },
-  });
+      setMessage(err instanceof Error ? err.message : "");
+    }
+  };
 
   useEffect(() => {
     // Check if we're on the contact page and there's a hash
@@ -199,34 +187,46 @@ const ContactFormContent = () => {
           )}
         </div>
 
-        <Button type="submit" size="lg" className="mt-8 mx-auto">
-          {isSubmitting ? (
-            <svg
-              className="mx-auto h-5 w-5 animate-spin text-white dark:text-black"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="4"
-              ></circle>
-              <path
-                className="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-              ></path>
-            </svg>
-          ) : (
-            <span className="inline-flex items-center">
-              {t("submitButton")}
+        {submitted ? (
+          <p className="mt-8 text-center text-lg">{t("thankYouMessage")}</p>
+        ) : (
+          <Button
+            type="submit"
+            size="lg"
+            className="mt-8 mx-auto"
+            disabled={isSubmitting}
+          >
+            <span className="relative inline-flex items-center justify-center">
+              <span className={isSubmitting ? "invisible" : ""}>
+                {t("submitButton")}
+              </span>
+              {isSubmitting && (
+                <span className="absolute inset-0 flex items-center justify-center">
+                  <svg
+                    className="h-5 w-5 animate-spin text-white dark:text-black"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                </span>
+              )}
             </span>
-          )}
-        </Button>
+          </Button>
+        )}
       </form>
 
       {showError && (

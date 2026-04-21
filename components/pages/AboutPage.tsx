@@ -45,8 +45,11 @@ export default async function AboutPage({ locale }: AboutPageProps) {
         </div>
       </section>
 
-      <section id="hanna-profile" className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-start">
+      <section
+        id="hanna-profile"
+        className="about-hanna-section container"
+      >
+        <div className="about-profile-layout grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-start">
           <div className="md:sticky md:top-[100px] md:self-start">
             <Image
               src={hanna}
@@ -98,9 +101,11 @@ export default async function AboutPage({ locale }: AboutPageProps) {
             <p className="text-2xl font-medium text-brand-brown mb-1">
               {t("hannaProfile.closingName")}
             </p>
-            <h3 className="text-lg font-medium text-brand-brown">
-              {t("hannaProfile.subtitle")}
-            </h3>
+            {t("hannaProfile.subtitle") ? (
+              <h3 className="text-lg font-medium text-brand-brown">
+                {t("hannaProfile.subtitle")}
+              </h3>
+            ) : null}
           </div>
         </div>
       </section>
