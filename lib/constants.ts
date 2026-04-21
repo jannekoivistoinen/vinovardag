@@ -61,7 +61,7 @@ export const SITE_CONFIG = {
     colors: {
       primary: "#A77E16",
       secondary: "#000000",
-      accent: "#D3A01C",
+      accent: "#B98B18",
     },
     fonts: {
       heading: "Cabinet Grotesk, sans-serif",

@@ -18,14 +18,13 @@ export function TerminalCTA() {
           <MarkdownText className="mb-12 p-base text-white/60">
             {t("description")}
           </MarkdownText>
-          <Button size="lg" className="max-w-30 mx-auto">
+          <Button size="lg" className="max-w-30 mx-auto" asChild>
             <Link
               href={`/${locale}/${
                 SITE_CONFIG.i18n.routes.contact[
                   locale as keyof typeof SITE_CONFIG.i18n.routes.contact
                 ]
               }`}
-              className="hover:no-underline"
             >
               {t("label")}
             </Link>

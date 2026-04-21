@@ -15,7 +15,7 @@ const config: Config = {
       },
       colors: {
         "brand-dark": "#A77E16",
-        "brand-primary": "#D3A01C",
+        "brand-primary": "#B98B18",
         "brand-light": "#EBE0D6",
         "brand-brown": "#503825",
         "brand-beige-lightest": "#FAF7F2",
