@@ -10,6 +10,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import JsonLd from "@/components/JsonLd";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const haskoy = localFont({
   src: "./../fonts/Haskoy-variable.woff2",
@@ -177,6 +178,7 @@ export default async function LocaleLayout({
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId="G-7RT7TFK6GX" />
     </html>
   );
 }
