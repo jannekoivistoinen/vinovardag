@@ -1,3 +1,4 @@
+import { execSync } from "node:child_process";
 import type { MetadataRoute } from "next";
 import { COMPANY_METADATA } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
@@ -11,88 +12,107 @@ type Pathnames = {
   [key: string]: PathConfig;
 };
 
+const ROUTE_SOURCES: Record<string, string[]> = {
+  "": ["app/[locale]/page.tsx", "components/pages/HomePage.tsx"],
+  "/services": [
+    "app/[locale]/services/page.tsx",
+    "components/pages/ServicesPage.tsx",
+  ],
+  "/about": [
+    "app/[locale]/about/page.tsx",
+    "components/pages/AboutPage.tsx",
+  ],
+  "/contact": [
+    "app/[locale]/contact/page.tsx",
+    "components/pages/ContactPage.tsx",
+  ],
+  "/terms": [
+    "app/[locale]/terms/page.tsx",
+    "components/pages/TermsPage.tsx",
+  ],
+};
+
+function getLastMod(files: string[]): string | undefined {
+  try {
+    const iso = execSync(
+      `git log -1 --format=%cI -- ${files.map((f) => `"${f}"`).join(" ")}`,
+      {
+        cwd: process.cwd(),
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      },
+    ).trim();
+    return iso || undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const { url } = COMPANY_METADATA;
   const baseUrl = url.endsWith("/") ? url.slice(0, -1) : url;
 
-  // Get all unique pathnames from the routing configuration
   const pathnames = routing.pathnames as Pathnames;
   const paths = Object.keys(pathnames);
 
-  // Create sitemap entries for each path and both languages
-  const sitemapEntries: MetadataRoute.Sitemap = [];
+  const homeLastMod = getLastMod(ROUTE_SOURCES[""]);
 
-  // Add entries for Swedish paths
-  paths.forEach((path) => {
-    const swedishUrl = `${baseUrl}/sv${pathnames[path].sv}`;
-    const englishUrl = `${baseUrl}/en${pathnames[path].en}`;
-
-    sitemapEntries.push({
-      url: swedishUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: path === "/" ? 1 : 0.8,
-      alternates: {
-        languages: {
-          en: englishUrl,
-          sv: swedishUrl,
-        },
-      },
-    });
-  });
-
-  // Add entries for English paths
-  paths.forEach((path) => {
-    const englishUrl = `${baseUrl}/en${pathnames[path].en}`;
-    const swedishUrl = `${baseUrl}/sv${pathnames[path].sv}`;
-
-    sitemapEntries.push({
-      url: englishUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: path === "/" ? 1 : 0.8,
-      alternates: {
-        languages: {
-          en: englishUrl,
-          sv: swedishUrl,
-        },
-      },
-    });
-  });
-
-  // Add homepage entry and locale-specific homepages
-  const homepageEntries: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
+  const entries: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/en`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      lastModified: homeLastMod,
       alternates: {
         languages: {
           en: `${baseUrl}/en`,
           sv: `${baseUrl}/sv`,
+          "x-default": `${baseUrl}/en`,
         },
       },
     },
     {
       url: `${baseUrl}/sv`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      lastModified: homeLastMod,
       alternates: {
         languages: {
           en: `${baseUrl}/en`,
           sv: `${baseUrl}/sv`,
+          "x-default": `${baseUrl}/en`,
         },
       },
     },
   ];
 
-  return [...homepageEntries, ...sitemapEntries];
+  paths.forEach((path) => {
+    const englishUrl = `${baseUrl}/en${pathnames[path].en}`;
+    const swedishUrl = `${baseUrl}/sv${pathnames[path].sv}`;
+    const lastModified = ROUTE_SOURCES[path]
+      ? getLastMod(ROUTE_SOURCES[path])
+      : undefined;
+
+    entries.push({
+      url: englishUrl,
+      lastModified,
+      alternates: {
+        languages: {
+          en: englishUrl,
+          sv: swedishUrl,
+          "x-default": englishUrl,
+        },
+      },
+    });
+
+    entries.push({
+      url: swedishUrl,
+      lastModified,
+      alternates: {
+        languages: {
+          en: englishUrl,
+          sv: swedishUrl,
+          "x-default": englishUrl,
+        },
+      },
+    });
+  });
+
+  return entries;
 }

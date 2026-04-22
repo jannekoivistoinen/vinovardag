@@ -4,7 +4,6 @@ import { getTranslations } from "next-intl/server";
 import HomePage from "@/components/pages/HomePage";
 import JsonLd from "@/components/JsonLd";
 
-// Update Props type to use PageProps
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -39,11 +38,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: COMPANY_METADATA.name,
       type: "website",
       locale: locale === "sv" ? "sv_SE" : "en_US",
+      alternateLocale: locale === "sv" ? ["en_US"] : ["sv_SE"],
       images: [
         {
           url: `${baseUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
+          alt: `${COMPANY_METADATA.name} — wine and culinary experiences in Swedish Lapland`,
         },
       ],
     },
@@ -56,9 +57,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Update Page component to handle Promise params
 export default async function Page({ params }: Props) {
   const { locale } = await params;
+  const baseUrl = COMPANY_METADATA.url.endsWith("/")
+    ? COMPANY_METADATA.url.slice(0, -1)
+    : COMPANY_METADATA.url;
+  const canonicalUrl = `${baseUrl}/${locale}`;
   const faqTranslations = await getTranslations({
     locale,
     namespace: "component.faq",
@@ -71,6 +75,7 @@ export default async function Page({ params }: Props) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": `${canonicalUrl}#faq`,
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question.replace(/^\*\s*/, ""),
@@ -81,8 +86,21 @@ export default async function Page({ params }: Props) {
     })),
   };
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: `${COMPANY_METADATA.name} | Premium Wine Experiences in Swedish Lapland`,
+    inLanguage: locale,
+    isPartOf: { "@id": `${baseUrl}/#website` },
+    about: { "@id": `${baseUrl}/#organization` },
+    primaryImageOfPage: `${baseUrl}/og-image.jpg`,
+  };
+
   return (
     <>
+      <JsonLd data={webPageSchema} />
       <JsonLd data={faqSchema} />
       <HomePage locale={locale} />
     </>

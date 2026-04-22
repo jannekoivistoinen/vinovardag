@@ -1,4 +1,4 @@
-import { setLanguageCookie } from "@/lib/utils";
+import { setLanguageCookie } from "@/lib/cookies";
 import type { useRouter as UseRouter } from "next/navigation";
 import { LocaleData, NavigationItem, isLocaleData } from "./types";
 

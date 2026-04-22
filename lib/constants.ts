@@ -18,7 +18,6 @@ export const SITE_CONFIG = {
     },
     contact: {
       email: "hello@vinovardag.com",
-      phone: "+46707123456",
       address: "Hjalmar Lundbohmsvägen 74A, 98139 Kiruna, Sweden",
     },
     social: {

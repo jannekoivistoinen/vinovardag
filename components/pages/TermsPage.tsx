@@ -1,13 +1,11 @@
-"use client";
-
 import { FAQ } from "@/components/FAQ";
 import MarkdownText from "@/components/MarkdownText";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function TermsPage() {
-  const t = useTranslations("page.terms");
+export default async function TermsPage() {
+  const t = await getTranslations("page.terms");
 
   return (
     <>

@@ -59,7 +59,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Update Page component to handle Promise params
 export default async function Page({ params }: Props) {
   const { locale } = await params;
   const baseUrl = COMPANY_METADATA.url.endsWith("/")
@@ -72,52 +71,98 @@ export default async function Page({ params }: Props) {
     locale,
     namespace: "page.about.hannaProfile",
   });
+  const homeLabel = locale === "sv" ? "Hem" : "Home";
+  const aboutLabel = locale === "sv" ? "Om oss" : "About";
 
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${baseUrl}/#hanna-karkea`,
     name: "Hanna Karkea",
-    jobTitle: aboutTranslations("subtitle"),
+    jobTitle: "Sommelier",
     description: aboutTranslations("bio"),
     url: canonicalUrl,
     image: `${baseUrl}/assets/images/vinovardag-hanna-karkea.jpg`,
+    nationality: { "@type": "Country", name: "Finland" },
     alumniOf: {
       "@type": "EducationalOrganization",
       name: "Scandinavian Wine Academy",
     },
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      name: "WSET Level 3",
-    },
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "WSET Level 3",
+        credentialCategory: "certification",
+        recognizedBy: {
+          "@type": "Organization",
+          name: "Wine & Spirit Education Trust",
+          url: "https://www.wsetglobal.com/",
+        },
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Certified Sommelier",
+        credentialCategory: "certification",
+        recognizedBy: {
+          "@type": "EducationalOrganization",
+          name: "Scandinavian Wine Academy",
+        },
+      },
+    ],
+    knowsLanguage: ["en", "sv", "fi"],
     knowsAbout: [
       "wine",
       "sommelier",
       "Nordic cuisine",
       "Arctic food culture",
       "wine pairings",
+      "cool-climate viticulture",
     ],
-    worksFor: {
-      "@type": "Organization",
-      name: SITE_CONFIG.company.name,
-      url: SITE_CONFIG.company.url,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Hjalmar Lundbohmsvägen 74A",
-        postalCode: "98139",
-        addressLocality: "Kiruna",
-        addressCountry: "SE",
-      },
-    },
+    worksFor: { "@id": `${baseUrl}/#organization` },
     address: {
       "@type": "PostalAddress",
       addressLocality: "Kiruna",
+      addressRegion: "Norrbotten",
       addressCountry: "SE",
     },
   };
 
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": ["WebPage", "AboutPage"],
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: `About ${SITE_CONFIG.company.name}`,
+    inLanguage: locale,
+    isPartOf: { "@id": `${baseUrl}/#website` },
+    about: { "@id": `${baseUrl}/#organization` },
+    mainEntity: { "@id": `${baseUrl}/#hanna-karkea` },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: homeLabel,
+        item: `${baseUrl}/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: aboutLabel,
+        item: canonicalUrl,
+      },
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={aboutPageSchema} />
       <JsonLd data={personSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <AboutPage locale={locale} />
     </>
   );

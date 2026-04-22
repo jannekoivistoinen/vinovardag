@@ -1,17 +1,15 @@
 /* TEAM */
-Company: Lucky Ranch Oy
-Site: https://luckyranch.fi
-Location: Pyhä, Finland
-Content: Thomas Lindqvist
-Photographers: Thomas Lindqvist, Mélanie Ba, Krista Ylinen, Miika Hämäläinen, Toni Eskelinen, Fiia Ketonen
+Company: Vinovardag
+Site: https://www.vinovardag.com
+Location: Kiruna, Swedish Lapland, Sweden
+Host & Sommelier: Hanna Karkea
 Developer: Janne Koivistoinen, Damngood
 Designer: Janne Koivistoinen, Damngood
 
 /* SITE */
-Last update: 2025
-Stack: Next.js, Tailwind CSS, Framer Motion
-Software: Cursor IDE, Sketch
+Last update: 2026
+Stack: Next.js, Tailwind CSS, next-intl, Framer Motion
 
-Built with attention to detail in Äkäslompolo, Finland.
+Built with attention to detail.
 
 A damn good website by Damngood.

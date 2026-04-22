@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { COMPANY_METADATA } from "@/lib/constants";

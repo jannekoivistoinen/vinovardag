@@ -24,7 +24,7 @@ const Footer = () => {
             <Link
               href="https://instagram.com/vinovardag"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
             >
               {t("instagram")}
             </Link>

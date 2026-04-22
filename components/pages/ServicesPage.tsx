@@ -5,9 +5,10 @@ import Link from "next/link";
 import { FAQ } from "@/components/FAQ";
 import { images, ImageKey } from "@/app/assets/images";
 import { SITE_CONFIG } from "@/lib/constants";
-import { Slider } from "@/components/Slider";
+import { Slider } from "@/components/SliderDynamic";
 import { ServiceCard } from "@/components/ServiceCard";
 import Script from "next/script";
+import ReactDOM from "react-dom";
 
 interface CardItem {
   title: string;
@@ -69,8 +70,11 @@ function ServiceOfferingBlock({
 }
 
 export default async function ServicesPage({ locale }: ServicesPageProps) {
-  const t = await getTranslations("page.services");
-  const tHome = await getTranslations("page.homepage");
+  ReactDOM.preconnect("https://outdoornorth67.rezdy.com");
+  const [t, tHome] = await Promise.all([
+    getTranslations("page.services"),
+    getTranslations("page.homepage"),
+  ]);
   const cards = tHome.raw("cards.items") as CardItem[];
   const requestViaEmail = t("requestViaEmail");
   const learnMoreAndBook = t("learnMoreAndBook");

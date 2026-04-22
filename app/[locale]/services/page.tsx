@@ -60,6 +60,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;
+  const baseUrl = COMPANY_METADATA.url.endsWith("/")
+    ? COMPANY_METADATA.url.slice(0, -1)
+    : COMPANY_METADATA.url;
+  const localizedPath =
+    locale === "sv"
+      ? SITE_CONFIG.i18n.routes.services.sv
+      : SITE_CONFIG.i18n.routes.services.en;
+  const canonicalUrl = `${baseUrl}/${locale}/${localizedPath}`;
+  const homeLabel = locale === "sv" ? "Hem" : "Home";
+  const servicesLabel = locale === "sv" ? "Tjänster" : "Services";
+
   const servicesTranslations = await getTranslations({
     locale,
     namespace: "page.services.services",
@@ -82,33 +93,89 @@ export default async function Page({ params }: Props) {
   };
   const allServices = [...sharedServices, ...privateServicesSection.service];
 
+  const cleanTitle = (t: string) =>
+    t.replace(/^###\s*\*?\s*/, "").replace(/\*/g, "").trim();
+
+  const areaServedNode = {
+    "@type": "City",
+    name: "Kiruna",
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: "Swedish Lapland",
+    },
+  } as const;
+
   const serviceItemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: allServices.map((service, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Service",
-        name: service.title.replace(/^###\s*\*?\s*/, ""),
+    "@id": `${canonicalUrl}#services`,
+    itemListElement: allServices.map((service, index) => {
+      const name = cleanTitle(service.title);
+      const serviceNode: Record<string, unknown> = {
+        "@type": ["Service", "TouristTrip"],
+        name,
         description: service.description,
         image: service.imageKey
-          ? `${SITE_CONFIG.company.url}/assets/images/${service.imageKey}.jpg`
-          : undefined,
-        url: service.bookingUrl,
-        provider: {
-          "@type": "Organization",
-          name: SITE_CONFIG.company.name,
-          url: SITE_CONFIG.company.url,
+          ? `${baseUrl}/assets/images/${service.imageKey}.jpg`
+          : `${baseUrl}/og-image.jpg`,
+        provider: { "@id": `${baseUrl}/#organization` },
+        areaServed: areaServedNode,
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "SEK",
+          priceRange: "SEK 1195-2500",
+          availability: "https://schema.org/InStock",
+          url: service.bookingUrl ?? canonicalUrl,
+          seller: { "@id": `${baseUrl}/#organization` },
         },
-        areaServed: "Kiruna, Swedish Lapland",
+      };
+      if (service.bookingUrl) {
+        serviceNode.url = service.bookingUrl;
+      }
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        item: serviceNode,
+      };
+    }),
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": ["WebPage", "CollectionPage"],
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: `${SITE_CONFIG.company.name} Services`,
+    inLanguage: locale,
+    isPartOf: { "@id": `${baseUrl}/#website` },
+    about: { "@id": `${baseUrl}/#organization` },
+    mainEntity: { "@id": `${canonicalUrl}#services` },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: homeLabel,
+        item: `${baseUrl}/${locale}`,
       },
-    })),
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: servicesLabel,
+        item: canonicalUrl,
+      },
+    ],
   };
 
   return (
     <>
+      <JsonLd data={webPageSchema} />
       <JsonLd data={serviceItemListSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <ServicesPage locale={locale} />
     </>
   );

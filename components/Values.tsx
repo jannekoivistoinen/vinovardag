@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import MarkdownText from "./MarkdownText";
 import { ValueCard } from "@/components/ValueCard";
-import { Slider } from "./Slider";
+import { Slider } from "./SliderDynamic";
 
 interface ValueItem {
   title: string;

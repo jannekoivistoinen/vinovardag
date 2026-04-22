@@ -11,25 +11,16 @@ export async function middleware(request: NextRequest) {
   try {
     const pathname = request.nextUrl.pathname;
 
-    // Log the request for debugging
-    console.log(`Processing request for path: ${pathname}`);
-
-    // Handle root path explicitly
     if (pathname === "/") {
       const defaultLocale = routing.defaultLocale;
       return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
     }
 
-    // If it starts with a valid locale, use the intl middleware
     if (/^\/(?:en|sv)(?:$|\/)/.test(pathname)) {
       return intlMiddleware(request);
     }
 
-    // For any other path at root level, redirect to the default locale version
     const defaultLocale = routing.defaultLocale;
-    console.log(
-      `Redirecting to default locale (${defaultLocale}) for path: ${pathname}`
-    );
     const response = NextResponse.redirect(
       new URL(`/${defaultLocale}${pathname}`, request.url)
     );
