@@ -20,7 +20,7 @@
         },
         {
           "question": "Hur bokar jag?",
-          "answer": "Du kan boka våra tjänster direkt via vår webbplats med hjälp av bokningslänken, eller genom att kontakta oss via e-post. För skräddarsydda upplevelser rekommenderar vi att du kontaktar oss direkt så att vi kan anpassa upplevelsen efter dina önskemål."
+          "answer": "Du kan boka våra tjänster genom att kontakta oss via e-post eller via kontaktformuläret på vår webbplats. För skräddarsydda upplevelser rekommenderar vi att du kontaktar oss direkt så att vi kan anpassa upplevelsen efter dina önskemål."
         },
         {
           "question": "Erbjuder ni vinprovningar?",
@@ -167,14 +167,12 @@
             "title": "### Arktiska heminvitationer i gamla Kiruna",
             "description": "Kliv in i vårt familjehem från 1914 i Kirunas historiska gamla stad för ett autentiskt arktiskt välkomnande lett av din sommeliervärdinna.",
             "bullets": [
-              "Lunch i sommelierens arktiska kök",
               "Nordiska vinprovningar",
               "Hjärtlig arktisk middag",
               "Äkta svensk fika"
             ],
             "imageKey": "vinovardagHero",
-            "altText": "Arktiska heminvitationer i gamla Kiruna",
-            "bookingUrl": "https://outdoornorth67.rezdy.com/598130/lunch-in-the-sommelier-s-arctic-kitchen"
+            "altText": "Arktiska heminvitationer i gamla Kiruna"
           }
         ]
       }
@@ -272,15 +270,11 @@
     "services": {
       "bookNow": "Boka nu",
       "requestViaEmail": "Kontakta via e-post",
-      "learnMoreAndBook": "Läs mer & Boka",
       "detailLabels": {
         "time": "Tid",
         "duration": "Varaktighet"
       },
       "sliderImages": [
-        {
-          "alt": "Lunch i sommelierens arktiska kök"
-        },
         {
           "alt": "Nordisk vinprovning hos Vinovardag"
         },
@@ -311,23 +305,6 @@
         "buttonText": "Kontakta oss"
       },
       "services": {
-        "title": "## Delade aktiviteter",
-        "service": [
-          {
-            "title": "### Lunch i sommelierens arktiska kök",
-            "description": "Det finns en särskild magi i en måltid tillagad med hjärtat och delad vid ett familjebord. Du välkomnas in i själva kärnan av vår vardag.\n\nVår matlagning är ärlig och tröstande, inspirerad av recept och vilda råvaror som försörjt familjer i norr i generationer. På menyn kan det finnas en långkokt renköttsgryta, färsk fisk från lokala vatten eller handplockade skogssvampar. Som sommelier älskar jag att välja den perfekta drycken till de hemlagade smakerna, men fokus ligger på måltidens värme och det lätta samtalet.",
-            "imageKey": "vinovardagCulinaryJourneys",
-            "altText": "Lunch i sommelierens arktiska kök i Kiruna",
-            "bookingUrl": "https://outdoornorth67.rezdy.com/598130/lunch-in-the-sommelier-s-arctic-kitchen",
-            "details": {
-              "type": "Delad aktivitet",
-              "time": "11–13.00",
-              "duration": "Ca 2 tim",
-              "capacity": "Min 2 – max 6 pax",
-              "note": "Privata tillfällen möjliga. Minimibokningsavgift motsvarande 6 personer tillkommer."
-            }
-          }
-        ],
         "privateServices": {
           "title": "Privata aktiviteter",
           "service": [

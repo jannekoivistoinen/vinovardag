@@ -14,7 +14,7 @@ interface ServiceCardProps {
   bullets?: string[];
   callToAction?: string;
   className?: string;
-  /** Merged onto the outer link (e.g. Rezdy modal classes) */
+  /** Merged onto the outer link */
   linkClassName?: string;
 }
 

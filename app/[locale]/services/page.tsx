@@ -75,12 +75,6 @@ export default async function Page({ params }: Props) {
     locale,
     namespace: "page.services.services",
   });
-  const sharedServices = servicesTranslations.raw("service") as Array<{
-    title: string;
-    description?: string;
-    imageKey?: string;
-    bookingUrl?: string;
-  }>;
   const privateServicesSection = servicesTranslations.raw(
     "privateServices"
   ) as {
@@ -88,10 +82,9 @@ export default async function Page({ params }: Props) {
       title: string;
       description?: string;
       imageKey?: string;
-      bookingUrl?: string;
     }>;
   };
-  const allServices = [...sharedServices, ...privateServicesSection.service];
+  const allServices = privateServicesSection.service;
 
   const cleanTitle = (t: string) =>
     t.replace(/^###\s*\*?\s*/, "").replace(/\*/g, "").trim();
@@ -125,13 +118,10 @@ export default async function Page({ params }: Props) {
           priceCurrency: "SEK",
           priceRange: "SEK 1195-2500",
           availability: "https://schema.org/InStock",
-          url: service.bookingUrl ?? canonicalUrl,
+          url: canonicalUrl,
           seller: { "@id": `${baseUrl}/#organization` },
         },
       };
-      if (service.bookingUrl) {
-        serviceNode.url = service.bookingUrl;
-      }
       return {
         "@type": "ListItem",
         position: index + 1,

@@ -20,7 +20,7 @@
         },
         {
           "question": "How can I book?",
-          "answer": "You can book our services directly through our website using the booking link, or by contacting us via email. For customized experiences, we recommend reaching out directly so we can tailor the experience to your preferences."
+          "answer": "You can book our services by contacting us via email or through the contact form on our website. For customized experiences, we recommend reaching out directly so we can tailor the experience to your preferences."
         },
         {
           "question": "Do you offer tastings?",
@@ -167,14 +167,12 @@
             "title": "### Arctic Home Invitations in Old Kiruna",
             "description": "Step into our 1914 family home in Kiruna's historic Old Town for an authentic Arctic welcome led by your sommelier host.",
             "bullets": [
-              "Lunch in the Sommelier's Arctic Kitchen",
               "Nordic wine tastings",
               "Heartfelt Arctic dining",
               "Authentic Swedish fika"
             ],
             "imageKey": "vinovardagHero",
-            "altText": "Arctic Home Invitations in Old Kiruna",
-            "bookingUrl": "https://outdoornorth67.rezdy.com/598130/lunch-in-the-sommelier-s-arctic-kitchen"
+            "altText": "Arctic Home Invitations in Old Kiruna"
           }
         ]
       }
@@ -220,7 +218,6 @@
       "hero": {
         "title": "# I look forward to welcoming you and sharing the heartfelt flavors of Lapland together",
         "description": "Thank you so much for your interest. Whether you are planning a special celebration, looking for the warmth of a home-hosted activity, or in need of personalized recommendations, I am here to help enrich your journey.",
-
         "buttonText": "Send a message"
       },
       "contact": {
@@ -254,15 +251,11 @@
     "services": {
       "bookNow": "Book Now",
       "requestViaEmail": "Request via email",
-      "learnMoreAndBook": "Learn more & Book",
       "detailLabels": {
         "time": "Time",
         "duration": "Duration"
       },
       "sliderImages": [
-        {
-          "alt": "Lunch in the Sommelier's Arctic Kitchen"
-        },
         {
           "alt": "Nordic wine tasting at Vinovardag"
         },
@@ -293,23 +286,6 @@
         "buttonText": "Get in touch"
       },
       "services": {
-        "title": "## Shared activities",
-        "service": [
-          {
-            "title": "### Lunch in the Sommelier's Arctic Kitchen",
-            "description": "There is a special kind of magic in a meal cooked from the heart and shared at a family table. You are being welcomed into the very center of our daily life.\n\nOur cooking is honest and comforting, inspired by the recipes and wild ingredients that have sustained families in the North for generations. You might find a pot of slow-simmered reindeer stew, fresh fish from local waters, or hand-picked forest mushrooms on the menu. As a Sommelier, I take great joy in choosing the perfect drink to complement these home-cooked flavors, but the focus remains on the warmth of the meal and the easy flow of conversation.",
-            "imageKey": "vinovardagCulinaryJourneys",
-            "altText": "Lunch in the Sommelier's Arctic Kitchen in Kiruna",
-            "bookingUrl": "https://outdoornorth67.rezdy.com/598130/lunch-in-the-sommelier-s-arctic-kitchen",
-            "details": {
-              "type": "Shared activity",
-              "time": "11–13.00",
-              "duration": "Approx 2 hrs",
-              "capacity": "Min 2 – max 6 pax",
-              "note": "Private sessions available. Minimum booking fee for 6 people applies."
-            }
-          }
-        ],
         "privateServices": {
           "title": "Private activities",
           "service": [
