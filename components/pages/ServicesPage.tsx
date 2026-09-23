@@ -4,69 +4,152 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FAQ } from "@/components/FAQ";
 import { images, ImageKey } from "@/app/assets/images";
-import { SITE_CONFIG } from "@/lib/constants";
-import { Slider } from "@/components/SliderDynamic";
-import { ServiceCard } from "@/components/ServiceCard";
+import { SITE_CONFIG, IMAGE_QUALITY } from "@/lib/constants";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faClock,
+  faHourglass,
+  faUsers,
+} from "@awesome.me/kit-b2cb81c624/icons/classic/solid";
 
-interface CardItem {
+interface ServiceDetails {
+  type: string;
+  time?: string;
+  duration: string;
+  capacity: string;
+  note?: string;
+}
+
+interface Service {
   title: string;
   description: string;
-  bullets: string[];
   imageKey: ImageKey;
   altText: string;
+  details: ServiceDetails;
+}
+
+interface ServicesSection {
+  privateServices: {
+    title: string;
+    service: Service[];
+  };
 }
 
 interface ServicesPageProps {
   locale: string;
 }
 
-function ServiceOfferingBlock({
-  card,
-  locale,
-  servicesPath,
-  requestViaEmail,
+function DetailsList({
+  details,
+  timeLabel,
+  durationLabel,
 }: {
-  card: CardItem;
-  locale: string;
-  servicesPath: string;
+  details: ServiceDetails;
+  timeLabel: string;
+  durationLabel: string;
+}) {
+  const rows = [
+    {
+      icon: faClock,
+      label: `${timeLabel}: ${details.time}`,
+      show: !!details.time,
+    },
+    {
+      icon: faHourglass,
+      label: `${durationLabel}: ${details.duration}`,
+      show: true,
+    },
+    { icon: faUsers, label: details.capacity, show: true },
+  ];
+
+  return (
+    <ul className="space-y-2 mt-12 mb-6">
+      <li className="text-xs font-semibold uppercase tracking-widest text-brand-dark mb-4">
+        {details.type}
+      </li>
+      {rows
+        .filter((r) => r.show)
+        .map((r) => (
+          <li
+            key={r.label}
+            className="flex items-center gap-3 text-md font-medium"
+          >
+            <FontAwesomeIcon
+              icon={r.icon}
+              className="w-4 h-4 text-brand-dark shrink-0"
+            />
+            <span>{r.label}</span>
+          </li>
+        ))}
+      {details.note && (
+        <li className="text-sm italic opacity-70 mt-1 pl-7">{details.note}</li>
+      )}
+    </ul>
+  );
+}
+
+function ActivityGrid({
+  services,
+  requestViaEmail,
+  timeLabel,
+  durationLabel,
+}: {
+  services: Service[];
   requestViaEmail: string;
+  timeLabel: string;
+  durationLabel: string;
 }) {
   return (
-    <div className="flex-1 flex flex-col">
-      <ServiceCard
-        title={card.title}
-        imageUrl={images[card.imageKey]}
-        altText={card.altText}
-        href={`/${locale}/${servicesPath}`}
-        description={card.description}
-        bullets={card.bullets}
-        details=""
-      />
-      <Button
-        size="lg"
-        className="mt-auto !text-white hover:no-underline self-start"
-        asChild
-      >
-        <a href={`mailto:${SITE_CONFIG.company.contact.email}`}>
-          {requestViaEmail}
-        </a>
-      </Button>
+    <div className="flex flex-col gap-6 md:gap-8">
+      {services.map((service) => (
+        <div
+          key={service.title}
+          className="bg-[#EDEDDE] grid grid-cols-1 md:grid-cols-2 items-stretch"
+        >
+          <div className="relative aspect-[4/3] md:aspect-auto w-full overflow-hidden">
+            <Image
+              src={images[service.imageKey]}
+              alt={service.altText}
+              fill
+              className="object-cover"
+              quality={IMAGE_QUALITY}
+              sizes="(min-width: 1280px) 640px, (min-width: 780px) 50vw, 100vw"
+              loading="lazy"
+            />
+          </div>
+          <div className="p-8 md:p-12">
+            <MarkdownText className="mb-4">{service.title}</MarkdownText>
+            <MarkdownText className="text-slate-700 content p-base">
+              {service.description}
+            </MarkdownText>
+            <DetailsList
+              details={service.details}
+              timeLabel={timeLabel}
+              durationLabel={durationLabel}
+            />
+            <Button
+              size="lg"
+              className="mt-2 !text-white hover:no-underline"
+              asChild
+            >
+              <a href={`mailto:${SITE_CONFIG.company.contact.email}`}>
+                {requestViaEmail}
+              </a>
+            </Button>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
 
 export default async function ServicesPage({ locale }: ServicesPageProps) {
-  const [t, tHome] = await Promise.all([
-    getTranslations("page.services"),
-    getTranslations("page.homepage"),
-  ]);
-  const cards = tHome.raw("cards.items") as CardItem[];
+  const t = await getTranslations("page.services");
+  const servicesSection = t.raw("services") as ServicesSection;
   const requestViaEmail = t("requestViaEmail");
-
-  const servicesPath =
-    SITE_CONFIG.i18n.routes.services[
-      locale as keyof typeof SITE_CONFIG.i18n.routes.services
-    ];
+  const timeLabel = t("detailLabels.time");
+  const durationLabel = t("detailLabels.duration");
 
   return (
     <>
@@ -97,33 +180,12 @@ export default async function ServicesPage({ locale }: ServicesPageProps) {
           </Button>
         </div>
 
-        <div className="flex flex-col gap-10 md:hidden">
-          {cards.map((card) => (
-            <ServiceOfferingBlock
-              key={card.title}
-              card={card}
-              locale={locale}
-              servicesPath={servicesPath}
-              requestViaEmail={requestViaEmail}
-            />
-          ))}
-        </div>
-        <div className="hidden md:block">
-          <Slider
-            slidesPerView={{ mobile: 1.05, tablet: 2, desktop: 2.5 }}
-            showPagination={false}
-          >
-            {cards.map((card) => (
-              <ServiceOfferingBlock
-                key={card.title}
-                card={card}
-                locale={locale}
-                servicesPath={servicesPath}
-                requestViaEmail={requestViaEmail}
-              />
-            ))}
-          </Slider>
-        </div>
+        <ActivityGrid
+          services={servicesSection.privateServices.service}
+          requestViaEmail={requestViaEmail}
+          timeLabel={timeLabel}
+          durationLabel={durationLabel}
+        />
       </section>
 
       <FAQ />
