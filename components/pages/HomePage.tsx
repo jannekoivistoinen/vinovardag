@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import MarkdownText from "../MarkdownText";
 import { FAQ } from "@/components/FAQ";
+import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Slider } from "@/components/SliderDynamic";
@@ -94,6 +95,8 @@ export default async function HomePage({ locale }: HomePageProps) {
           ))}
         </Slider>
       </section>
+
+      <Testimonials />
 
       <FAQ />
     </>

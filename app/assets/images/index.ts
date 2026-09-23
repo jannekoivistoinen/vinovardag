@@ -6,7 +6,7 @@ import vinovardagWinetastings from "./vinovardag-winetastings.jpg";
 import hannaKarkea from "./vinovardag-hanna-karkea.jpg";
 import peopleImage from "./vinovardag-people.jpg";
 import terminalImage from "./vinovardag-terminal.jpg";
-import testimonialAvatar from "./testimonialAvatar.jpg";
+import anuLampinen from "./anu-lampinen.jpg";
 
 // FontAwesome Icons
 import { faArrowRightLong } from "@awesome.me/kit-b2cb81c624/icons/duotone/solid";
@@ -22,7 +22,9 @@ export const images = {
   hannaKarkea,
   peopleImage,
   terminalImage,
-  testimonialAvatar,
+
+  // Testimonial portraits
+  anuLampinen,
 } as const;
 
 export const navigationIcons = {

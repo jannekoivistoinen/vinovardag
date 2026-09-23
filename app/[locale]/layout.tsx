@@ -138,25 +138,19 @@ export default async function LocaleLayout({
   }
   const testimonialItems = tTestimonials.raw("items") as Array<{
     name: string;
+    role?: string;
     quote: string;
   }>;
 
-  const reviews = testimonialItems.map((item) => {
-    const cleanedAuthor = item.name
-      .replace(/\*\*/g, "")
-      .split(" - ")[0]
-      .trim();
-    return {
-      "@type": "Review",
-      author: { "@type": "Person", name: cleanedAuthor },
-      reviewBody: item.quote,
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-    };
-  });
+  const reviews = testimonialItems.map((item) => ({
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: item.name,
+      ...(item.role ? { jobTitle: item.role } : {}),
+    },
+    reviewBody: item.quote,
+  }));
 
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -255,13 +249,6 @@ export default async function LocaleLayout({
     email: SITE_CONFIG.company.contact.email,
     founder: { "@id": `${BASE_URL}/#organization` },
     parentOrganization: { "@id": `${BASE_URL}/#organization` },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      worstRating: "5",
-      reviewCount: reviews.length,
-    },
     review: reviews,
   };
 

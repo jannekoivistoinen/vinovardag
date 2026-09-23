@@ -88,18 +88,19 @@
       ]
     },
     "testimonials": {
+      "sectionTitle": "## Rekommendationer",
       "items": [
         {
-          "name": "**Gäst från Tyskland** - Privat vinprovning",
-          "quote": "Hanna skapade en varm och avslappnad provning i sitt familjehem. Vinparningarna var genomtänkta och vi lärde oss mer på 90 minuter än under många formella provningar."
+          "quote": "Vi valde Hanna för att välja vinerna till vårt bröllop eftersom vi blev genuint imponerade av hennes professionalism och äkta passion för vin. Hon älskar verkligen det hon gör och har en anmärkningsvärd förmåga att sätta sig in i hur det är för den som kanske inte kan så mycket om vin, och ge helt skräddarsydda rekommendationer.\n\nVåra gäster uppskattade kvällens lilla höjdpunkt, där Hanna presenterade vinerna hon valt ut tillsammans med maträtterna de parats med. Allt var alldeles utsökt, och upplevelsen tillförde något alldeles särskilt till vårt firande.",
+          "name": "Anu Lampinen",
+          "role": "Founder & CEO, Lucky Ranch",
+          "imageKey": "anuLampinen",
+          "altText": "Anu Lampinen, Founder & CEO för Lucky Ranch"
         },
         {
-          "name": "**Gäst från Stockholm** - Arktisk middag",
-          "quote": "Middagen kändes personlig och genuin. Varje rätt hade en berättelse från norr och de alkoholfria alternativen var lika välgjorda."
-        },
-        {
-          "name": "**Gäst från Helsingfors** - Hemhostad fika",
-          "quote": "Detta blev ett av våra bästa minnen från Kiruna. Fantastiskt kaffe, hembakat fika och genuin gästfrihet i ett historiskt hus från 1914."
+          "quote": "Vi tycker väldigt mycket om att arbeta med Hanna. Hon är en varm och positiv person med ett genuint engagemang och en vilja att bidra till att våra gäster får en riktigt fin upplevelse.",
+          "name": "Thomas Eidefors",
+          "role": "Niehku Mountain Villa"
         }
       ]
     }
