@@ -23,7 +23,7 @@ export default async function Testimonials() {
       <MarkdownText className="p-lg mb-6 md:mb-12 content md:text-center">
         {t("sectionTitle")}
       </MarkdownText>
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-3">
         {items.map((item) => (
           <TestimonialCard
             key={item.name}
