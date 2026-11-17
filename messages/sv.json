@@ -2,7 +2,7 @@
   "component": {
     "terminalCTA": {
       "title": "## Upptäck vinkonstens mästerverk med Vinovardag",
-      "description": "Är du redo att utforska vinets värld på ett helt nytt sätt? Med Vinovardag blir varje klunk en berättelse och varje upplevelse skapad för att förtjusa. Boka din resa in i Nordens unika vinkultur redan idag!",
+      "description": "Berätta vad du har i tankarna – en provning för två, en familjemiddag eller ett gruppevenemang – så sätter jag ihop en upplevelse för dig.",
       "label": "Kontakta oss"
     },
     "footer": {
@@ -16,7 +16,7 @@
       "items": [
         {
           "question": "Vilka tjänster erbjuder ni?",
-          "answer": "Vi erbjuder ett brett utbud av tjänster inklusive sommelierkonsultationer, vinprovningar och kulinariska upplevelser. Vårt utbud är skräddarsytt för att möta behoven hos lokala företag och internationella turister. Varje upplevelse är designad för att lyfta fram det bästa av nordisk vinkultur."
+          "answer": "Vi erbjuder ett brett utbud av tjänster inklusive sommelierkonsultationer, vinprovningar och kulinariska upplevelser. Vårt utbud är skräddarsytt för att möta behoven hos privatpersoner, resenärer och företag. Varje upplevelse är designad för att lyfta fram det bästa av nordisk vinkultur."
         },
         {
           "question": "Hur bokar jag?",
@@ -28,7 +28,11 @@
         },
         {
           "question": "Jag dricker inte alkohol, kan jag fortfarande delta?",
-          "answer": "Absolut! Vi erbjuder alkoholfria alternativ för alla våra provningar och upplevelser. Vårt mål är att skapa inkluderande upplevelser där alla kan njuta av den kulinariska resan, oavsett dryckespreferenser. Vänligen nämn ditt intresse för dessa alternativ när du första gången hör av dig, så kan vi skräddarsy upplevelsen efter din resa genom Lappland."
+          "answer": "Absolut! Vi erbjuder alkoholfria alternativ för alla våra provningar och upplevelser. Vårt mål är att skapa inkluderande upplevelser där alla kan njuta av den kulinariska resan, oavsett dryckespreferenser. Nämn det gärna i ditt första meddelande, så anpassar vi upplevelsen efter dig."
+        },
+        {
+          "question": "Kan ni ta hänsyn till allergier eller specialkost?",
+          "answer": "Ja. Vår matlagning innehåller vegetariska rätter och alkoholfria alternativ finns alltid. Berätta om allergier eller kostönskemål när du hör av dig, så anpassar vi upplevelsen."
         },
         {
           "question": "Kan era upplevelser anpassas?",
@@ -45,16 +49,15 @@
         "firstName": "Förnamn",
         "lastName": "Efternamn",
         "email": "E-post",
-        "phone": "Telefon med landskod, t.ex. +46",
+        "phone": "Telefon (valfritt), t.ex. +46 …",
         "message": "Meddelande"
       },
-      "messageHelp": "Vänligen berätta vilken typ av tjänst eller aktivitet du är intresserad av, det ungefärliga datumet och antal personer, så återkommer jag så snart som möjligt",
+      "messageHelp": "Berätta vilken upplevelse du är intresserad av, önskat datum, antal personer och eventuella kostönskemål, så återkommer jag så snart som möjligt.",
       "validation": {
         "firstNameRequired": "Förnamn är obligatoriskt",
         "lastNameRequired": "Efternamn är obligatoriskt",
         "emailRequired": "Din e-postadress är obligatorisk",
         "emailInvalid": "Ange en giltig e-postadress",
-        "phoneRequired": "Ditt telefonnummer är obligatoriskt",
         "phoneInvalid": "Ange ett giltigt telefonnummer",
         "messageRequired": "Ett meddelande är obligatoriskt"
       },
@@ -65,25 +68,25 @@
     "aboutHanna": {
       "quote": "Hannas expertis inom vin är oöverträffad. Hon kombinerar utan ansträngning djup kunskap med en varm och tillgänglig stil, vilket skapar oförglömliga provningsupplevelser.",
       "quoteAttribution": "**Gäst från London** - Privat middagsupplevelse",
-      "heading": "## Om mig, Din värd & sommelier",
+      "heading": "## Om mig – din värd och sommelier",
       "subtitle": "",
-      "paragraph": "Som certifierad sommelier ursprungligen från finska Lappland och nu rotad i svenska Lappland har jag ett arktiskt perspektiv på vinets värld. Som dotter till en renherdare och en restauratör har mitt liv alltid varit en blandning av det vilda och det välkomnande.",
+      "paragraph": "Som certifierad sommelier ursprungligen från finska Lappland och nu rotad i svenska Lappland har jag ett arktiskt perspektiv på vinets värld. Som dotter till en renskötare och en restauratör har mitt liv alltid varit en blandning av det vilda och det välkomnande.",
       "continueReading": "Läs mer"
     },
     "values": {
-      "sectionTitle": "## Värderingar & Filosofi",
+      "sectionTitle": "## Värderingar och filosofi",
       "items": [
         {
-          "title": "### Hållbarhet i Fokus",
+          "title": "### Hållbarhet i fokus",
           "text": "Med rötterna i svenska Lapplands hänförande landskap är hållbarhet vägledande för våra val. Vi samarbetar med vingårdar som delar vår respekt för miljön och strävar efter att leverera genuina vinupplevelser som hedrar naturens balans och renheten i vårt arktiska hem."
         },
         {
-          "title": "### Etiskt Inköpt, Exceptionellt Utformat",
+          "title": "### Etiskt inköpt, omsorgsfullt utvalt",
           "text": "Vi tror att ett stort vin berättar en historia om integritet. Därför väljer vi noggrant ut viner från producenter som är engagerade i etiska metoder, vilket säkerställer att varje flaska återspeglar kvalitet, ansvar och en djup respekt för hantverket och människorna bakom det."
         },
         {
-          "title": "### Främja Gemenskap & Samhörighet",
-          "text": "Vinovardag är dedikerade till att berika vår gemenskap genom att skapa delade upplevelser. Vi strävar efter att förena människor genom vinets glädje, fira den lokala kulturen och främja en välkomnande plats för upptäckt, lärande och genuin mänsklig samhörighet i hjärtat av svenska Lappland."
+          "title": "### Gemenskap och samhörighet",
+          "text": "Vinovardag vill berika vår gemenskap genom att skapa delade upplevelser. Vi strävar efter att förena människor genom vinets glädje, fira den lokala kulturen och främja en välkomnande plats för upptäckt, lärande och genuin mänsklig samhörighet i hjärtat av svenska Lappland."
         }
       ]
     },
@@ -113,8 +116,8 @@
   "page": {
     "homepage": {
       "metadata": {
-        "title": "Vinprovning & Matupplevelser i Kiruna | Vinovardag",
-        "description": "Boka sommelierledda vinprovningar och matupplevelser i Kiruna, svenska Lappland. Vinovardag erbjuder personliga aktiviteter för lokalbor och internationella gäster.",
+        "title": "Vinprovning i Kiruna med sommelier | Vinovardag",
+        "description": "Privat sommelierledd vinprovning och arktisk middag i Kiruna, svenska Lappland, med Hanna Karkea (WSET Level 3). Små grupper, anpassat efter er.",
         "keywords": [
           "vinprovning Kiruna",
           "sommelier Kiruna",
@@ -136,7 +139,7 @@
         "sectionTitle": "## Vinprovningar och kulinariska resor",
         "items": [
           {
-            "title": "### Utomhuskulinariska upplevelser",
+            "title": "### Mat- och vinupplevelser utomhus",
             "description": "Förena naturens skönhet med exceptionella viner. Dessa utomhusupplevelser kopplar vackra platser med välvalda viner och säsongsbetonad mat.",
             "bullets": [
               "Skogspicnickar",
@@ -144,7 +147,7 @@
               "Säsongsbetonade matparningar"
             ],
             "imageKey": "vinovardagOutdoor",
-            "altText": "Utomhuskulinarisk upplevelse i svenska Lappland"
+            "altText": "Mat- och vinupplevelse utomhus i svenska Lappland"
           },
           {
             "title": "### Skräddarsydda kulinariska resor",
@@ -153,7 +156,7 @@
               "Flera rätters vinparningar",
               "Samarbete med kock",
               "Utveckling av skräddarsydd meny",
-              "Privata middagsupplevelser, till exempel svensk craft party, surströmmingsprovning, eftermiddagste med smörgåstårta"
+              "Privata middagsupplevelser, till exempel kräftskiva, surströmmingsprovning, eftermiddagste med smörgåstårta"
             ],
             "imageKey": "vinovardagCulinaryJourneys",
             "altText": "Skräddarsydd kulinarisk resa hos Vinovardag"
@@ -185,8 +188,8 @@
     },
     "about": {
       "metadata": {
-        "title": "Om Vinovardag | Vin- och kulinariska upplevelser i Lappland",
-        "description": "Lär dig mer om Vinovardag och sommelier Hannas passion för att skapa unika vin- och kulinariska upplevelser i hjärtat av Lappland.",
+        "title": "Hanna Karkea – sommelier i Kiruna, svenska Lappland",
+        "description": "Möt Hanna Karkea, sommelier med WSET Level 3 och bäst i klassen vid Scandinavian Wine Academy, som skapar vin- och matupplevelser i Kiruna.",
         "keywords": [
           "vinupplevelser",
           "sommelier",
@@ -201,35 +204,16 @@
         "buttonText": "Kontakta oss"
       },
       "hannaProfile": {
-        "title": "## Om mig, Din värd & sommelier",
+        "title": "## Om mig – din värd och sommelier",
         "closingName": "Vänliga hälsningar, Hanna",
         "subtitle": "",
-        "bio": "Som certifierad sommelier ursprungligen från finska Lappland och nu rotad i svenska Lappland har jag ett arktiskt perspektiv på vinets värld.\n\nSom dotter till en renherdare och en restauratör har mitt liv alltid varit en blandning av det vilda och det välkomnande. Jag växte upp i skärningspunkten mellan vild natur och arktisk gästfrihet, där jag tidigt lärde mig att ett bord bara är så bra som hjärtat bakom det. Idag, som certifierad sommelier rotad i svenska Lappland, för jag det dubbla arvet till varje glas jag serverar och varje gäst jag möter.\n\nJag påbörjade min formella vinutbildning i Stockholm, där jag hade turen att ta examen som bäst i klassen vid Scandinavian Wine Academy. Sedan dess har jag lagt till WSET Level 3 i min verktygslåda och tillbringat otaliga timmar på vingårdar världen över. Jag ser mig inte som färdigutbildad; jag utforskar och lär mig fortfarande varje dag för att säkerställa att jag för med mig den bästa och mest aktuella kunskapen till bordet.\n\nMin sanna passion är att vara värd för anspråkslösa, avslappnade och bekväma sammankomster. Jag gör mitt bästa för att skapa en avslappnad miljö där gäster från hela världen kan mötas, så att varje tillfälle känns som ett varmt samtal bland vänner.\n\nFrån nyfikna nybörjare till livslånga kännare – alla är välkomna. Följ med till mitt hemmabord eller vid elden i en traditionell samisk kåta för en upplevelse som förenar ny kunskap med en hjärtlig koppling till vårt land.",
-        "philosopyTitle": "## Vår filosofi",
-        "philosophyCards": {
-          "accessible": {
-            "title": "Tillgänglig",
-            "description": "Bryta ner barriärer och pretentioner som ofta förknippas med vin och göra kunskap tillgänglig för alla oavsett erfarenhetsnivå."
-          },
-          "authentic": {
-            "title": "Autentisk",
-            "description": "Hedra både vintraditioner och Lapplands unika kultur, och skapa upplevelser som känns genuina och kopplade till platsen."
-          },
-          "sustainable": {
-            "title": "Hållbar",
-            "description": "Prioritera miljömedvetna producenter och metoder som respekterar naturen och stödjer framtiden för vinframställning."
-          },
-          "experiential": {
-            "title": "Upplevelsebaserad",
-            "description": "Skapa multisensoriska upplevelser som anknyter till vår arktiska omgivning och gör varje vinögonblick minnesvärt och unikt."
-          }
-        }
+        "bio": "Som certifierad sommelier ursprungligen från finska Lappland och nu rotad i svenska Lappland har jag ett arktiskt perspektiv på vinets värld.\n\nSom dotter till en renskötare och en restauratör har mitt liv alltid varit en blandning av det vilda och det välkomnande. Jag växte upp i skärningspunkten mellan vild natur och arktisk gästfrihet, där jag tidigt lärde mig att ett bord bara är så bra som hjärtat bakom det. Idag, som certifierad sommelier rotad i svenska Lappland, för jag det dubbla arvet till varje glas jag serverar och varje gäst jag möter.\n\nJag påbörjade min formella vinutbildning i Stockholm, där jag hade turen att ta examen som bäst i klassen vid Scandinavian Wine Academy. Sedan dess har jag lagt till WSET Level 3 i min verktygslåda och tillbringat otaliga timmar på vingårdar världen över. Jag ser mig inte som färdigutbildad; jag utforskar och lär mig fortfarande varje dag för att säkerställa att jag för med mig den bästa och mest aktuella kunskapen till bordet.\n\nMin sanna passion är att vara värd för anspråkslösa, avslappnade och bekväma sammankomster. Jag gör mitt bästa för att skapa en avslappnad miljö där gäster från hela världen kan mötas, så att varje tillfälle känns som ett varmt samtal bland vänner.\n\nFrån nyfikna nybörjare till livslånga kännare – alla är välkomna. Följ med till mitt hemmabord eller vid elden i en traditionell samisk kåta för en upplevelse som förenar ny kunskap med en hjärtlig koppling till vårt land."
       }
     },
     "contact": {
       "metadata": {
-        "title": "Kontakta Vinovardag | Boka din vinupplevelse i svenska Lappland",
-        "description": "Kontakta Vinovardag för att boka din personliga vinprovning, företagsevenemang eller kulinariska upplevelse i svenska Lapplands orörda natur.",
+        "title": "Boka privat vinprovning i Kiruna",
+        "description": "Skicka en förfrågan om privat vinprovning, arktisk middag eller gruppevenemang i Kiruna. Ange datum, antal och önskemål – Hanna svarar personligen.",
         "keywords": [
           "boka vinprovning",
           "sommeliertjänster",
@@ -242,19 +226,19 @@
       },
       "hero": {
         "title": "# Jag ser fram emot att välkomna dig och dela Lapplands hjärtliga smaker tillsammans",
-        "description": "Tack så mycket för ditt intresse. Oavsett om du planerar ett speciellt firande, söker värmen av en hemhostad aktivitet, eller behöver personliga rekommendationer, finns jag här för att lyfta din upplevelse.",
+        "description": "Tack så mycket för ditt intresse. Oavsett om du planerar ett firande, vill uppleva värmen i ett hemmabesök eller behöver personliga rekommendationer hjälper jag dig gärna.",
         "buttonText": "Skicka ett meddelande"
       },
       "contact": {
         "title": "### Kontaktinformation",
-        "info": "Hjalmar Lundbohmsvägen 74A\n\n98139 Kiruna\n\nSverige",
+        "info": "Hjalmar Lundbohmsvägen 74A\n\n981 39 Kiruna\n\nSverige",
         "formTitle": "### Skicka ett meddelande",
-        "email": "e. hello@vinovardag.com"
+        "email": "E-post: hello@vinovardag.com"
       }
     },
     "terms": {
       "metadata": {
-        "title": "Villkor | Vinovardag",
+        "title": "Villkor",
         "description": "Villkor för Vinovardags vinupplevelser och tjänster i svenska Lappland.",
         "keywords": [
           "villkor",
@@ -275,10 +259,10 @@
     },
     "services": {
       "bookNow": "Boka nu",
-      "requestViaEmail": "Kontakta via e-post",
+      "requestViaEmail": "Skicka förfrågan",
       "detailLabels": {
         "time": "Tid",
-        "duration": "Varaktighet"
+        "duration": "Längd"
       },
       "sliderImages": [
         {
@@ -292,8 +276,8 @@
         }
       ],
       "metadata": {
-        "title": "Tjänster | Vinprovningar & Kulinariska Äventyr med Vinovardag",
-        "description": "Utforska Vinovardags professionella sommeliertjänster, inklusive vinprovningar, kulinariska utomhusupplevelser och skräddarsydda vinresor i svenska Lappland.",
+        "title": "Privat vinprovning och arktisk middag i Kiruna",
+        "description": "Nordisk vinprovning, arktisk middag och svensk fika i vårt familjehem från 1914 i gamla Kiruna, med certifierad sommelier som värd. 2–8 personer.",
         "keywords": [
           "vinprovningar",
           "sommeliertjänster",
@@ -316,24 +300,24 @@
           "service": [
             {
               "title": "### Nordisk vinprovning: En sommeliers urval",
-              "description": "Upptäck den överraskande världen av vinodling i svalt klimat och nordiska smaker. Denna intima stund skalar bort formaliteten i en klassisk provning och ersätter den med genuint samtal och expertinsikt.\n\nDu får en kurerad resa genom högkvalitativa viner med fokus på hur de harmoniserar med den subarktiska miljön. Till varje glas serveras handplockade, lätta tilltugg inspirerade av det lokala skafferiet. Stämningen är varm och avslappnad. Alkoholfria alternativ finns. Möjligt att arrangera utomhus i naturen.",
+              "description": "Upptäck den överraskande världen av vinodling i svalt klimat och nordiska smaker. Denna intima stund slopar det formella i en klassisk provning och ersätter den med genuint samtal och expertinsikt.\n\nDu får en noga utvald provning av högkvalitativa viner med fokus på hur de harmoniserar med den subarktiska miljön. Till varje glas serveras handplockade, lätta tilltugg inspirerade av det lokala skafferiet. Stämningen är varm och avslappnad. Alkoholfria alternativ finns. Möjligt att arrangera utomhus i naturen.",
               "imageKey": "vinovardagWinetastings",
               "altText": "Nordisk vinprovning hos Vinovardag i Kiruna",
               "details": {
                 "type": "Privat aktivitet på begäran",
-                "duration": "ca 1,5 tim",
-                "capacity": "Min 2 – max 8 pax"
+                "duration": "ca 1,5 timmar",
+                "capacity": "2–8 personer"
               }
             },
             {
               "title": "### Hjärtlig arktisk middag",
-              "description": "Fly den traditionella restaurangmiljön för en plats vid vårt privata familjebord. Mer än bara en måltid är detta en inbjudan in i hjärtat av det arktiska livet.\n\nVår matlagning är ärlig och säsongsbetonad, med vegetariska rätter från skogen eller vår trädgård vid sidan av klassiker som mustig renskavsgryta eller färsk fisk från närområdet. Varje tallrik bär en berättelse om norr. På begäran kan vi utforma upplevelsen kring svenska traditioner – till exempel en svensk craft party, surströmmingsprovning eller eftermiddagste med smörgåstårta. Alkoholfria alternativ finns.",
+              "description": "Byt restaurangmiljön mot en plats vid vårt privata familjebord. Mer än bara en måltid är detta en inbjudan in i hjärtat av det arktiska livet.\n\nVår matlagning är ärlig och säsongsbetonad, med vegetariska rätter från skogen eller vår trädgård vid sidan av klassiker som mustig renskavsgryta eller färsk fisk från närområdet. Varje tallrik bär en berättelse om norr. På begäran kan vi utforma upplevelsen kring svenska traditioner – till exempel en kräftskiva, surströmmingsprovning eller eftermiddagste med smörgåstårta. Alkoholfria alternativ finns.",
               "imageKey": "vinovardagOutdoor",
               "altText": "Hjärtlig arktisk middag hos Vinovardag i Kiruna",
               "details": {
                 "type": "Privat aktivitet på begäran",
-                "duration": "ca 2,5 tim",
-                "capacity": "Min 2 – max 6 pax"
+                "duration": "ca 2,5 timmar",
+                "capacity": "2–6 personer"
               }
             },
             {
@@ -343,8 +327,8 @@
               "altText": "Äkta svensk fika hos Vinovardag i Kiruna",
               "details": {
                 "type": "Privat aktivitet på begäran",
-                "duration": "ca 1,5 tim",
-                "capacity": "Min 2 – max 8 pax"
+                "duration": "ca 1,5 timmar",
+                "capacity": "2–8 personer"
               }
             }
           ]

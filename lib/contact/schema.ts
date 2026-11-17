@@ -2,7 +2,7 @@ export type ContactFormData = {
   firstName: string;
   lastName: string;
   email: string;
-  phone: string;
+  phone?: string;
   message: string;
   botcheck?: string;
 };
@@ -18,7 +18,6 @@ export function validateContact(data: unknown): ContactFormData | null {
     "firstName",
     "lastName",
     "email",
-    "phone",
     "message",
   ] as const;
   for (const key of required) {
@@ -29,7 +28,8 @@ export function validateContact(data: unknown): ContactFormData | null {
     firstName: (d.firstName as string).trim().slice(0, 80),
     lastName: (d.lastName as string).trim().slice(0, 80),
     email: (d.email as string).trim().slice(0, 200),
-    phone: (d.phone as string).trim().slice(0, 40),
+    phone:
+      typeof d.phone === "string" ? d.phone.trim().slice(0, 40) : undefined,
     message: (d.message as string).trim().slice(0, 5000),
     botcheck: typeof d.botcheck === "string" ? d.botcheck : undefined,
   };

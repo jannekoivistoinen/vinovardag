@@ -92,11 +92,13 @@ function DetailsList({
 function ActivityGrid({
   services,
   requestViaEmail,
+  contactHref,
   timeLabel,
   durationLabel,
 }: {
   services: Service[];
   requestViaEmail: string;
+  contactHref: string;
   timeLabel: string;
   durationLabel: string;
 }) {
@@ -133,9 +135,9 @@ function ActivityGrid({
               className="mt-2 !text-white hover:no-underline"
               asChild
             >
-              <a href={`mailto:${SITE_CONFIG.company.contact.email}`}>
+              <Link href={contactHref} className="hover:no-underline">
                 {requestViaEmail}
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -150,6 +152,11 @@ export default async function ServicesPage({ locale }: ServicesPageProps) {
   const requestViaEmail = t("requestViaEmail");
   const timeLabel = t("detailLabels.time");
   const durationLabel = t("detailLabels.duration");
+  const contactPath = `/${locale}/${
+    SITE_CONFIG.i18n.routes.contact[
+      locale as keyof typeof SITE_CONFIG.i18n.routes.contact
+    ]
+  }`;
 
   return (
     <>
@@ -167,13 +174,8 @@ export default async function ServicesPage({ locale }: ServicesPageProps) {
             asChild
           >
             <Link
-              href={`/${locale}/${
-                SITE_CONFIG.i18n.routes.contact[
-                  locale as keyof typeof SITE_CONFIG.i18n.routes.contact
-                ]
-              }`}
+              href={contactPath}
               className="hover:no-underline"
-              target="_blank"
             >
               {t("hero.buttonText")}
             </Link>
@@ -183,6 +185,7 @@ export default async function ServicesPage({ locale }: ServicesPageProps) {
         <ActivityGrid
           services={servicesSection.privateServices.service}
           requestViaEmail={requestViaEmail}
+          contactHref={`${contactPath}#inquiry-form`}
           timeLabel={timeLabel}
           durationLabel={durationLabel}
         />

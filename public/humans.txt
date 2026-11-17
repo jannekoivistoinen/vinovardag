@@ -8,7 +8,7 @@ Designer: Janne Koivistoinen, Damngood
 
 /* SITE */
 Last update: 2026
-Stack: Next.js, Tailwind CSS, next-intl, Framer Motion
+Stack: Next.js, Tailwind CSS, next-intl, Motion
 
 Built with attention to detail.
 

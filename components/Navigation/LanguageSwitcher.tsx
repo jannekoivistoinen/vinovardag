@@ -16,7 +16,12 @@ import {
   desktopPopoverTriggerStyles,
   linkStyles,
 } from "./styles";
-import { handleLanguageChange, localeNames } from "./utils";
+import Link from "next/link";
+import {
+  handleLanguageChange,
+  localeNames,
+  localizePathname,
+} from "./utils";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -42,15 +47,22 @@ export default function LanguageSwitcher() {
         <div className="p-2">
           <div>
             {locales.map((loc) => (
-              <button
+              <Link
                 key={loc}
-                onClick={() => handleLanguageChange(loc, router, pathname)}
+                href={localizePathname(pathname, loc)}
+                hrefLang={loc}
+                lang={loc}
+                aria-current={loc === locale ? "true" : undefined}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLanguageChange(loc, router, pathname);
+                }}
                 className={desktopPopoverLinkStyles}
               >
                 <span className={desktopPopoverLinkTitleStyles}>
                   {localeNames[loc]}
                 </span>
-              </button>
+              </Link>
             ))}
           </div>
         </div>

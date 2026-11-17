@@ -1,8 +1,6 @@
 import { FAQ } from "@/components/FAQ";
 import MarkdownText from "@/components/MarkdownText";
 import { getTranslations } from "next-intl/server";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export default async function TermsPage() {
   const t = await getTranslations("page.terms");
@@ -17,15 +15,6 @@ export default async function TermsPage() {
           <MarkdownText className="p-lg content">
             {t("hero.description")}
           </MarkdownText>
-          <Button
-            size="lg"
-            className="mx-auto mt-8 !text-white hover:no-underline"
-            asChild
-          >
-            <Link href="#" className="hover:no-underline" target="_blank">
-              {t("hero.buttonText")}
-            </Link>
-          </Button>
         </div>
       </section>
 

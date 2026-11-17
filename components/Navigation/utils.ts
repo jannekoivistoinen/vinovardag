@@ -1,4 +1,5 @@
 import { setLanguageCookie } from "@/lib/cookies";
+import { SITE_CONFIG } from "@/lib/constants";
 import type { useRouter as UseRouter } from "next/navigation";
 import { LocaleData, NavigationItem, isLocaleData } from "./types";
 
@@ -15,10 +16,18 @@ export function handleLanguageChange(
   pathname: string
 ) {
   setLanguageCookie(newLocale);
+  router.push(localizePathname(pathname, newLocale));
+}
+
+export function localizePathname(pathname: string, newLocale: string) {
   const segments = pathname.split("/");
+  const currentLocale = segments[1];
   segments[1] = newLocale;
-  const newPathname = segments.join("/");
-  router.push(newPathname);
+  const route = Object.values(SITE_CONFIG.i18n.routes).find(
+    (r) => r[currentLocale as keyof typeof r] === segments[2]
+  );
+  if (route) segments[2] = route[newLocale as keyof typeof route];
+  return segments.join("/");
 }
 
 // Helper function to check if a link is active

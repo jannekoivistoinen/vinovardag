@@ -100,6 +100,8 @@ export async function generateMetadata({
   };
 }
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -124,33 +126,11 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   let messages;
-  let tTestimonials;
   try {
-    [messages, tTestimonials] = await Promise.all([
-      getMessages(),
-      getTranslations({
-        locale,
-        namespace: "component.testimonials",
-      }),
-    ]);
+    messages = await getMessages();
   } catch {
     notFound();
   }
-  const testimonialItems = tTestimonials.raw("items") as Array<{
-    name: string;
-    role?: string;
-    quote: string;
-  }>;
-
-  const reviews = testimonialItems.map((item) => ({
-    "@type": "Review",
-    author: {
-      "@type": "Person",
-      name: item.name,
-      ...(item.role ? { jobTitle: item.role } : {}),
-    },
-    reviewBody: item.quote,
-  }));
 
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -170,6 +150,7 @@ export default async function LocaleLayout({
     },
     founder: {
       "@type": "Person",
+      "@id": `${BASE_URL}/#hanna-karkea`,
       name: "Hanna Karkea",
       jobTitle: "Sommelier",
       alumniOf: {
@@ -213,12 +194,6 @@ export default async function LocaleLayout({
       `${BASE_URL}/logo.png`,
     ],
     logo: `${BASE_URL}/logo.svg`,
-    priceRange: "SEK 1195-2500",
-    openingHours: "Mo-Su 00:00-23:59",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      description: "By appointment",
-    },
     servesCuisine: ["Nordic", "Arctic", "Swedish"],
     areaServed: {
       "@type": "City",
@@ -247,9 +222,8 @@ export default async function LocaleLayout({
       addressCountry: "SE",
     },
     email: SITE_CONFIG.company.contact.email,
-    founder: { "@id": `${BASE_URL}/#organization` },
+    founder: { "@id": `${BASE_URL}/#hanna-karkea` },
     parentOrganization: { "@id": `${BASE_URL}/#organization` },
-    review: reviews,
   };
 
   return (

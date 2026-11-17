@@ -9,7 +9,7 @@ export default function NotFound() {
       <div className="text-center">
         <Image
           src={Logo}
-          alt="Lucky Ranch Logo"
+          alt="Vinovardag"
           width={120}
           height={120}
           className="mx-auto mb-12"

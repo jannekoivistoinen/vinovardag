@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: canonicalUrl,
       languages: {
         en: `${baseUrl}/en/${SITE_CONFIG.i18n.routes.about.en}`,
+        "x-default": `${baseUrl}/en/${SITE_CONFIG.i18n.routes.about.en}`,
         sv: `${baseUrl}/sv/${SITE_CONFIG.i18n.routes.about.sv}`,
       },
     },
@@ -82,7 +83,7 @@ export default async function Page({ params }: Props) {
     jobTitle: "Sommelier",
     description: aboutTranslations("bio"),
     url: canonicalUrl,
-    image: `${baseUrl}/assets/images/vinovardag-hanna-karkea.jpg`,
+    image: `${baseUrl}/images/vinovardag-hanna-karkea.jpg`,
     nationality: { "@type": "Country", name: "Finland" },
     alumniOf: {
       "@type": "EducationalOrganization",

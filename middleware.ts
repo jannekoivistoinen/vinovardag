@@ -13,7 +13,7 @@ export async function middleware(request: NextRequest) {
 
     if (pathname === "/") {
       const defaultLocale = routing.defaultLocale;
-      return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
+      return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url), 308);
     }
 
     if (/^\/(?:en|sv)(?:$|\/)/.test(pathname)) {
@@ -21,10 +21,10 @@ export async function middleware(request: NextRequest) {
     }
 
     const defaultLocale = routing.defaultLocale;
-    const response = NextResponse.redirect(
-      new URL(`/${defaultLocale}${pathname}`, request.url)
+    return NextResponse.redirect(
+      new URL(`/${defaultLocale}${pathname}`, request.url),
+      308
     );
-    return response;
   } catch (error) {
     console.error("Middleware error:", error);
     // Return a basic response to prevent complete failure

@@ -7,7 +7,7 @@ import { FAQ } from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/ServiceCard";
-import { Slider } from "@/components/SliderDynamic";
+import { Slider } from "@/components/Slider";
 import { SITE_CONFIG, IMAGE_QUALITY } from "@/lib/constants";
 
 interface CardItem {

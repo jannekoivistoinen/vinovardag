@@ -17,7 +17,7 @@ export function buildContactEmail(data: ContactFormData) {
   const rows: [string, string][] = [
     ["Name", `${data.firstName} ${data.lastName}`],
     ["Email", data.email],
-    ["Phone", data.phone],
+    ["Phone", data.phone || "-"],
   ];
   const text =
     rows.map(([k, v]) => `${k}: ${v}`).join("\n") +

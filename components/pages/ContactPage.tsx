@@ -24,7 +24,7 @@ export default async function ContactPage() {
             </MarkdownText>
             <div className="mb-3 md:mb-6 w-full aspect-video rounded overflow-hidden">
               <iframe
-                src="https://maps.google.com/maps?q=Hjalmar+Lundbohmsv%C3%A4gen+74A,+98139+Kiruna,+Sweden&z=6&output=embed"
+                src="https://maps.google.com/maps?q=Hjalmar+Lundbohmsv%C3%A4gen+74A,+98139+Kiruna,+Sweden&z=15&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

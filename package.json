@@ -1,5 +1,5 @@
 {
-  "name": "damngood-template",
+  "name": "vinovardag",
   "version": "0.2.0",
   "private": true,
   "scripts": {
@@ -10,10 +10,8 @@
   },
   "dependencies": {
     "@awesome.me/kit-b2cb81c624": "^1.0.6",
-    "@formatjs/intl-localematcher": "^0.5.7",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@heroicons/react": "^2.2.0",
     "@next/third-parties": "^16.2.4",
     "@radix-ui/react-popover": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.0",
@@ -24,7 +22,6 @@
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.460.0",
     "motion": "^11.11.17",
-    "negotiator": "^1.0.0",
     "next": "15.5.15",
     "next-intl": "^3.25.1",
     "react": "^18.3.1",
@@ -38,7 +35,6 @@
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",
-    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

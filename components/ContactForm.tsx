@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useSearchParams, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import type {
@@ -27,8 +26,6 @@ const getInputClassName = (error?: boolean, isSelect?: boolean) => {
 
 const ContactFormContent = () => {
   const t = useTranslations("component.contactForm");
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
   const {
     register,
     handleSubmit,
@@ -37,7 +34,6 @@ const ContactFormContent = () => {
     mode: "onTouched",
   });
 
-  const [message, setMessage] = useState<string>("");
   const [showError, setShowError] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -48,21 +44,18 @@ const ContactFormContent = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      const json = (await res.json()) as ContactApiResult;
-      if (!res.ok || !json.ok) {
-        throw new Error("error" in json ? json.error : "Failed");
-      }
+      const json = (await res.json().catch(() => null)) as ContactApiResult | null;
+      if (!res.ok || !json?.ok) throw new Error();
       setShowError(false);
       setSubmitted(true);
-    } catch (err) {
+    } catch {
       setShowError(true);
-      setMessage(err instanceof Error ? err.message : "");
     }
   };
 
   useEffect(() => {
     // Check if we're on the contact page and there's a hash
-    if (pathname === "/contact" && window.location.hash === "#inquiry-form") {
+    if (window.location.hash === "#inquiry-form") {
       const element = document.getElementById("inquiry-form");
       if (element) {
         setTimeout(() => {
@@ -70,7 +63,7 @@ const ContactFormContent = () => {
         }, 100);
       }
     }
-  }, [pathname, searchParams]);
+  }, []);
 
   return (
     <>
@@ -80,16 +73,23 @@ const ContactFormContent = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
-          type="checkbox"
-          id=""
-          className="hidden"
-          style={{ display: "none" }}
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="absolute -left-[9999px] h-px w-px opacity-0"
           {...register("botcheck")}
-        ></input>
+        />
 
         <div className="mb-5 flex gap-4">
           <div className="w-1/2">
+            <label htmlFor="contact-firstName" className="sr-only">
+              {t("placeholders.firstName")}
+            </label>
             <input
+              id="contact-firstName"
+              aria-invalid={!!errors.firstName}
+              aria-describedby={errors.firstName ? "contact-firstName-error" : undefined}
               type="text"
               placeholder={t("placeholders.firstName")}
               autoComplete="given-name"
@@ -100,13 +100,19 @@ const ContactFormContent = () => {
               })}
             />
             {errors.firstName && (
-              <div className="mt-1 text-red-600">
+              <div id="contact-firstName-error" role="alert" className="mt-1 text-red-700">
                 <small>{errors.firstName.message?.toString()}</small>
               </div>
             )}
           </div>
           <div className="w-1/2">
+            <label htmlFor="contact-lastName" className="sr-only">
+              {t("placeholders.lastName")}
+            </label>
             <input
+              id="contact-lastName"
+              aria-invalid={!!errors.lastName}
+              aria-describedby={errors.lastName ? "contact-lastName-error" : undefined}
               type="text"
               placeholder={t("placeholders.lastName")}
               autoComplete="family-name"
@@ -117,7 +123,7 @@ const ContactFormContent = () => {
               })}
             />
             {errors.lastName && (
-              <div className="mt-1 text-red-600">
+              <div id="contact-lastName-error" role="alert" className="mt-1 text-red-700">
                 <small>{errors.lastName.message?.toString()}</small>
               </div>
             )}
@@ -125,53 +131,67 @@ const ContactFormContent = () => {
         </div>
 
         <div className="mb-5">
+          <label htmlFor="contact-email" className="sr-only">
+            {t("placeholders.email")}
+          </label>
           <input
-            id="email_address"
+            id="contact-email"
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "contact-email-error" : undefined}
             type="email"
             placeholder={t("placeholders.email")}
-            autoComplete="false"
+            autoComplete="email"
             className={getInputClassName(!!errors.email)}
             {...register("email", {
               required: t("validation.emailRequired"),
               pattern: {
-                value: /^\S+@\S+$/i,
+                value: /^\S+@\S+\.\S+$/,
                 message: t("validation.emailInvalid"),
               },
             })}
           />
           {errors.email && (
-            <div className="mt-1 text-red-600">
+            <div id="contact-email-error" role="alert" className="mt-1 text-red-700">
               <small>{errors.email.message?.toString()}</small>
             </div>
           )}
         </div>
 
         <div className="mb-5">
+          <label htmlFor="contact-phone" className="sr-only">
+            {t("placeholders.phone")}
+          </label>
           <input
+            id="contact-phone"
+            aria-invalid={!!errors.phone}
+            aria-describedby={errors.phone ? "contact-phone-error" : undefined}
             type="tel"
             placeholder={t("placeholders.phone")}
             autoComplete="tel"
             className={getInputClassName(!!errors.phone)}
             {...register("phone", {
-              required: t("validation.phoneRequired"),
               pattern: {
-                value: /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
+                value: /^\+?[0-9\s().-]{6,20}$/,
                 message: t("validation.phoneInvalid"),
               },
             })}
           />
           {errors.phone && (
-            <div className="mt-1 text-red-600">
+            <div id="contact-phone-error" role="alert" className="mt-1 text-red-700">
               <small>{errors.phone.message?.toString()}</small>
             </div>
           )}
         </div>
 
         <div className="mb-3">
+          <label htmlFor="contact-message" className="sr-only">
+            {t("placeholders.message")}
+          </label>
           <textarea
             id="contact-message"
+            aria-invalid={!!errors.message}
             placeholder={t("placeholders.message")}
-            aria-describedby="message-help"
+            aria-describedby={errors.message ? "message-help contact-message-error" : "message-help"}
             className={`h-36 ${getInputClassName(!!errors.message)}`}
             {...register("message", {
               required: t("validation.messageRequired"),
@@ -181,14 +201,16 @@ const ContactFormContent = () => {
             {t("messageHelp")}
           </p>
           {errors.message && (
-            <div className="mt-1 text-red-600">
+            <div id="contact-message-error" role="alert" className="mt-1 text-red-700">
               <small>{errors.message.message?.toString()}</small>
             </div>
           )}
         </div>
 
         {submitted ? (
-          <p className="mt-8 text-center text-lg">{t("thankYouMessage")}</p>
+          <p role="status" className="mt-8 text-center text-lg">
+            {t("thankYouMessage")}
+          </p>
         ) : (
           <Button
             type="submit"
@@ -230,18 +252,12 @@ const ContactFormContent = () => {
       </form>
 
       {showError && (
-        <div className="mt-3 text-center text-sm text-red-500">
-          {message || t("errorMessage")}
+        <div role="alert" className="mt-3 text-center text-sm text-red-700">
+          {t("errorMessage")}
         </div>
       )}
     </>
   );
 };
 
-export default function Contact() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ContactFormContent />
-    </Suspense>
-  );
-}
+export default ContactFormContent;

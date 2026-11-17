@@ -82,7 +82,7 @@ export default function Navigation() {
       >
         <div className="flex relative z-[10000] nav-logo">
           <Link
-            href="/"
+            href={`/${locale}`}
             className={`px-1 xl:px-2 transition hover:opacity-50 ${
               isScrolled ? "scale-[80%]" : "scale-[80%]"
             }`}

@@ -24,6 +24,7 @@ import {
   isActive,
   handleLanguageChange,
   localeNames,
+  localizePathname,
 } from "./utils";
 import {
   containerVariants,
@@ -245,9 +246,14 @@ export default function MobileNavigation({
                 custom={0.8}
               >
                 {locales.map((loc) => (
-                  <button
+                  <Link
                     key={loc}
-                    onClick={() => {
+                    href={localizePathname(pathname, loc)}
+                    hrefLang={loc}
+                    lang={loc}
+                    aria-current={locale === loc ? "true" : undefined}
+                    onClick={(e) => {
+                      e.preventDefault();
                       handleLanguageChange(loc, router, pathname);
                       setMobileMenuOpen(false);
                     }}
@@ -259,7 +265,7 @@ export default function MobileNavigation({
                   >
                     <Globe className="h-4 w-4" />
                     <span className="font-medium">{localeNames[loc]}</span>
-                  </button>
+                  </Link>
                 ))}
               </motion.div>
             )}

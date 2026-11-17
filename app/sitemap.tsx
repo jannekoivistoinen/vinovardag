@@ -26,10 +26,6 @@ const ROUTE_SOURCES: Record<string, string[]> = {
     "app/[locale]/contact/page.tsx",
     "components/pages/ContactPage.tsx",
   ],
-  "/terms": [
-    "app/[locale]/terms/page.tsx",
-    "components/pages/TermsPage.tsx",
-  ],
 };
 
 function getLastMod(files: string[]): string | undefined {
@@ -53,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = url.endsWith("/") ? url.slice(0, -1) : url;
 
   const pathnames = routing.pathnames as Pathnames;
-  const paths = Object.keys(pathnames);
+  const paths = Object.keys(pathnames).filter((path) => ROUTE_SOURCES[path]);
 
   const homeLastMod = getLastMod(ROUTE_SOURCES[""]);
 
@@ -85,9 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   paths.forEach((path) => {
     const englishUrl = `${baseUrl}/en${pathnames[path].en}`;
     const swedishUrl = `${baseUrl}/sv${pathnames[path].sv}`;
-    const lastModified = ROUTE_SOURCES[path]
-      ? getLastMod(ROUTE_SOURCES[path])
-      : undefined;
+    const lastModified = getLastMod(ROUTE_SOURCES[path]);
 
     entries.push({
       url: englishUrl,

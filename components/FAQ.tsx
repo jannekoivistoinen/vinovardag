@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { useTranslations } from "next-intl";
 import MarkdownText from "@/components/MarkdownText";
 import Image from "next/image";
@@ -18,31 +17,38 @@ interface FAQProps {
   className?: string;
 }
 
-const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
+const FAQItem = ({
+  id,
+  question,
+  answer,
+  isOpen,
+  onClick,
+}: FAQItemProps & { id: string }) => {
   return (
     <div className="border-b border-neutral-200">
       <button
         className="flex w-full items-center py-4 text-left"
-        onMouseDown={onClick}
+        onClick={onClick}
+        aria-expanded={isOpen}
+        aria-controls={id}
       >
         <span className="mr-4 text-brand-brown">{isOpen ? "−" : "+"}</span>
         <span className="text-lg font-medium">{question}</span>
       </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <MarkdownText className="pb-8 pl-6 md:pl-12 p-base">
-              {answer}
-            </MarkdownText>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        id={id}
+        className={`grid transition-[grid-template-rows,opacity,visibility] duration-200 ease-in-out motion-reduce:transition-none ${
+          isOpen
+            ? "grid-rows-[1fr] opacity-100 visible"
+            : "grid-rows-[0fr] opacity-0 invisible"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <MarkdownText className="pb-8 pl-6 md:pl-12 p-base">
+            {answer}
+          </MarkdownText>
+        </div>
+      </div>
     </div>
   );
 };
@@ -89,6 +95,7 @@ export function FAQ({}: FAQProps) {
             {items.map((item, index) => (
               <FAQItem
                 key={index}
+                id={`faq-answer-${index}`}
                 question={item.question}
                 answer={item.answer}
                 isOpen={openIndices.has(index)}

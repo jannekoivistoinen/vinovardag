@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: canonicalUrl,
       languages: {
         en: `${baseUrl}/en/${SITE_CONFIG.i18n.routes.contact.en}`,
+        "x-default": `${baseUrl}/en/${SITE_CONFIG.i18n.routes.contact.en}`,
         sv: `${baseUrl}/sv/${SITE_CONFIG.i18n.routes.contact.sv}`,
       },
     },

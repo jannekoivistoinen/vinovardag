@@ -4,6 +4,12 @@ import { getTranslations } from "next-intl/server";
 import ServicesPage from "@/components/pages/ServicesPage";
 import JsonLd from "@/components/JsonLd";
 
+const SCHEMA_IMAGES: Record<string, string> = {
+  vinovardagWinetastings: "vinovardag-winetastings.jpg",
+  vinovardagOutdoor: "vinovardag-outdoor.jpg",
+  vinovardagHero: "vinovardag-hero.jpg",
+};
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -31,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: canonicalUrl,
       languages: {
         en: `${baseUrl}/en/${SITE_CONFIG.i18n.routes.services.en}`,
+        "x-default": `${baseUrl}/en/${SITE_CONFIG.i18n.routes.services.en}`,
         sv: `${baseUrl}/sv/${SITE_CONFIG.i18n.routes.services.sv}`,
       },
     },
@@ -108,15 +115,15 @@ export default async function Page({ params }: Props) {
         "@type": ["Service", "TouristTrip"],
         name,
         description: service.description,
-        image: service.imageKey
-          ? `${baseUrl}/assets/images/${service.imageKey}.jpg`
-          : `${baseUrl}/og-image.jpg`,
+        image:
+          service.imageKey && SCHEMA_IMAGES[service.imageKey]
+            ? `${baseUrl}/images/${SCHEMA_IMAGES[service.imageKey]}`
+            : `${baseUrl}/og-image.jpg`,
         provider: { "@id": `${baseUrl}/#organization` },
         areaServed: areaServedNode,
         offers: {
           "@type": "Offer",
           priceCurrency: "SEK",
-          priceRange: "SEK 1195-2500",
           availability: "https://schema.org/InStock",
           url: canonicalUrl,
           seller: { "@id": `${baseUrl}/#organization` },

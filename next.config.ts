@@ -13,18 +13,25 @@ const config: NextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 2592000,
   },
+  headers: async () => [
+    {
+      source: "/:path*",
+      headers: [
+        { key: "X-Content-Type-Options", value: "nosniff" },
+        { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        { key: "X-Frame-Options", value: "SAMEORIGIN" },
+        {
+          key: "Permissions-Policy",
+          value: "camera=(), microphone=(), geolocation=()",
+        },
+      ],
+    },
+  ],
   experimental: {
     serverActions: {
       bodySizeLimit: "2mb",
     },
   },
-  redirects: async () => [
-    {
-      source: "/en/winter-activities",
-      destination: "/en/activities/winter",
-      permanent: true,
-    },
-  ],
 };
 
 export default withNextIntl(config);

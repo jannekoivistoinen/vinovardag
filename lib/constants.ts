@@ -13,7 +13,6 @@ export const SITE_CONFIG = {
     logo: {
       // Path to logo images
       default: "/logo.svg",
-      dark: "/logo-dark.svg",
       alt: "Vinovardag logo",
     },
     contact: {
